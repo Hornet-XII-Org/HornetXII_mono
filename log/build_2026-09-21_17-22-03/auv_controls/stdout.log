@@ -1,0 +1,24 @@
+-- Install configuration: ""
+-- Execute custom install script
+-- Up-to-date symlink: /home/ironie/HornetXII_sims/install/auv_controls/share/auv_controls/config/my_controllers.yaml
+-- Up-to-date symlink: /home/ironie/HornetXII_sims/install/auv_controls/share/auv_controls/description/inertial_macros.urdf.xacro
+-- Up-to-date symlink: /home/ironie/HornetXII_sims/install/auv_controls/share/auv_controls/description/robot.urdf.xacro
+-- Up-to-date symlink: /home/ironie/HornetXII_sims/install/auv_controls/share/auv_controls/description/robot_core.urdf.xacro
+-- Up-to-date symlink: /home/ironie/HornetXII_sims/install/auv_controls/share/auv_controls/description/sim_controls.xacro
+-- Up-to-date symlink: /home/ironie/HornetXII_sims/install/auv_controls/share/auv_controls/launch/control.launch.py
+-- Symlinking: /home/ironie/HornetXII_sims/install/auv_controls/share/auv_controls/launch/rsp.launch.py
+-- Up-to-date symlink: /home/ironie/HornetXII_sims/install/auv_controls/share/ament_index/resource_index/package_run_dependencies/auv_controls
+-- Up-to-date symlink: /home/ironie/HornetXII_sims/install/auv_controls/share/ament_index/resource_index/parent_prefix_path/auv_controls
+-- Up-to-date symlink: /home/ironie/HornetXII_sims/install/auv_controls/share/auv_controls/environment/ament_prefix_path.sh
+-- Up-to-date symlink: /home/ironie/HornetXII_sims/install/auv_controls/share/auv_controls/environment/ament_prefix_path.dsv
+-- Up-to-date symlink: /home/ironie/HornetXII_sims/install/auv_controls/share/auv_controls/environment/path.sh
+-- Up-to-date symlink: /home/ironie/HornetXII_sims/install/auv_controls/share/auv_controls/environment/path.dsv
+-- Up-to-date symlink: /home/ironie/HornetXII_sims/install/auv_controls/share/auv_controls/local_setup.bash
+-- Up-to-date symlink: /home/ironie/HornetXII_sims/install/auv_controls/share/auv_controls/local_setup.sh
+-- Up-to-date symlink: /home/ironie/HornetXII_sims/install/auv_controls/share/auv_controls/local_setup.zsh
+-- Up-to-date symlink: /home/ironie/HornetXII_sims/install/auv_controls/share/auv_controls/local_setup.dsv
+-- Symlinking: /home/ironie/HornetXII_sims/install/auv_controls/share/auv_controls/package.dsv
+-- Up-to-date symlink: /home/ironie/HornetXII_sims/install/auv_controls/share/ament_index/resource_index/packages/auv_controls
+-- Up-to-date symlink: /home/ironie/HornetXII_sims/install/auv_controls/share/auv_controls/cmake/auv_controlsConfig.cmake
+-- Up-to-date symlink: /home/ironie/HornetXII_sims/install/auv_controls/share/auv_controls/cmake/auv_controlsConfig-version.cmake
+-- Up-to-date symlink: /home/ironie/HornetXII_sims/install/auv_controls/share/auv_controls/package.xml

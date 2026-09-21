@@ -1,0 +1,15 @@
+[ 25%] [32mBuilding CXX object CMakeFiles/thruster_dave_hardware_interface.dir/src/thruster_dave_hardware_interface.cpp.o[0m
+[ 75%] Built target odoRepub
+[100%] [32m[1mLinking CXX shared library libthruster_dave_hardware_interface.so[0m
+[100%] Built target thruster_dave_hardware_interface
+-- Install configuration: ""
+-- Execute custom install script
+-- Symlinking: /home/ironie/HornetXII_sims/install/auv_sims/lib/libthruster_dave_hardware_interface.so
+[31mCMake Error at ament_cmake_symlink_install/ament_cmake_symlink_install.cmake:105 (message):
+  ament_cmake_symlink_install_directory() can't find
+  '/home/ironie/HornetXII_sims/src/auv_sims/config'
+Call Stack (most recent call first):
+  ament_cmake_symlink_install/ament_cmake_symlink_install.cmake:322 (ament_cmake_symlink_install_directory)
+  cmake_install.cmake:46 (include)
+
+[0m

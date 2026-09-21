@@ -1,0 +1,81 @@
+[0.062s] Invoking command in '/home/ironie/HornetXII_sims/build/dave_robot_models': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ironie/assignment3/install/assignment3:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/ironie/HornetXII_sims/src/dave/models/dave_robot_models -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/ironie/HornetXII_sims/install/dave_robot_models
+[0.424s] -- The C compiler identification is GNU 13.3.0
+[1.407s] -- The CXX compiler identification is GNU 13.3.0
+[2.173s] -- Detecting C compiler ABI info
+[2.599s] -- Detecting C compiler ABI info - done
+[2.614s] -- Check for working C compiler: /usr/bin/cc - skipped
+[2.614s] -- Detecting C compile features
+[2.615s] -- Detecting C compile features - done
+[2.718s] -- Detecting CXX compiler ABI info
+[3.119s] -- Detecting CXX compiler ABI info - done
+[3.133s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[3.137s] -- Detecting CXX compile features
+[3.137s] -- Detecting CXX compile features - done
+[3.139s] -- Found ament_cmake: 2.5.6 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[3.447s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[3.621s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[3.888s] -- Configuring done (3.8s)
+[3.894s] -- Generating done (0.0s)
+[3.901s] -- Build files have been written to: /home/ironie/HornetXII_sims/build/dave_robot_models
+[3.908s] Invoked command in '/home/ironie/HornetXII_sims/build/dave_robot_models' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ironie/assignment3/install/assignment3:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/ironie/HornetXII_sims/src/dave/models/dave_robot_models -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/ironie/HornetXII_sims/install/dave_robot_models
+[3.912s] Invoking command in '/home/ironie/HornetXII_sims/build/dave_robot_models': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ironie/assignment3/install/assignment3:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/ironie/HornetXII_sims/build/dave_robot_models -- -j12 -l12
+[4.118s] Invoked command in '/home/ironie/HornetXII_sims/build/dave_robot_models' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ironie/assignment3/install/assignment3:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/ironie/HornetXII_sims/build/dave_robot_models -- -j12 -l12
+[4.119s] Invoking command in '/home/ironie/HornetXII_sims/build/dave_robot_models': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ironie/assignment3/install/assignment3:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/ironie/HornetXII_sims/build/dave_robot_models
+[4.375s] -- Install configuration: ""
+[4.375s] -- Execute custom install script
+[4.376s] -- Symlinking: /home/ironie/HornetXII_sims/install/dave_robot_models/lib/dave_robot_models/ardusub_manual_control.py
+[4.376s] -- Symlinking: /home/ironie/HornetXII_sims/install/dave_robot_models/lib/dave_robot_models/keyboard_publisher.py
+[4.376s] -- Symlinking: /home/ironie/HornetXII_sims/install/dave_robot_models/lib/dave_robot_models/ws_to_joy.py
+[4.376s] -- Symlinking: /home/ironie/HornetXII_sims/install/dave_robot_models/share/dave_robot_models/description/bluerov2/model.config
+[4.376s] -- Symlinking: /home/ironie/HornetXII_sims/install/dave_robot_models/share/dave_robot_models/description/bluerov2/model.sdf
+[4.377s] -- Symlinking: /home/ironie/HornetXII_sims/install/dave_robot_models/share/dave_robot_models/description/bluerov2_heavy/model.config
+[4.378s] -- Symlinking: /home/ironie/HornetXII_sims/install/dave_robot_models/share/dave_robot_models/description/bluerov2_heavy/model.sdf
+[4.379s] -- Symlinking: /home/ironie/HornetXII_sims/install/dave_robot_models/share/dave_robot_models/description/bluerov2_heavy_multibeam_sonar/model.config
+[4.380s] -- Symlinking: /home/ironie/HornetXII_sims/install/dave_robot_models/share/dave_robot_models/description/bluerov2_heavy_multibeam_sonar/model.sdf
+[4.381s] -- Symlinking: /home/ironie/HornetXII_sims/install/dave_robot_models/share/dave_robot_models/description/glider_slocum/model.config
+[4.381s] -- Symlinking: /home/ironie/HornetXII_sims/install/dave_robot_models/share/dave_robot_models/description/glider_slocum/model.sdf
+[4.382s] -- Symlinking: /home/ironie/HornetXII_sims/install/dave_robot_models/share/dave_robot_models/description/rexrov/model.config
+[4.382s] -- Symlinking: /home/ironie/HornetXII_sims/install/dave_robot_models/share/dave_robot_models/description/rexrov/model.sdf
+[4.383s] -- Symlinking: /home/ironie/HornetXII_sims/install/dave_robot_models/share/dave_robot_models/launch/bluerov_teleop.launch.py
+[4.383s] -- Symlinking: /home/ironie/HornetXII_sims/install/dave_robot_models/share/dave_robot_models/launch/upload_robot.launch.py
+[4.383s] -- Symlinking: /home/ironie/HornetXII_sims/install/dave_robot_models/share/dave_robot_models/meshes/bluerov2/bluerov2.dae
+[4.384s] -- Symlinking: /home/ironie/HornetXII_sims/install/dave_robot_models/share/dave_robot_models/meshes/bluerov2_heavy/bluerov2_heavy.dae
+[4.384s] -- Symlinking: /home/ironie/HornetXII_sims/install/dave_robot_models/share/dave_robot_models/meshes/glider_slocum/COLLISION-Slocum-Glider.dae
+[4.386s] -- Symlinking: /home/ironie/HornetXII_sims/install/dave_robot_models/share/dave_robot_models/meshes/glider_slocum/Slocum-Glider-LeftFin.dae
+[4.399s] -- Symlinking: /home/ironie/HornetXII_sims/install/dave_robot_models/share/dave_robot_models/meshes/glider_slocum/Slocum-Glider-Propeller.dae
+[4.412s] -- Symlinking: /home/ironie/HornetXII_sims/install/dave_robot_models/share/dave_robot_models/meshes/glider_slocum/Slocum-Glider-RightFin.dae
+[4.427s] -- Symlinking: /home/ironie/HornetXII_sims/install/dave_robot_models/share/dave_robot_models/meshes/glider_slocum/Slocum-Glider-TopRudder.dae
+[4.441s] -- Symlinking: /home/ironie/HornetXII_sims/install/dave_robot_models/share/dave_robot_models/meshes/glider_slocum/Slocum-Glider.dae
+[4.456s] -- Symlinking: /home/ironie/HornetXII_sims/install/dave_robot_models/share/dave_robot_models/meshes/glider_slocum/Slocum-Glider.png
+[4.470s] -- Symlinking: /home/ironie/HornetXII_sims/install/dave_robot_models/share/dave_robot_models/meshes/rexrov/RexROV_no_props.dae
+[4.483s] -- Symlinking: /home/ironie/HornetXII_sims/install/dave_robot_models/share/dave_robot_models/meshes/rexrov/RexROV_no_props.stl
+[4.495s] -- Symlinking: /home/ironie/HornetXII_sims/install/dave_robot_models/share/dave_robot_models/meshes/rexrov/collision.blend
+[4.510s] -- Symlinking: /home/ironie/HornetXII_sims/install/dave_robot_models/share/dave_robot_models/meshes/rexrov/prop.dae
+[4.523s] -- Symlinking: /home/ironie/HornetXII_sims/install/dave_robot_models/share/dave_robot_models/meshes/t200/ccw_prop.dae
+[4.545s] -- Symlinking: /home/ironie/HornetXII_sims/install/dave_robot_models/share/dave_robot_models/meshes/t200/cw_prop.dae
+[4.564s] -- Symlinking: /home/ironie/HornetXII_sims/install/dave_robot_models/share/dave_robot_models/config/bluerov2/ardusub.parm
+[4.579s] -- Symlinking: /home/ironie/HornetXII_sims/install/dave_robot_models/share/dave_robot_models/config/bluerov2/robot_config.py
+[4.592s] -- Symlinking: /home/ironie/HornetXII_sims/install/dave_robot_models/share/dave_robot_models/config/bluerov2_heavy/ardusub.parm
+[4.605s] -- Symlinking: /home/ironie/HornetXII_sims/install/dave_robot_models/share/dave_robot_models/config/bluerov2_heavy/robot_config.py
+[4.616s] -- Symlinking: /home/ironie/HornetXII_sims/install/dave_robot_models/share/dave_robot_models/config/bluerov2_heavy_multibeam_sonar/ardusub.parm
+[4.626s] -- Symlinking: /home/ironie/HornetXII_sims/install/dave_robot_models/share/dave_robot_models/config/bluerov2_heavy_multibeam_sonar/robot_config.py
+[4.639s] -- Symlinking: /home/ironie/HornetXII_sims/install/dave_robot_models/share/dave_robot_models/config/glider_slocum/robot_config.py
+[4.652s] -- Symlinking: /home/ironie/HornetXII_sims/install/dave_robot_models/share/dave_robot_models/config/mavros/mavros.yaml
+[4.665s] -- Symlinking: /home/ironie/HornetXII_sims/install/dave_robot_models/share/dave_robot_models/config/rexrov/robot_config.py
+[4.676s] -- Symlinking: /home/ironie/HornetXII_sims/install/dave_robot_models/share/dave_robot_models/environment/dave_robot_models.dsv
+[4.692s] -- Symlinking: /home/ironie/HornetXII_sims/install/dave_robot_models/share/ament_index/resource_index/package_run_dependencies/dave_robot_models
+[4.703s] -- Symlinking: /home/ironie/HornetXII_sims/install/dave_robot_models/share/ament_index/resource_index/parent_prefix_path/dave_robot_models
+[4.714s] -- Symlinking: /home/ironie/HornetXII_sims/install/dave_robot_models/share/dave_robot_models/environment/ament_prefix_path.sh
+[4.724s] -- Symlinking: /home/ironie/HornetXII_sims/install/dave_robot_models/share/dave_robot_models/environment/ament_prefix_path.dsv
+[4.734s] -- Symlinking: /home/ironie/HornetXII_sims/install/dave_robot_models/share/dave_robot_models/environment/path.sh
+[4.745s] -- Symlinking: /home/ironie/HornetXII_sims/install/dave_robot_models/share/dave_robot_models/environment/path.dsv
+[4.761s] -- Symlinking: /home/ironie/HornetXII_sims/install/dave_robot_models/share/dave_robot_models/local_setup.bash
+[4.772s] -- Symlinking: /home/ironie/HornetXII_sims/install/dave_robot_models/share/dave_robot_models/local_setup.sh
+[4.786s] -- Symlinking: /home/ironie/HornetXII_sims/install/dave_robot_models/share/dave_robot_models/local_setup.zsh
+[4.798s] -- Symlinking: /home/ironie/HornetXII_sims/install/dave_robot_models/share/dave_robot_models/local_setup.dsv
+[4.810s] -- Symlinking: /home/ironie/HornetXII_sims/install/dave_robot_models/share/dave_robot_models/package.dsv
+[4.822s] -- Symlinking: /home/ironie/HornetXII_sims/install/dave_robot_models/share/ament_index/resource_index/packages/dave_robot_models
+[4.835s] -- Symlinking: /home/ironie/HornetXII_sims/install/dave_robot_models/share/dave_robot_models/cmake/dave_robot_modelsConfig.cmake
+[4.846s] -- Symlinking: /home/ironie/HornetXII_sims/install/dave_robot_models/share/dave_robot_models/cmake/dave_robot_modelsConfig-version.cmake
+[4.860s] -- Symlinking: /home/ironie/HornetXII_sims/install/dave_robot_models/share/dave_robot_models/package.xml
+[4.873s] Invoked command in '/home/ironie/HornetXII_sims/build/dave_robot_models' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ironie/assignment3/install/assignment3:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/ironie/HornetXII_sims/build/dave_robot_models

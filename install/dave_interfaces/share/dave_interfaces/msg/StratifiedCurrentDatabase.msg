@@ -1,1 +1,0 @@
-/home/ironie/HornetXII_sims/src/dave/dave_interfaces/msg/StratifiedCurrentDatabase.msg

@@ -1,0 +1,1 @@
+/home/ironie/HornetXII_sims/build/auv_sims/ament_cmake_environment_hooks/local_setup.sh

@@ -1,1 +1,0 @@
-/home/ironie/HornetXII_sims/build/dave_interfaces/rosidl_generator_cpp/dave_interfaces/msg/detail/stratified_current_velocity__type_support.hpp

@@ -1,1 +1,0 @@
-/home/ironie/HornetXII_sims/build/dave_interfaces/rosidl_typesupport_introspection_c/dave_interfaces/srv/detail/get_origin_spherical_coord__rosidl_typesupport_introspection_c.h

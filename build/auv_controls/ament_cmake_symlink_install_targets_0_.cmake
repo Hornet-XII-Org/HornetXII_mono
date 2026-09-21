@@ -1,1 +1,0 @@
-ament_cmake_symlink_install_targets("TARGET_FILES" "/home/ironie/HornetXII_sims/build/auv_controls/libthruster_dave_hardware_interface.so" "TARGETS" "thruster_dave_hardware_interface" "ARCHIVE_DESTINATION" "lib" "LIBRARY_DESTINATION" "lib" "RUNTIME_DESTINATION" "bin")

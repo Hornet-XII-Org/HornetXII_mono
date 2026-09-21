@@ -1,1 +1,0 @@
-/home/ironie/HornetXII_sims/src/dave/gazebo/dave_gz_sensor_plugins/include/dave_gz_sensor_plugins/UnderwaterCamera.hh

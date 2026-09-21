@@ -1,0 +1,14 @@
+[0.016s] Invoking command in '/home/ironie/HornetXII_sims/build/auv_sims': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ironie/assignment3/install/assignment3:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/ironie/HornetXII_sims/build/auv_sims -- -j12 -l12
+[0.064s] [ 25%] [32mBuilding CXX object CMakeFiles/thruster_dave_hardware_interface.dir/src/thruster_dave_hardware_interface.cpp.o[0m
+[0.064s] [ 50%] [32mBuilding CXX object CMakeFiles/odoRepub.dir/src/odo_republisher.cpp.o[0m
+[0.086s] [01m[K/home/ironie/HornetXII_sims/src/auv_sims/src/thruster_dave_hardware_interface.cpp:1:10:[m[K [01;31m[Kfatal error: [m[Kthruster_dave_hardware_interface/thruster_dave_hardware_interface.hpp: No such file or directory
+[0.086s]     1 | #include [01;31m[K"thruster_dave_hardware_interface/thruster_dave_hardware_interface.hpp"[m[K
+[0.086s]       |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[0.086s] compilation terminated.
+[0.086s] gmake[2]: *** [CMakeFiles/thruster_dave_hardware_interface.dir/build.make:76: CMakeFiles/thruster_dave_hardware_interface.dir/src/thruster_dave_hardware_interface.cpp.o] Error 1
+[0.086s] gmake[1]: *** [CMakeFiles/Makefile2:139: CMakeFiles/thruster_dave_hardware_interface.dir/all] Error 2
+[0.087s] gmake[1]: *** Waiting for unfinished jobs....
+[7.914s] [ 75%] [32m[1mLinking CXX executable odoRepub[0m
+[8.406s] [ 75%] Built target odoRepub
+[8.407s] gmake: *** [Makefile:146: all] Error 2
+[8.409s] Invoked command in '/home/ironie/HornetXII_sims/build/auv_sims' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ironie/assignment3/install/assignment3:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/ironie/HornetXII_sims/build/auv_sims -- -j12 -l12

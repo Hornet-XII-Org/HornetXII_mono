@@ -1,0 +1,438 @@
+[0.197s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build', '--symlink-install', '--packages-select', 'auv_sims']
+[0.197s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=True, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=12, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=['auv_sims'], packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, mixin_files=None, mixin=None, verb_parser=<colcon_mixin.mixin.mixin_argument.MixinArgumentDecorator object at 0x7db58a03be00>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7db589fd9c70>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7db589fd9c70>>, mixin_verb=('build',))
+[0.233s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.233s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.233s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.233s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.233s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.233s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.233s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/ironie/HornetXII_sims'
+[0.233s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.233s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.234s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.234s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.234s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.234s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.234s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.234s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.234s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.269s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.269s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.269s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.269s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.269s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.269s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.269s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.270s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.270s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.270s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.270s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.270s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.270s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.270s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.270s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.270s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[0.270s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[0.270s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[0.270s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[0.271s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[0.271s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[0.271s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[0.271s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[0.271s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[0.271s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[0.271s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[0.271s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[0.271s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[0.271s] Level 1:colcon.colcon_core.package_identification:_identify(src/auv_controls) by extensions ['ignore', 'ignore_ament_install']
+[0.271s] Level 1:colcon.colcon_core.package_identification:_identify(src/auv_controls) by extension 'ignore'
+[0.272s] Level 1:colcon.colcon_core.package_identification:_identify(src/auv_controls) by extension 'ignore_ament_install'
+[0.272s] Level 1:colcon.colcon_core.package_identification:_identify(src/auv_controls) by extensions ['colcon_pkg']
+[0.272s] Level 1:colcon.colcon_core.package_identification:_identify(src/auv_controls) by extension 'colcon_pkg'
+[0.272s] Level 1:colcon.colcon_core.package_identification:_identify(src/auv_controls) by extensions ['colcon_meta']
+[0.272s] Level 1:colcon.colcon_core.package_identification:_identify(src/auv_controls) by extension 'colcon_meta'
+[0.272s] Level 1:colcon.colcon_core.package_identification:_identify(src/auv_controls) by extensions ['ros']
+[0.272s] Level 1:colcon.colcon_core.package_identification:_identify(src/auv_controls) by extension 'ros'
+[0.275s] DEBUG:colcon.colcon_core.package_identification:Package 'src/auv_controls' with type 'ros.ament_cmake' and name 'auv_controls'
+[0.275s] Level 1:colcon.colcon_core.package_identification:_identify(src/auv_sims) by extensions ['ignore', 'ignore_ament_install']
+[0.275s] Level 1:colcon.colcon_core.package_identification:_identify(src/auv_sims) by extension 'ignore'
+[0.275s] Level 1:colcon.colcon_core.package_identification:_identify(src/auv_sims) by extension 'ignore_ament_install'
+[0.275s] Level 1:colcon.colcon_core.package_identification:_identify(src/auv_sims) by extensions ['colcon_pkg']
+[0.275s] Level 1:colcon.colcon_core.package_identification:_identify(src/auv_sims) by extension 'colcon_pkg'
+[0.275s] Level 1:colcon.colcon_core.package_identification:_identify(src/auv_sims) by extensions ['colcon_meta']
+[0.276s] Level 1:colcon.colcon_core.package_identification:_identify(src/auv_sims) by extension 'colcon_meta'
+[0.276s] Level 1:colcon.colcon_core.package_identification:_identify(src/auv_sims) by extensions ['ros']
+[0.276s] Level 1:colcon.colcon_core.package_identification:_identify(src/auv_sims) by extension 'ros'
+[0.277s] DEBUG:colcon.colcon_core.package_identification:Package 'src/auv_sims' with type 'ros.ament_cmake' and name 'auv_sims'
+[0.277s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave) by extensions ['ignore', 'ignore_ament_install']
+[0.277s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave) by extension 'ignore'
+[0.277s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave) by extension 'ignore_ament_install'
+[0.277s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave) by extensions ['colcon_pkg']
+[0.277s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave) by extension 'colcon_pkg'
+[0.277s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave) by extensions ['colcon_meta']
+[0.278s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave) by extension 'colcon_meta'
+[0.278s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave) by extensions ['ros']
+[0.278s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave) by extension 'ros'
+[0.278s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave) by extensions ['cmake', 'python']
+[0.278s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave) by extension 'cmake'
+[0.278s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave) by extension 'python'
+[0.278s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave) by extensions ['python_setup_py']
+[0.278s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave) by extension 'python_setup_py'
+[0.278s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/dave_interfaces) by extensions ['ignore', 'ignore_ament_install']
+[0.279s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/dave_interfaces) by extension 'ignore'
+[0.279s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/dave_interfaces) by extension 'ignore_ament_install'
+[0.279s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/dave_interfaces) by extensions ['colcon_pkg']
+[0.279s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/dave_interfaces) by extension 'colcon_pkg'
+[0.279s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/dave_interfaces) by extensions ['colcon_meta']
+[0.279s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/dave_interfaces) by extension 'colcon_meta'
+[0.279s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/dave_interfaces) by extensions ['ros']
+[0.279s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/dave_interfaces) by extension 'ros'
+[0.280s] DEBUG:colcon.colcon_core.package_identification:Package 'src/dave/dave_interfaces' with type 'ros.ament_cmake' and name 'dave_interfaces'
+[0.280s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/examples) by extensions ['ignore', 'ignore_ament_install']
+[0.280s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/examples) by extension 'ignore'
+[0.280s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/examples) by extension 'ignore_ament_install'
+[0.280s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/examples) by extensions ['colcon_pkg']
+[0.280s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/examples) by extension 'colcon_pkg'
+[0.280s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/examples) by extensions ['colcon_meta']
+[0.280s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/examples) by extension 'colcon_meta'
+[0.280s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/examples) by extensions ['ros']
+[0.280s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/examples) by extension 'ros'
+[0.280s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/examples) by extensions ['cmake', 'python']
+[0.281s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/examples) by extension 'cmake'
+[0.281s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/examples) by extension 'python'
+[0.281s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/examples) by extensions ['python_setup_py']
+[0.281s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/examples) by extension 'python_setup_py'
+[0.281s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/examples/community) by extensions ['ignore', 'ignore_ament_install']
+[0.281s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/examples/community) by extension 'ignore'
+[0.281s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/examples/community) by extension 'ignore_ament_install'
+[0.281s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/examples/community) by extensions ['colcon_pkg']
+[0.281s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/examples/community) by extension 'colcon_pkg'
+[0.281s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/examples/community) by extensions ['colcon_meta']
+[0.281s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/examples/community) by extension 'colcon_meta'
+[0.281s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/examples/community) by extensions ['ros']
+[0.281s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/examples/community) by extension 'ros'
+[0.282s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/examples/community) by extensions ['cmake', 'python']
+[0.282s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/examples/community) by extension 'cmake'
+[0.282s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/examples/community) by extension 'python'
+[0.282s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/examples/community) by extensions ['python_setup_py']
+[0.282s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/examples/community) by extension 'python_setup_py'
+[0.282s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/examples/dave_demos) by extensions ['ignore', 'ignore_ament_install']
+[0.282s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/examples/dave_demos) by extension 'ignore'
+[0.282s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/examples/dave_demos) by extension 'ignore_ament_install'
+[0.283s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/examples/dave_demos) by extensions ['colcon_pkg']
+[0.283s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/examples/dave_demos) by extension 'colcon_pkg'
+[0.283s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/examples/dave_demos) by extensions ['colcon_meta']
+[0.283s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/examples/dave_demos) by extension 'colcon_meta'
+[0.283s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/examples/dave_demos) by extensions ['ros']
+[0.283s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/examples/dave_demos) by extension 'ros'
+[0.283s] DEBUG:colcon.colcon_core.package_identification:Package 'src/dave/examples/dave_demos' with type 'ros.ament_cmake' and name 'dave_demos'
+[0.284s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/extras) by extensions ['ignore', 'ignore_ament_install']
+[0.284s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/extras) by extension 'ignore'
+[0.284s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/extras) by extension 'ignore_ament_install'
+[0.284s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/extras) by extensions ['colcon_pkg']
+[0.284s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/extras) by extension 'colcon_pkg'
+[0.284s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/extras) by extensions ['colcon_meta']
+[0.284s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/extras) by extension 'colcon_meta'
+[0.284s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/extras) by extensions ['ros']
+[0.284s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/extras) by extension 'ros'
+[0.284s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/extras) by extensions ['cmake', 'python']
+[0.284s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/extras) by extension 'cmake'
+[0.285s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/extras) by extension 'python'
+[0.285s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/extras) by extensions ['python_setup_py']
+[0.285s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/extras) by extension 'python_setup_py'
+[0.285s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/extras/lint_local) by extensions ['ignore', 'ignore_ament_install']
+[0.285s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/extras/lint_local) by extension 'ignore'
+[0.285s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/extras/lint_local) by extension 'ignore_ament_install'
+[0.285s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/extras/lint_local) by extensions ['colcon_pkg']
+[0.285s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/extras/lint_local) by extension 'colcon_pkg'
+[0.285s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/extras/lint_local) by extensions ['colcon_meta']
+[0.285s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/extras/lint_local) by extension 'colcon_meta'
+[0.285s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/extras/lint_local) by extensions ['ros']
+[0.285s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/extras/lint_local) by extension 'ros'
+[0.285s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/extras/lint_local) by extensions ['cmake', 'python']
+[0.285s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/extras/lint_local) by extension 'cmake'
+[0.285s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/extras/lint_local) by extension 'python'
+[0.285s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/extras/lint_local) by extensions ['python_setup_py']
+[0.286s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/extras/lint_local) by extension 'python_setup_py'
+[0.286s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/extras/repos) by extensions ['ignore', 'ignore_ament_install']
+[0.286s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/extras/repos) by extension 'ignore'
+[0.286s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/extras/repos) by extension 'ignore_ament_install'
+[0.286s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/extras/repos) by extensions ['colcon_pkg']
+[0.286s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/extras/repos) by extension 'colcon_pkg'
+[0.286s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/extras/repos) by extensions ['colcon_meta']
+[0.286s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/extras/repos) by extension 'colcon_meta'
+[0.286s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/extras/repos) by extensions ['ros']
+[0.286s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/extras/repos) by extension 'ros'
+[0.286s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/extras/repos) by extensions ['cmake', 'python']
+[0.286s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/extras/repos) by extension 'cmake'
+[0.286s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/extras/repos) by extension 'python'
+[0.287s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/extras/repos) by extensions ['python_setup_py']
+[0.287s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/extras/repos) by extension 'python_setup_py'
+[0.287s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/gazebo) by extensions ['ignore', 'ignore_ament_install']
+[0.287s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/gazebo) by extension 'ignore'
+[0.287s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/gazebo) by extension 'ignore_ament_install'
+[0.287s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/gazebo) by extensions ['colcon_pkg']
+[0.287s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/gazebo) by extension 'colcon_pkg'
+[0.287s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/gazebo) by extensions ['colcon_meta']
+[0.287s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/gazebo) by extension 'colcon_meta'
+[0.287s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/gazebo) by extensions ['ros']
+[0.287s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/gazebo) by extension 'ros'
+[0.287s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/gazebo) by extensions ['cmake', 'python']
+[0.287s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/gazebo) by extension 'cmake'
+[0.288s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/gazebo) by extension 'python'
+[0.288s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/gazebo) by extensions ['python_setup_py']
+[0.288s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/gazebo) by extension 'python_setup_py'
+[0.288s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/gazebo/dave_gz_model_plugins) by extensions ['ignore', 'ignore_ament_install']
+[0.288s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/gazebo/dave_gz_model_plugins) by extension 'ignore'
+[0.288s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/gazebo/dave_gz_model_plugins) by extension 'ignore_ament_install'
+[0.288s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/gazebo/dave_gz_model_plugins) by extensions ['colcon_pkg']
+[0.288s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/gazebo/dave_gz_model_plugins) by extension 'colcon_pkg'
+[0.288s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/gazebo/dave_gz_model_plugins) by extensions ['colcon_meta']
+[0.288s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/gazebo/dave_gz_model_plugins) by extension 'colcon_meta'
+[0.289s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/gazebo/dave_gz_model_plugins) by extensions ['ros']
+[0.289s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/gazebo/dave_gz_model_plugins) by extension 'ros'
+[0.290s] DEBUG:colcon.colcon_core.package_identification:Package 'src/dave/gazebo/dave_gz_model_plugins' with type 'ros.ament_cmake' and name 'dave_gz_model_plugins'
+[0.290s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/gazebo/dave_gz_multibeam_sonar) by extensions ['ignore', 'ignore_ament_install']
+[0.290s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/gazebo/dave_gz_multibeam_sonar) by extension 'ignore'
+[0.290s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/gazebo/dave_gz_multibeam_sonar) by extension 'ignore_ament_install'
+[0.290s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/gazebo/dave_gz_multibeam_sonar) by extensions ['colcon_pkg']
+[0.290s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/gazebo/dave_gz_multibeam_sonar) by extension 'colcon_pkg'
+[0.290s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/gazebo/dave_gz_multibeam_sonar) by extensions ['colcon_meta']
+[0.290s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/gazebo/dave_gz_multibeam_sonar) by extension 'colcon_meta'
+[0.290s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/gazebo/dave_gz_multibeam_sonar) by extensions ['ros']
+[0.290s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/gazebo/dave_gz_multibeam_sonar) by extension 'ros'
+[0.290s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/gazebo/dave_gz_multibeam_sonar) by extensions ['cmake', 'python']
+[0.290s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/gazebo/dave_gz_multibeam_sonar) by extension 'cmake'
+[0.290s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/gazebo/dave_gz_multibeam_sonar) by extension 'python'
+[0.291s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/gazebo/dave_gz_multibeam_sonar) by extensions ['python_setup_py']
+[0.291s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/gazebo/dave_gz_multibeam_sonar) by extension 'python_setup_py'
+[0.291s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/gazebo/dave_gz_multibeam_sonar/multibeam_sonar) by extensions ['ignore', 'ignore_ament_install']
+[0.291s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/gazebo/dave_gz_multibeam_sonar/multibeam_sonar) by extension 'ignore'
+[0.291s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/gazebo/dave_gz_multibeam_sonar/multibeam_sonar) by extension 'ignore_ament_install'
+[0.291s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/gazebo/dave_gz_multibeam_sonar/multibeam_sonar) by extensions ['colcon_pkg']
+[0.291s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/gazebo/dave_gz_multibeam_sonar/multibeam_sonar) by extension 'colcon_pkg'
+[0.291s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/gazebo/dave_gz_multibeam_sonar/multibeam_sonar) by extensions ['colcon_meta']
+[0.291s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/gazebo/dave_gz_multibeam_sonar/multibeam_sonar) by extension 'colcon_meta'
+[0.291s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/gazebo/dave_gz_multibeam_sonar/multibeam_sonar) by extensions ['ros']
+[0.291s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/gazebo/dave_gz_multibeam_sonar/multibeam_sonar) by extension 'ros'
+[0.292s] DEBUG:colcon.colcon_core.package_identification:Package 'src/dave/gazebo/dave_gz_multibeam_sonar/multibeam_sonar' with type 'ros.ament_cmake' and name 'multibeam_sonar'
+[0.292s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/gazebo/dave_gz_multibeam_sonar/multibeam_sonar_demo) by extensions ['ignore', 'ignore_ament_install']
+[0.292s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/gazebo/dave_gz_multibeam_sonar/multibeam_sonar_demo) by extension 'ignore'
+[0.292s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/gazebo/dave_gz_multibeam_sonar/multibeam_sonar_demo) by extension 'ignore_ament_install'
+[0.292s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/gazebo/dave_gz_multibeam_sonar/multibeam_sonar_demo) by extensions ['colcon_pkg']
+[0.292s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/gazebo/dave_gz_multibeam_sonar/multibeam_sonar_demo) by extension 'colcon_pkg'
+[0.292s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/gazebo/dave_gz_multibeam_sonar/multibeam_sonar_demo) by extensions ['colcon_meta']
+[0.293s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/gazebo/dave_gz_multibeam_sonar/multibeam_sonar_demo) by extension 'colcon_meta'
+[0.293s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/gazebo/dave_gz_multibeam_sonar/multibeam_sonar_demo) by extensions ['ros']
+[0.293s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/gazebo/dave_gz_multibeam_sonar/multibeam_sonar_demo) by extension 'ros'
+[0.293s] DEBUG:colcon.colcon_core.package_identification:Package 'src/dave/gazebo/dave_gz_multibeam_sonar/multibeam_sonar_demo' with type 'ros.ament_cmake' and name 'dave_multibeam_sonar_demo'
+[0.293s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/gazebo/dave_gz_multibeam_sonar/multibeam_sonar_system) by extensions ['ignore', 'ignore_ament_install']
+[0.293s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/gazebo/dave_gz_multibeam_sonar/multibeam_sonar_system) by extension 'ignore'
+[0.293s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/gazebo/dave_gz_multibeam_sonar/multibeam_sonar_system) by extension 'ignore_ament_install'
+[0.294s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/gazebo/dave_gz_multibeam_sonar/multibeam_sonar_system) by extensions ['colcon_pkg']
+[0.294s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/gazebo/dave_gz_multibeam_sonar/multibeam_sonar_system) by extension 'colcon_pkg'
+[0.294s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/gazebo/dave_gz_multibeam_sonar/multibeam_sonar_system) by extensions ['colcon_meta']
+[0.294s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/gazebo/dave_gz_multibeam_sonar/multibeam_sonar_system) by extension 'colcon_meta'
+[0.294s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/gazebo/dave_gz_multibeam_sonar/multibeam_sonar_system) by extensions ['ros']
+[0.294s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/gazebo/dave_gz_multibeam_sonar/multibeam_sonar_system) by extension 'ros'
+[0.294s] DEBUG:colcon.colcon_core.package_identification:Package 'src/dave/gazebo/dave_gz_multibeam_sonar/multibeam_sonar_system' with type 'ros.ament_cmake' and name 'multibeam_sonar_system'
+[0.294s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/gazebo/dave_gz_sensor_plugins) by extensions ['ignore', 'ignore_ament_install']
+[0.295s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/gazebo/dave_gz_sensor_plugins) by extension 'ignore'
+[0.295s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/gazebo/dave_gz_sensor_plugins) by extension 'ignore_ament_install'
+[0.295s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/gazebo/dave_gz_sensor_plugins) by extensions ['colcon_pkg']
+[0.295s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/gazebo/dave_gz_sensor_plugins) by extension 'colcon_pkg'
+[0.295s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/gazebo/dave_gz_sensor_plugins) by extensions ['colcon_meta']
+[0.295s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/gazebo/dave_gz_sensor_plugins) by extension 'colcon_meta'
+[0.295s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/gazebo/dave_gz_sensor_plugins) by extensions ['ros']
+[0.295s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/gazebo/dave_gz_sensor_plugins) by extension 'ros'
+[0.296s] DEBUG:colcon.colcon_core.package_identification:Package 'src/dave/gazebo/dave_gz_sensor_plugins' with type 'ros.ament_cmake' and name 'dave_gz_sensor_plugins'
+[0.296s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/gazebo/dave_gz_world_plugins) by extensions ['ignore', 'ignore_ament_install']
+[0.296s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/gazebo/dave_gz_world_plugins) by extension 'ignore'
+[0.296s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/gazebo/dave_gz_world_plugins) by extension 'ignore_ament_install'
+[0.296s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/gazebo/dave_gz_world_plugins) by extensions ['colcon_pkg']
+[0.296s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/gazebo/dave_gz_world_plugins) by extension 'colcon_pkg'
+[0.296s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/gazebo/dave_gz_world_plugins) by extensions ['colcon_meta']
+[0.296s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/gazebo/dave_gz_world_plugins) by extension 'colcon_meta'
+[0.296s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/gazebo/dave_gz_world_plugins) by extensions ['ros']
+[0.296s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/gazebo/dave_gz_world_plugins) by extension 'ros'
+[0.297s] DEBUG:colcon.colcon_core.package_identification:Package 'src/dave/gazebo/dave_gz_world_plugins' with type 'ros.ament_cmake' and name 'dave_gz_world_plugins'
+[0.297s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/gazebo/dave_ros_gz_plugins) by extensions ['ignore', 'ignore_ament_install']
+[0.297s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/gazebo/dave_ros_gz_plugins) by extension 'ignore'
+[0.297s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/gazebo/dave_ros_gz_plugins) by extension 'ignore_ament_install'
+[0.297s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/gazebo/dave_ros_gz_plugins) by extensions ['colcon_pkg']
+[0.298s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/gazebo/dave_ros_gz_plugins) by extension 'colcon_pkg'
+[0.298s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/gazebo/dave_ros_gz_plugins) by extensions ['colcon_meta']
+[0.298s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/gazebo/dave_ros_gz_plugins) by extension 'colcon_meta'
+[0.298s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/gazebo/dave_ros_gz_plugins) by extensions ['ros']
+[0.298s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/gazebo/dave_ros_gz_plugins) by extension 'ros'
+[0.298s] DEBUG:colcon.colcon_core.package_identification:Package 'src/dave/gazebo/dave_ros_gz_plugins' with type 'ros.ament_cmake' and name 'dave_ros_gz_plugins'
+[0.299s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/models) by extensions ['ignore', 'ignore_ament_install']
+[0.299s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/models) by extension 'ignore'
+[0.299s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/models) by extension 'ignore_ament_install'
+[0.299s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/models) by extensions ['colcon_pkg']
+[0.299s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/models) by extension 'colcon_pkg'
+[0.299s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/models) by extensions ['colcon_meta']
+[0.299s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/models) by extension 'colcon_meta'
+[0.299s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/models) by extensions ['ros']
+[0.299s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/models) by extension 'ros'
+[0.299s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/models) by extensions ['cmake', 'python']
+[0.299s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/models) by extension 'cmake'
+[0.300s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/models) by extension 'python'
+[0.300s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/models) by extensions ['python_setup_py']
+[0.300s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/models) by extension 'python_setup_py'
+[0.300s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/models/dave_object_models) by extensions ['ignore', 'ignore_ament_install']
+[0.300s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/models/dave_object_models) by extension 'ignore'
+[0.300s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/models/dave_object_models) by extension 'ignore_ament_install'
+[0.300s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/models/dave_object_models) by extensions ['colcon_pkg']
+[0.300s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/models/dave_object_models) by extension 'colcon_pkg'
+[0.300s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/models/dave_object_models) by extensions ['colcon_meta']
+[0.301s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/models/dave_object_models) by extension 'colcon_meta'
+[0.301s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/models/dave_object_models) by extensions ['ros']
+[0.301s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/models/dave_object_models) by extension 'ros'
+[0.301s] DEBUG:colcon.colcon_core.package_identification:Package 'src/dave/models/dave_object_models' with type 'ros.ament_cmake' and name 'dave_object_models'
+[0.302s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/models/dave_robot_models) by extensions ['ignore', 'ignore_ament_install']
+[0.302s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/models/dave_robot_models) by extension 'ignore'
+[0.302s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/models/dave_robot_models) by extension 'ignore_ament_install'
+[0.302s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/models/dave_robot_models) by extensions ['colcon_pkg']
+[0.302s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/models/dave_robot_models) by extension 'colcon_pkg'
+[0.302s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/models/dave_robot_models) by extensions ['colcon_meta']
+[0.302s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/models/dave_robot_models) by extension 'colcon_meta'
+[0.302s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/models/dave_robot_models) by extensions ['ros']
+[0.302s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/models/dave_robot_models) by extension 'ros'
+[0.303s] DEBUG:colcon.colcon_core.package_identification:Package 'src/dave/models/dave_robot_models' with type 'ros.ament_cmake' and name 'dave_robot_models'
+[0.303s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/models/dave_sensor_models) by extensions ['ignore', 'ignore_ament_install']
+[0.303s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/models/dave_sensor_models) by extension 'ignore'
+[0.303s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/models/dave_sensor_models) by extension 'ignore_ament_install'
+[0.303s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/models/dave_sensor_models) by extensions ['colcon_pkg']
+[0.303s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/models/dave_sensor_models) by extension 'colcon_pkg'
+[0.303s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/models/dave_sensor_models) by extensions ['colcon_meta']
+[0.303s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/models/dave_sensor_models) by extension 'colcon_meta'
+[0.304s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/models/dave_sensor_models) by extensions ['ros']
+[0.304s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/models/dave_sensor_models) by extension 'ros'
+[0.304s] DEBUG:colcon.colcon_core.package_identification:Package 'src/dave/models/dave_sensor_models' with type 'ros.ament_cmake' and name 'dave_sensor_models'
+[0.304s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/models/dave_worlds) by extensions ['ignore', 'ignore_ament_install']
+[0.304s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/models/dave_worlds) by extension 'ignore'
+[0.304s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/models/dave_worlds) by extension 'ignore_ament_install'
+[0.304s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/models/dave_worlds) by extensions ['colcon_pkg']
+[0.304s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/models/dave_worlds) by extension 'colcon_pkg'
+[0.305s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/models/dave_worlds) by extensions ['colcon_meta']
+[0.305s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/models/dave_worlds) by extension 'colcon_meta'
+[0.305s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/models/dave_worlds) by extensions ['ros']
+[0.305s] Level 1:colcon.colcon_core.package_identification:_identify(src/dave/models/dave_worlds) by extension 'ros'
+[0.305s] DEBUG:colcon.colcon_core.package_identification:Package 'src/dave/models/dave_worlds' with type 'ros.ament_cmake' and name 'dave_worlds'
+[0.305s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.305s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.305s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.305s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.305s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.328s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'auv_controls' in 'src/auv_controls'
+[0.328s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'dave_demos' in 'src/dave/examples/dave_demos'
+[0.328s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'dave_interfaces' in 'src/dave/dave_interfaces'
+[0.328s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'dave_multibeam_sonar_demo' in 'src/dave/gazebo/dave_gz_multibeam_sonar/multibeam_sonar_demo'
+[0.328s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'dave_object_models' in 'src/dave/models/dave_object_models'
+[0.328s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'dave_robot_models' in 'src/dave/models/dave_robot_models'
+[0.328s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'dave_sensor_models' in 'src/dave/models/dave_sensor_models'
+[0.328s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'dave_worlds' in 'src/dave/models/dave_worlds'
+[0.328s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'multibeam_sonar_system' in 'src/dave/gazebo/dave_gz_multibeam_sonar/multibeam_sonar_system'
+[0.328s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'dave_gz_sensor_plugins' in 'src/dave/gazebo/dave_gz_sensor_plugins'
+[0.328s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'dave_gz_world_plugins' in 'src/dave/gazebo/dave_gz_world_plugins'
+[0.328s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'multibeam_sonar' in 'src/dave/gazebo/dave_gz_multibeam_sonar/multibeam_sonar'
+[0.328s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'dave_ros_gz_plugins' in 'src/dave/gazebo/dave_ros_gz_plugins'
+[0.328s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'dave_gz_model_plugins' in 'src/dave/gazebo/dave_gz_model_plugins'
+[0.329s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.329s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.330s] WARNING:colcon.colcon_core.prefix_path.colcon:The path '/home/ironie/dave_ws/install' in the environment variable COLCON_PREFIX_PATH doesn't exist
+[0.330s] WARNING:colcon.colcon_ros.prefix_path.ament:The path '/home/ironie/HornetXII_sims/install/multibeam_sonar' in the environment variable AMENT_PREFIX_PATH doesn't exist
+[0.330s] WARNING:colcon.colcon_ros.prefix_path.ament:The path '/home/ironie/HornetXII_sims/install/dave_gz_model_plugins' in the environment variable AMENT_PREFIX_PATH doesn't exist
+[0.330s] WARNING:colcon.colcon_ros.prefix_path.ament:The path '/home/ironie/HornetXII_sims/install/dave_ros_gz_plugins' in the environment variable AMENT_PREFIX_PATH doesn't exist
+[0.331s] WARNING:colcon.colcon_ros.prefix_path.ament:The path '/home/ironie/HornetXII_sims/install/dave_gz_world_plugins' in the environment variable AMENT_PREFIX_PATH doesn't exist
+[0.331s] WARNING:colcon.colcon_ros.prefix_path.ament:The path '/home/ironie/HornetXII_sims/install/dave_gz_sensor_plugins' in the environment variable AMENT_PREFIX_PATH doesn't exist
+[0.331s] WARNING:colcon.colcon_ros.prefix_path.ament:The path '/home/ironie/HornetXII_sims/install/dave_interfaces' in the environment variable AMENT_PREFIX_PATH doesn't exist
+[0.331s] WARNING:colcon.colcon_ros.prefix_path.ament:The path '/home/ironie/dave_ws/install/multibeam_sonar_system' in the environment variable AMENT_PREFIX_PATH doesn't exist
+[0.331s] WARNING:colcon.colcon_ros.prefix_path.ament:The path '/home/ironie/dave_ws/install/dave_worlds' in the environment variable AMENT_PREFIX_PATH doesn't exist
+[0.331s] WARNING:colcon.colcon_ros.prefix_path.ament:The path '/home/ironie/dave_ws/install/dave_sensor_models' in the environment variable AMENT_PREFIX_PATH doesn't exist
+[0.331s] WARNING:colcon.colcon_ros.prefix_path.ament:The path '/home/ironie/dave_ws/install/dave_robot_models' in the environment variable AMENT_PREFIX_PATH doesn't exist
+[0.331s] WARNING:colcon.colcon_ros.prefix_path.ament:The path '/home/ironie/dave_ws/install/dave_object_models' in the environment variable AMENT_PREFIX_PATH doesn't exist
+[0.331s] WARNING:colcon.colcon_ros.prefix_path.ament:The path '/home/ironie/dave_ws/install/dave_multibeam_sonar_demo' in the environment variable AMENT_PREFIX_PATH doesn't exist
+[0.331s] WARNING:colcon.colcon_ros.prefix_path.ament:The path '/home/ironie/dave_ws/install/dave_interfaces' in the environment variable AMENT_PREFIX_PATH doesn't exist
+[0.331s] WARNING:colcon.colcon_ros.prefix_path.ament:The path '/home/ironie/dave_ws/install/dave_demos' in the environment variable AMENT_PREFIX_PATH doesn't exist
+[0.332s] WARNING:colcon.colcon_ros.prefix_path.ament:The path '/home/ironie/dave_ws/install/auv_controls' in the environment variable AMENT_PREFIX_PATH doesn't exist
+[0.332s] WARNING:colcon.colcon_ros.prefix_path.catkin:The path '/home/ironie/HornetXII_sims/install/multibeam_sonar' in the environment variable CMAKE_PREFIX_PATH doesn't exist
+[0.332s] WARNING:colcon.colcon_ros.prefix_path.catkin:The path '/home/ironie/HornetXII_sims/install/dave_gz_model_plugins' in the environment variable CMAKE_PREFIX_PATH doesn't exist
+[0.332s] WARNING:colcon.colcon_ros.prefix_path.catkin:The path '/home/ironie/HornetXII_sims/install/dave_ros_gz_plugins' in the environment variable CMAKE_PREFIX_PATH doesn't exist
+[0.332s] WARNING:colcon.colcon_ros.prefix_path.catkin:The path '/home/ironie/HornetXII_sims/install/dave_gz_world_plugins' in the environment variable CMAKE_PREFIX_PATH doesn't exist
+[0.332s] WARNING:colcon.colcon_ros.prefix_path.catkin:The path '/home/ironie/HornetXII_sims/install/dave_gz_sensor_plugins' in the environment variable CMAKE_PREFIX_PATH doesn't exist
+[0.332s] WARNING:colcon.colcon_ros.prefix_path.catkin:The path '/home/ironie/HornetXII_sims/install/dave_interfaces' in the environment variable CMAKE_PREFIX_PATH doesn't exist
+[0.332s] WARNING:colcon.colcon_ros.prefix_path.catkin:The path '/home/ironie/dave_ws/install/multibeam_sonar_system' in the environment variable CMAKE_PREFIX_PATH doesn't exist
+[0.332s] WARNING:colcon.colcon_ros.prefix_path.catkin:The path '/home/ironie/dave_ws/install/dave_worlds' in the environment variable CMAKE_PREFIX_PATH doesn't exist
+[0.333s] WARNING:colcon.colcon_ros.prefix_path.catkin:The path '/home/ironie/dave_ws/install/dave_sensor_models' in the environment variable CMAKE_PREFIX_PATH doesn't exist
+[0.333s] WARNING:colcon.colcon_ros.prefix_path.catkin:The path '/home/ironie/dave_ws/install/dave_robot_models' in the environment variable CMAKE_PREFIX_PATH doesn't exist
+[0.333s] WARNING:colcon.colcon_ros.prefix_path.catkin:The path '/home/ironie/dave_ws/install/dave_object_models' in the environment variable CMAKE_PREFIX_PATH doesn't exist
+[0.333s] WARNING:colcon.colcon_ros.prefix_path.catkin:The path '/home/ironie/dave_ws/install/dave_multibeam_sonar_demo' in the environment variable CMAKE_PREFIX_PATH doesn't exist
+[0.333s] WARNING:colcon.colcon_ros.prefix_path.catkin:The path '/home/ironie/dave_ws/install/dave_interfaces' in the environment variable CMAKE_PREFIX_PATH doesn't exist
+[0.333s] WARNING:colcon.colcon_ros.prefix_path.catkin:The path '/home/ironie/dave_ws/install/dave_demos' in the environment variable CMAKE_PREFIX_PATH doesn't exist
+[0.333s] WARNING:colcon.colcon_ros.prefix_path.catkin:The path '/home/ironie/dave_ws/install/auv_controls' in the environment variable CMAKE_PREFIX_PATH doesn't exist
+[0.335s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 9 installed packages in /home/ironie/HornetXII_sims/install
+[0.335s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 1 installed packages in /home/ironie/testGazebo/install
+[0.336s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 1 installed packages in /home/ironie/assignment3/install
+[0.337s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 421 installed packages in /opt/ros/jazzy
+[0.338s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.393s] Level 5:colcon.colcon_core.verb:set package 'auv_sims' build argument 'cmake_args' from command line to 'None'
+[0.393s] Level 5:colcon.colcon_core.verb:set package 'auv_sims' build argument 'cmake_target' from command line to 'None'
+[0.393s] Level 5:colcon.colcon_core.verb:set package 'auv_sims' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.393s] Level 5:colcon.colcon_core.verb:set package 'auv_sims' build argument 'cmake_clean_cache' from command line to 'False'
+[0.393s] Level 5:colcon.colcon_core.verb:set package 'auv_sims' build argument 'cmake_clean_first' from command line to 'False'
+[0.393s] Level 5:colcon.colcon_core.verb:set package 'auv_sims' build argument 'cmake_force_configure' from command line to 'False'
+[0.393s] Level 5:colcon.colcon_core.verb:set package 'auv_sims' build argument 'ament_cmake_args' from command line to 'None'
+[0.393s] Level 5:colcon.colcon_core.verb:set package 'auv_sims' build argument 'catkin_cmake_args' from command line to 'None'
+[0.393s] Level 5:colcon.colcon_core.verb:set package 'auv_sims' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.393s] DEBUG:colcon.colcon_core.verb:Building package 'auv_sims' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/ironie/HornetXII_sims/build/auv_sims', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/ironie/HornetXII_sims/install/auv_sims', 'merge_install': False, 'path': '/home/ironie/HornetXII_sims/src/auv_sims', 'symlink_install': True, 'test_result_base': None}
+[0.393s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.394s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.395s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/ironie/HornetXII_sims/src/auv_sims' with build type 'ament_cmake'
+[0.395s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/ironie/HornetXII_sims/src/auv_sims'
+[0.399s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.399s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.399s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.412s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ironie/HornetXII_sims/build/auv_sims': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ironie/assignment3/install/assignment3:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/ironie/HornetXII_sims/build/auv_sims -- -j12 -l12
+[7.644s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ironie/HornetXII_sims/build/auv_sims' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ironie/assignment3/install/assignment3:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/ironie/HornetXII_sims/build/auv_sims -- -j12 -l12
+[7.655s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ironie/HornetXII_sims/build/auv_sims': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ironie/assignment3/install/assignment3:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/ironie/HornetXII_sims/build/auv_sims
+[7.672s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(auv_sims)
+[7.674s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ironie/HornetXII_sims/build/auv_sims' returned '1': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ironie/assignment3/install/assignment3:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/ironie/HornetXII_sims/build/auv_sims
+[7.675s] Level 1:colcon.colcon_core.environment:checking '/home/ironie/HornetXII_sims/install/auv_sims' for CMake module files
+[7.676s] Level 1:colcon.colcon_core.environment:checking '/home/ironie/HornetXII_sims/install/auv_sims' for CMake config files
+[7.676s] Level 1:colcon.colcon_core.environment:checking '/home/ironie/HornetXII_sims/install/auv_sims/lib'
+[7.676s] Level 1:colcon.colcon_core.shell:create_environment_hook('auv_sims', 'ld_library_path_lib')
+[7.676s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ironie/HornetXII_sims/install/auv_sims/share/auv_sims/hook/ld_library_path_lib.ps1'
+[7.677s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ironie/HornetXII_sims/install/auv_sims/share/auv_sims/hook/ld_library_path_lib.dsv'
+[7.677s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ironie/HornetXII_sims/install/auv_sims/share/auv_sims/hook/ld_library_path_lib.sh'
+[7.678s] Level 1:colcon.colcon_core.environment:checking '/home/ironie/HornetXII_sims/install/auv_sims/bin'
+[7.678s] Level 1:colcon.colcon_core.environment:checking '/home/ironie/HornetXII_sims/install/auv_sims/lib/pkgconfig/auv_sims.pc'
+[7.678s] Level 1:colcon.colcon_core.environment:checking '/home/ironie/HornetXII_sims/install/auv_sims/lib/python3.12/site-packages'
+[7.678s] Level 1:colcon.colcon_core.environment:checking '/home/ironie/HornetXII_sims/install/auv_sims/bin'
+[7.679s] INFO:colcon.colcon_core.shell:Creating package script '/home/ironie/HornetXII_sims/install/auv_sims/share/auv_sims/package.ps1'
+[7.679s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/ironie/HornetXII_sims/install/auv_sims/share/auv_sims/package.dsv'
+[7.680s] INFO:colcon.colcon_core.shell:Creating package script '/home/ironie/HornetXII_sims/install/auv_sims/share/auv_sims/package.sh'
+[7.681s] INFO:colcon.colcon_core.shell:Creating package script '/home/ironie/HornetXII_sims/install/auv_sims/share/auv_sims/package.bash'
+[7.681s] INFO:colcon.colcon_core.shell:Creating package script '/home/ironie/HornetXII_sims/install/auv_sims/share/auv_sims/package.zsh'
+[7.682s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/ironie/HornetXII_sims/install/auv_sims/share/colcon-core/packages/auv_sims)
+[7.692s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[7.692s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[7.693s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '1'
+[7.693s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[7.750s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.notify_send': Could not find 'notify-send'
+[7.751s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[7.751s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[7.751s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[7.752s] DEBUG:colcon.colcon_notification.desktop_notification.notify2:Failed to initialize notify2: org.freedesktop.DBus.Error.ServiceUnknown: The name org.freedesktop.Notifications was not provided by any .service files
+[7.752s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[7.752s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/ironie/HornetXII_sims/install/local_setup.ps1'
+[7.753s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/ironie/HornetXII_sims/install/_local_setup_util_ps1.py'
+[7.754s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/ironie/HornetXII_sims/install/setup.ps1'
+[7.755s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/ironie/HornetXII_sims/install/local_setup.sh'
+[7.755s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/ironie/HornetXII_sims/install/_local_setup_util_sh.py'
+[7.756s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/ironie/HornetXII_sims/install/setup.sh'
+[7.757s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/ironie/HornetXII_sims/install/local_setup.bash'
+[7.757s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/ironie/HornetXII_sims/install/setup.bash'
+[7.758s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/ironie/HornetXII_sims/install/local_setup.zsh'
+[7.758s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/ironie/HornetXII_sims/install/setup.zsh'

@@ -1,0 +1,14 @@
+[ 50%] Built target odoRepub
+[100%] Built target thruster_dave_hardware_interface
+-- Install configuration: ""
+-- Execute custom install script
+-- Up-to-date symlink: /home/ironie/HornetXII_sims/install/auv_sims/lib/libthruster_dave_hardware_interface.so
+-- Symlinking: /home/ironie/HornetXII_sims/install/auv_sims/share/auv_sims/config/gz_bridge.yaml
+[31mCMake Error at ament_cmake_symlink_install/ament_cmake_symlink_install.cmake:105 (message):
+  ament_cmake_symlink_install_directory() can't find
+  '/home/ironie/HornetXII_sims/src/auv_sims/description'
+Call Stack (most recent call first):
+  ament_cmake_symlink_install/ament_cmake_symlink_install.cmake:322 (ament_cmake_symlink_install_directory)
+  cmake_install.cmake:46 (include)
+
+[0m

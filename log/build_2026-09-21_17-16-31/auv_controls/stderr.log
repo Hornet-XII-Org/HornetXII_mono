@@ -1,0 +1,24 @@
+[0mCMake Deprecation Warning at /opt/ros/jazzy/share/tl_expected/cmake/tl_expectedConfig.cmake:37 (message):
+  Package 'tl_expected' is deprecated (This package will be removed in ROS 2
+  Lyrical Luth.
+
+        Use tl/expected.hpp from libexpected-dev,
+        or rcpputils/tl_expected/expected.hpp if the system header is not available)
+Call Stack (most recent call first):
+  /opt/ros/jazzy/share/parameter_traits/cmake/ament_cmake_export_dependencies-extras.cmake:21 (find_package)
+  /opt/ros/jazzy/share/parameter_traits/cmake/parameter_traitsConfig.cmake:41 (include)
+  /opt/ros/jazzy/share/controller_manager/cmake/ament_cmake_export_dependencies-extras.cmake:21 (find_package)
+  /opt/ros/jazzy/share/controller_manager/cmake/controller_managerConfig.cmake:41 (include)
+  /opt/ros/jazzy/share/gz_ros2_control/cmake/ament_cmake_export_dependencies-extras.cmake:21 (find_package)
+  /opt/ros/jazzy/share/gz_ros2_control/cmake/gz_ros2_controlConfig.cmake:41 (include)
+  CMakeLists.txt:14 (find_package)
+
+[0m
+[31mCMake Error at /opt/ros/jazzy/share/pluginlib/cmake/pluginlib_export_plugin_description_file.cmake:84 (message):
+  Given plugin description file
+  '/home/ironie/HornetXII_sims/src/auv_controls/thruster_dave_hardware_interface.xml'
+  does not exist
+Call Stack (most recent call first):
+  CMakeLists.txt:59 (pluginlib_export_plugin_description_file)
+
+[0m

@@ -1,1 +1,0 @@
-/home/ironie/HornetXII_sims/build/dave_gz_model_plugins/ament_cmake_environment_hooks/local_setup.sh

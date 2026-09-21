@@ -1,1 +1,0 @@
-ament_cmake_symlink_install_targets("TARGET_FILES" "/home/ironie/HornetXII_sims/build/dave_ros_gz_plugins/libSphericalCoords.so" "/home/ironie/HornetXII_sims/build/dave_ros_gz_plugins/libDVLBridge.so" "TARGETS" "SphericalCoords" "DVLBridge" "DESTINATION" "lib/dave_ros_gz_plugins")

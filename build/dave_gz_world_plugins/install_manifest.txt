@@ -1,9 +1,0 @@
-/home/ironie/HornetXII_sims/install/dave_gz_world_plugins/lib/libdave_gz_world_plugins-msgs.so.VERSION
-/home/ironie/HornetXII_sims/install/dave_gz_world_plugins/lib/libdave_gz_world_plugins-msgs.so
-/home/ironie/HornetXII_sims/install/dave_gz_world_plugins/lib/libOceanCurrentWorldPlugin.so
-/home/ironie/HornetXII_sims/install/dave_gz_world_plugins/lib/libgauss_markov_process.so
-/home/ironie/HornetXII_sims/install/dave_gz_world_plugins/lib/libtidal_oscillation.so
-/home/ironie/HornetXII_sims/install/dave_gz_world_plugins/lib/libdave_gz_world_plugins-msgs.so.VERSION
-/home/ironie/HornetXII_sims/install/dave_gz_world_plugins/lib/libdave_gz_world_plugins-msgs.so
-/home/ironie/HornetXII_sims/install/dave_gz_world_plugins/share/dave_gz_world_plugins/cmake/export_dave_gz_world_pluginsExport.cmake
-/home/ironie/HornetXII_sims/install/dave_gz_world_plugins/share/dave_gz_world_plugins/cmake/export_dave_gz_world_pluginsExport-noconfig.cmake

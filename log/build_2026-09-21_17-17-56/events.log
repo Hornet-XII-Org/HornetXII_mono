@@ -1,0 +1,116 @@
+[0.000000] (-) TimerEvent: {}
+[0.000253] (-) JobUnselected: {'identifier': 'auv_controls'}
+[0.000303] (-) JobUnselected: {'identifier': 'dave_demos'}
+[0.000356] (-) JobUnselected: {'identifier': 'dave_gz_model_plugins'}
+[0.000514] (-) JobUnselected: {'identifier': 'dave_gz_sensor_plugins'}
+[0.000602] (-) JobUnselected: {'identifier': 'dave_gz_world_plugins'}
+[0.000691] (-) JobUnselected: {'identifier': 'dave_interfaces'}
+[0.000742] (-) JobUnselected: {'identifier': 'dave_multibeam_sonar_demo'}
+[0.000756] (-) JobUnselected: {'identifier': 'dave_object_models'}
+[0.000846] (-) JobUnselected: {'identifier': 'dave_robot_models'}
+[0.001224] (-) JobUnselected: {'identifier': 'dave_ros_gz_plugins'}
+[0.001286] (-) JobUnselected: {'identifier': 'dave_sensor_models'}
+[0.001300] (-) JobUnselected: {'identifier': 'dave_worlds'}
+[0.001309] (-) JobUnselected: {'identifier': 'multibeam_sonar'}
+[0.001543] (-) JobUnselected: {'identifier': 'multibeam_sonar_system'}
+[0.001616] (auv_sims) JobQueued: {'identifier': 'auv_sims', 'dependencies': OrderedDict()}
+[0.001636] (auv_sims) JobStarted: {'identifier': 'auv_sims'}
+[0.010227] (auv_sims) JobProgress: {'identifier': 'auv_sims', 'progress': 'cmake'}
+[0.013594] (auv_sims) JobProgress: {'identifier': 'auv_sims', 'progress': 'build'}
+[0.013686] (auv_sims) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/ironie/HornetXII_sims/build/auv_sims', '--', '-j12', '-l12'], 'cwd': '/home/ironie/HornetXII_sims/build/auv_sims', 'env': OrderedDict({'GZ_SIM_SYSTEM_PLUGIN_PATH': '/home/ironie/HornetXII_sims/install/dave_gz_model_plugins/lib/dave_gz_model_plugins/:/home/ironie/HornetXII_sims/install/dave_ros_gz_plugins/lib/dave_ros_gz_plugins/:/home/ironie/HornetXII_sims/install/dave_gz_world_plugins/lib/dave_gz_world_plugins/:/home/ironie/HornetXII_sims/install/dave_gz_sensor_plugins/lib/dave_gz_sensor_plugins/:/opt/ros/jazzy/lib', 'LESSOPEN': '| /usr/bin/lesspipe %s', 'GZ_SIM_RESOURCE_PATH': '/home/ironie/HornetXII_sims/install/dave_worlds/share/dave_worlds:/home/ironie/HornetXII_sims/install/dave_sensor_models/share/dave_sensor_models:/home/ironie/HornetXII_sims/install/dave_robot_models/share/dave_robot_models:/home/ironie/HornetXII_sims/install/dave_object_models/share/dave_object_models:/home/ironie/dave_ws/install/dave_worlds/share/dave_worlds:/home/ironie/dave_ws/install/dave_sensor_models/share/dave_sensor_models:/home/ironie/dave_ws/install/dave_robot_models/share/dave_robot_models:/home/ironie/dave_ws/install/dave_object_models/share/dave_object_models:/opt/ros/jazzy/share', 'USER': 'ironie', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/share/gz:/opt/ros/jazzy/opt/sdformat_vendor/share/gz:/opt/ros/jazzy/opt/gz_gui_vendor/share/gz:/opt/ros/jazzy/opt/gz_transport_vendor/share/gz:/opt/ros/jazzy/opt/gz_rendering_vendor/share/gz:/opt/ros/jazzy/opt/gz_plugin_vendor/share/gz:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/share/gz:/opt/ros/jazzy/opt/gz_msgs_vendor/share/gz:/opt/ros/jazzy/opt/gz_common_vendor/share/gz', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/ironie/HornetXII_sims/install/dave_ros_gz_plugins/lib:/home/ironie/HornetXII_sims/install/dave_gz_world_plugins/lib:/home/ironie/HornetXII_sims/install/dave_interfaces/lib:/home/ironie/HornetXII_sims/install/auv_controls/lib:/home/ironie/dave_ws/install/dave_interfaces/lib:/home/ironie/dave_ws/install/auv_controls/lib:/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/ironie', 'OLDPWD': '/home/ironie/HornetXII_sims/src', 'ROS_PYTHON_VERSION': '3', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'WSL_DISTRO_NAME': 'Ubuntu', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'WAYLAND_DISPLAY': 'wayland-0', 'COLCON_PREFIX_PATH': '/home/ironie/HornetXII_sims/install:/home/ironie/testGazebo/install:/home/ironie/assignment3/install:/home/ironie/dave_ws/install', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'ironie', 'NAME': 'DESKTOP-8QG6CM3', 'WSL_INTEROP': '/run/WSL/418_interop', 'PULSE_SERVER': 'unix:/mnt/wslg/PulseServer', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'TERM': 'xterm-256color', 'PATH': '/opt/ros/jazzy/opt/gz_msgs_vendor/bin:/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin:/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Program Files/WindowsApps/MicrosoftCorporationII.WindowsSubsystemForLinux_2.9.10.0_x64__8wekyb3d8bbwe:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Program Files/Common Files/Oracle/Java/javapath:/mnt/c/Windows/system32:/mnt/c/Windows:/mnt/c/Windows/System32/Wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0/:/mnt/c/Windows/System32/OpenSSH/:/mnt/c/Program Files/Git/cmd:/mnt/c/Program Files/Microsoft SQL Server/150/Tools/Binn/:/mnt/c/Program Files/dotnet/:/mnt/c/Program Files/Docker/Docker/resources/bin:/mnt/c/ProgramData/DockerDesktop/version-bin:/mnt/c/Gradle/gradle-7.5.1/bin:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/d/Programs/Putty/:/mnt/c/Program Files/CMake/bin:/mnt/c/Program Files/nodejs/:/mnt/c/Program Files/WSL/:/mnt/d/Programs/Mathworks/bin:/mnt/c/Users/Leong Yi Wei/AppData/Local/Programs/Python/Python39/Scripts/:/mnt/c/Users/Leong Yi Wei/AppData/Local/Programs/Python/Python39/:/mnt/c/Users/Leong Yi Wei/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/Leong Yi Wei/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Users/Leong Yi Wei/.dotnet/tools:/mnt/c/Program Files (x86)/Nmap:/mnt/c/Program Files/Java/jre1.8.0_341/bin:/mnt/c/Users/Leong Yi Wei/anaconda3/condabin:/mnt/c/Users/Leong Yi Wei/anaconda3/Scripts/conda:/mnt/c/Users/Leong Yi Wei/anaconda3/Library/bin/c:/mnt/c/Program Files/Git/cmd:/mnt/c/Program Files/Git/bin/:/mnt/c/Program Files/Git:/mnt/c/Program Files/CMake/bin:/mnt/c/Users/Leong Yi Wei/AppData/Roaming/npm:/mnt/d/Programs/AndroidSDK/platform-tools:/snap/bin', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'AMENT_PREFIX_PATH': '/home/ironie/HornetXII_sims/install/multibeam_sonar_system:/home/ironie/HornetXII_sims/install/multibeam_sonar:/home/ironie/HornetXII_sims/install/dave_worlds:/home/ironie/HornetXII_sims/install/dave_sensor_models:/home/ironie/HornetXII_sims/install/dave_gz_model_plugins:/home/ironie/HornetXII_sims/install/dave_ros_gz_plugins:/home/ironie/HornetXII_sims/install/dave_robot_models:/home/ironie/HornetXII_sims/install/dave_object_models:/home/ironie/HornetXII_sims/install/dave_multibeam_sonar_demo:/home/ironie/HornetXII_sims/install/dave_gz_world_plugins:/home/ironie/HornetXII_sims/install/dave_gz_sensor_plugins:/home/ironie/HornetXII_sims/install/dave_interfaces:/home/ironie/HornetXII_sims/install/dave_demos:/home/ironie/HornetXII_sims/install/auv_controls:/home/ironie/dave_ws/install/multibeam_sonar_system:/home/ironie/dave_ws/install/dave_worlds:/home/ironie/dave_ws/install/dave_sensor_models:/home/ironie/dave_ws/install/dave_robot_models:/home/ironie/dave_ws/install/dave_object_models:/home/ironie/dave_ws/install/dave_multibeam_sonar_demo:/home/ironie/dave_ws/install/dave_interfaces:/home/ironie/dave_ws/install/dave_demos:/home/ironie/dave_ws/install/auv_controls:/home/ironie/testGazebo/install/simulator:/home/ironie/assignment3/install/assignment3:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'PWD': '/home/ironie/HornetXII_sims/build/auv_sims', 'XDG_DATA_DIRS': '/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/ironie/HornetXII_sims/install/dave_interfaces/lib/python3.12/site-packages:/home/ironie/dave_ws/install/dave_interfaces/lib/python3.12/site-packages:/home/ironie/assignment3/install/assignment3/lib/python3.12/site-packages:/opt/ros/jazzy/opt/gz_sim_vendor/lib/python:/opt/ros/jazzy/opt/sdformat_vendor/lib/python:/opt/ros/jazzy/opt/gz_transport_vendor/lib/python:/opt/ros/jazzy/opt/gz_msgs_vendor/lib/python:/opt/ros/jazzy/opt/gz_math_vendor/lib/python:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'WSL2_GUI_APPS_ENABLED': '1', 'HOSTTYPE': 'x86_64', 'CMAKE_PREFIX_PATH': '/home/ironie/HornetXII_sims/install/multibeam_sonar_system:/home/ironie/HornetXII_sims/install/multibeam_sonar:/home/ironie/HornetXII_sims/install/dave_worlds:/home/ironie/HornetXII_sims/install/dave_sensor_models:/home/ironie/HornetXII_sims/install/dave_gz_model_plugins:/home/ironie/HornetXII_sims/install/dave_ros_gz_plugins:/home/ironie/HornetXII_sims/install/dave_robot_models:/home/ironie/HornetXII_sims/install/dave_object_models:/home/ironie/HornetXII_sims/install/dave_multibeam_sonar_demo:/home/ironie/HornetXII_sims/install/dave_gz_world_plugins:/home/ironie/HornetXII_sims/install/dave_gz_sensor_plugins:/home/ironie/HornetXII_sims/install/dave_interfaces:/home/ironie/HornetXII_sims/install/dave_demos:/home/ironie/HornetXII_sims/install/auv_controls:/home/ironie/dave_ws/install/multibeam_sonar_system:/home/ironie/dave_ws/install/dave_worlds:/home/ironie/dave_ws/install/dave_sensor_models:/home/ironie/dave_ws/install/dave_robot_models:/home/ironie/dave_ws/install/dave_object_models:/home/ironie/dave_ws/install/dave_multibeam_sonar_demo:/home/ironie/dave_ws/install/dave_interfaces:/home/ironie/dave_ws/install/dave_demos:/home/ironie/dave_ws/install/auv_controls:/home/ironie/testGazebo/install/simulator:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/home/ironie/assignment3/install/assignment3:/opt/ros/jazzy', 'WSLENV': ''}), 'shell': False}
+[0.065152] (auv_sims) StdoutLine: {'line': b'[ 25%] \x1b[32mBuilding CXX object CMakeFiles/thruster_dave_hardware_interface.dir/src/thruster_dave_hardware_interface.cpp.o\x1b[0m\n'}
+[0.065673] (auv_sims) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/odoRepub.dir/src/odo_republisher.cpp.o\x1b[0m\n'}
+[0.087054] (auv_sims) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ironie/HornetXII_sims/src/auv_sims/src/thruster_dave_hardware_interface.cpp:1:10:\x1b[m\x1b[K \x1b[01;31m\x1b[Kfatal error: \x1b[m\x1b[Kthruster_dave_hardware_interface/thruster_dave_hardware_interface.hpp: No such file or directory\n'}
+[0.087257] (auv_sims) StderrLine: {'line': b'    1 | #include \x1b[01;31m\x1b[K"thruster_dave_hardware_interface/thruster_dave_hardware_interface.hpp"\x1b[m\x1b[K\n'}
+[0.087358] (auv_sims) StderrLine: {'line': b'      |          \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[0.087419] (auv_sims) StderrLine: {'line': b'compilation terminated.\n'}
+[0.087763] (auv_sims) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/thruster_dave_hardware_interface.dir/build.make:76: CMakeFiles/thruster_dave_hardware_interface.dir/src/thruster_dave_hardware_interface.cpp.o] Error 1\n'}
+[0.088028] (auv_sims) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:139: CMakeFiles/thruster_dave_hardware_interface.dir/all] Error 2\n'}
+[0.088165] (auv_sims) StderrLine: {'line': b'gmake[1]: *** Waiting for unfinished jobs....\n'}
+[0.099218] (-) TimerEvent: {}
+[0.199966] (-) TimerEvent: {}
+[0.303676] (-) TimerEvent: {}
+[0.407406] (-) TimerEvent: {}
+[0.509211] (-) TimerEvent: {}
+[0.612863] (-) TimerEvent: {}
+[0.716627] (-) TimerEvent: {}
+[0.820627] (-) TimerEvent: {}
+[0.924608] (-) TimerEvent: {}
+[1.028007] (-) TimerEvent: {}
+[1.131948] (-) TimerEvent: {}
+[1.234366] (-) TimerEvent: {}
+[1.338271] (-) TimerEvent: {}
+[1.441375] (-) TimerEvent: {}
+[1.544966] (-) TimerEvent: {}
+[1.648740] (-) TimerEvent: {}
+[1.749286] (-) TimerEvent: {}
+[1.849679] (-) TimerEvent: {}
+[1.951144] (-) TimerEvent: {}
+[2.054680] (-) TimerEvent: {}
+[2.155703] (-) TimerEvent: {}
+[2.259241] (-) TimerEvent: {}
+[2.362895] (-) TimerEvent: {}
+[2.463592] (-) TimerEvent: {}
+[2.567158] (-) TimerEvent: {}
+[2.671055] (-) TimerEvent: {}
+[2.773924] (-) TimerEvent: {}
+[2.877794] (-) TimerEvent: {}
+[2.981449] (-) TimerEvent: {}
+[3.085099] (-) TimerEvent: {}
+[3.188908] (-) TimerEvent: {}
+[3.292468] (-) TimerEvent: {}
+[3.396239] (-) TimerEvent: {}
+[3.499947] (-) TimerEvent: {}
+[3.603615] (-) TimerEvent: {}
+[3.707290] (-) TimerEvent: {}
+[3.807791] (-) TimerEvent: {}
+[3.911540] (-) TimerEvent: {}
+[4.015405] (-) TimerEvent: {}
+[4.119312] (-) TimerEvent: {}
+[4.221072] (-) TimerEvent: {}
+[4.324847] (-) TimerEvent: {}
+[4.428793] (-) TimerEvent: {}
+[4.532739] (-) TimerEvent: {}
+[4.637940] (-) TimerEvent: {}
+[4.740578] (-) TimerEvent: {}
+[4.841014] (-) TimerEvent: {}
+[4.944156] (-) TimerEvent: {}
+[5.049232] (-) TimerEvent: {}
+[5.154450] (-) TimerEvent: {}
+[5.259626] (-) TimerEvent: {}
+[5.364855] (-) TimerEvent: {}
+[5.469924] (-) TimerEvent: {}
+[5.575047] (-) TimerEvent: {}
+[5.680235] (-) TimerEvent: {}
+[5.784932] (-) TimerEvent: {}
+[5.885348] (-) TimerEvent: {}
+[5.987341] (-) TimerEvent: {}
+[6.092589] (-) TimerEvent: {}
+[6.197802] (-) TimerEvent: {}
+[6.300230] (-) TimerEvent: {}
+[6.405365] (-) TimerEvent: {}
+[6.509508] (-) TimerEvent: {}
+[6.614711] (-) TimerEvent: {}
+[6.716150] (-) TimerEvent: {}
+[6.821207] (-) TimerEvent: {}
+[6.923217] (-) TimerEvent: {}
+[7.028471] (-) TimerEvent: {}
+[7.133533] (-) TimerEvent: {}
+[7.238690] (-) TimerEvent: {}
+[7.343637] (-) TimerEvent: {}
+[7.449545] (-) TimerEvent: {}
+[7.556037] (-) TimerEvent: {}
+[7.662530] (-) TimerEvent: {}
+[7.766829] (-) TimerEvent: {}
+[7.873421] (-) TimerEvent: {}
+[7.915741] (auv_sims) StdoutLine: {'line': b'[ 75%] \x1b[32m\x1b[1mLinking CXX executable odoRepub\x1b[0m\n'}
+[7.977012] (-) TimerEvent: {}
+[8.083564] (-) TimerEvent: {}
+[8.190255] (-) TimerEvent: {}
+[8.291166] (-) TimerEvent: {}
+[8.397815] (-) TimerEvent: {}
+[8.407238] (auv_sims) StdoutLine: {'line': b'[ 75%] Built target odoRepub\n'}
+[8.408548] (auv_sims) StderrLine: {'line': b'gmake: *** [Makefile:146: all] Error 2\n'}
+[8.410555] (auv_sims) CommandEnded: {'returncode': 2}
+[8.420100] (auv_sims) JobEnded: {'identifier': 'auv_sims', 'rc': 2}
+[8.430988] (-) EventReactorShutdown: {}

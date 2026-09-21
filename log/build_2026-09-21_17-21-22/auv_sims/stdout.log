@@ -1,0 +1,6 @@
+[ 50%] Built target odoRepub
+[100%] Built target thruster_dave_hardware_interface
+-- Install configuration: ""
+-- Execute custom install script
+-- Up-to-date symlink: /home/ironie/HornetXII_sims/install/auv_sims/lib/libthruster_dave_hardware_interface.so
+-- Up-to-date symlink: /home/ironie/HornetXII_sims/install/auv_sims/share/auv_sims/config/gz_bridge.yaml

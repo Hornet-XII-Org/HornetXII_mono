@@ -1,0 +1,36 @@
+-- The C compiler identification is GNU 13.3.0
+-- The CXX compiler identification is GNU 13.3.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found ament_cmake: 2.5.6 (/opt/ros/jazzy/share/ament_cmake/cmake)
+-- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+-- Override CMake install command with custom implementation using symlinks instead of copying resources
+-- CUDA Toolkit not found: Skipping CUDA-specific targets
+-- Configuring done (4.7s)
+-- Generating done (0.0s)
+-- Build files have been written to: /home/ironie/HornetXII_sims/build/multibeam_sonar_system
+-- Install configuration: ""
+-- Execute custom install script
+-- Symlinking: /home/ironie/HornetXII_sims/install/multibeam_sonar_system/share/ament_index/resource_index/package_run_dependencies/multibeam_sonar_system
+-- Symlinking: /home/ironie/HornetXII_sims/install/multibeam_sonar_system/share/ament_index/resource_index/parent_prefix_path/multibeam_sonar_system
+-- Symlinking: /home/ironie/HornetXII_sims/install/multibeam_sonar_system/share/multibeam_sonar_system/environment/ament_prefix_path.sh
+-- Symlinking: /home/ironie/HornetXII_sims/install/multibeam_sonar_system/share/multibeam_sonar_system/environment/ament_prefix_path.dsv
+-- Symlinking: /home/ironie/HornetXII_sims/install/multibeam_sonar_system/share/multibeam_sonar_system/environment/path.sh
+-- Symlinking: /home/ironie/HornetXII_sims/install/multibeam_sonar_system/share/multibeam_sonar_system/environment/path.dsv
+-- Symlinking: /home/ironie/HornetXII_sims/install/multibeam_sonar_system/share/multibeam_sonar_system/local_setup.bash
+-- Symlinking: /home/ironie/HornetXII_sims/install/multibeam_sonar_system/share/multibeam_sonar_system/local_setup.sh
+-- Symlinking: /home/ironie/HornetXII_sims/install/multibeam_sonar_system/share/multibeam_sonar_system/local_setup.zsh
+-- Symlinking: /home/ironie/HornetXII_sims/install/multibeam_sonar_system/share/multibeam_sonar_system/local_setup.dsv
+-- Symlinking: /home/ironie/HornetXII_sims/install/multibeam_sonar_system/share/multibeam_sonar_system/package.dsv
+-- Symlinking: /home/ironie/HornetXII_sims/install/multibeam_sonar_system/share/ament_index/resource_index/packages/multibeam_sonar_system
+-- Symlinking: /home/ironie/HornetXII_sims/install/multibeam_sonar_system/share/multibeam_sonar_system/cmake/multibeam_sonar_systemConfig.cmake
+-- Symlinking: /home/ironie/HornetXII_sims/install/multibeam_sonar_system/share/multibeam_sonar_system/cmake/multibeam_sonar_systemConfig-version.cmake
+-- Symlinking: /home/ironie/HornetXII_sims/install/multibeam_sonar_system/share/multibeam_sonar_system/package.xml

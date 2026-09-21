@@ -1,1 +1,0 @@
-/home/ironie/HornetXII_sims/build/dave_interfaces/rosidl_generator_c/dave_interfaces/msg/detail/usbl_response__struct.h
