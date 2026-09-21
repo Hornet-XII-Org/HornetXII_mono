@@ -1,0 +1,36 @@
+{
+  "type_description_msg": {
+    "type_description": {
+      "type_name": "dave_interfaces/msg/DVLTarget",
+      "fields": [
+        {
+          "name": "type",
+          "type": {
+            "type_id": 17,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        },
+        {
+          "name": "range",
+          "type": {
+            "type_id": 11,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        }
+      ]
+    },
+    "referenced_type_descriptions": []
+  },
+  "type_hashes": [
+    {
+      "type_name": "dave_interfaces/msg/DVLTarget",
+      "hash_string": "RIHS01_524a5c93ef0dca7bd7ef00d156e87156bd462772deba76562fc7a82561cfc835"
+    }
+  ]
+}

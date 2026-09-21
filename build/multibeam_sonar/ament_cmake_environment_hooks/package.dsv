@@ -1,0 +1,4 @@
+source;share/multibeam_sonar/local_setup.bash
+source;share/multibeam_sonar/local_setup.dsv
+source;share/multibeam_sonar/local_setup.sh
+source;share/multibeam_sonar/local_setup.zsh

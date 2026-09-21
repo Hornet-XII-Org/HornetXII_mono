@@ -1,0 +1,8 @@
+source;share/dave_multibeam_sonar_demo/hook/cmake_prefix_path.ps1
+source;share/dave_multibeam_sonar_demo/hook/cmake_prefix_path.dsv
+source;share/dave_multibeam_sonar_demo/hook/cmake_prefix_path.sh
+source;share/dave_multibeam_sonar_demo/local_setup.bash
+source;share/dave_multibeam_sonar_demo/local_setup.dsv
+source;share/dave_multibeam_sonar_demo/local_setup.ps1
+source;share/dave_multibeam_sonar_demo/local_setup.sh
+source;share/dave_multibeam_sonar_demo/local_setup.zsh

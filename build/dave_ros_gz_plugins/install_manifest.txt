@@ -1,0 +1,4 @@
+/home/ironie/HornetXII_sims/install/dave_ros_gz_plugins/lib/libSphericalCoords.so
+/home/ironie/HornetXII_sims/install/dave_ros_gz_plugins/lib/libOceanCurrentPlugin.so
+/home/ironie/HornetXII_sims/install/dave_ros_gz_plugins/share/dave_ros_gz_plugins/cmake/export_dave_ros_gz_pluginsExport.cmake
+/home/ironie/HornetXII_sims/install/dave_ros_gz_plugins/share/dave_ros_gz_plugins/cmake/export_dave_ros_gz_pluginsExport-noconfig.cmake

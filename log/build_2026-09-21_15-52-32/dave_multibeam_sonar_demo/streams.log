@@ -1,0 +1,42 @@
+[0.049s] Invoking command in '/home/ironie/HornetXII_sims/build/dave_multibeam_sonar_demo': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ironie/assignment3/install/assignment3:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/ironie/HornetXII_sims/src/dave/gazebo/dave_gz_multibeam_sonar/multibeam_sonar_demo -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/ironie/HornetXII_sims/install/dave_multibeam_sonar_demo
+[0.290s] -- The C compiler identification is GNU 13.3.0
+[1.107s] -- The CXX compiler identification is GNU 13.3.0
+[1.846s] -- Detecting C compiler ABI info
+[2.135s] -- Detecting C compiler ABI info - done
+[2.146s] -- Check for working C compiler: /usr/bin/cc - skipped
+[2.147s] -- Detecting C compile features
+[2.147s] -- Detecting C compile features - done
+[2.230s] -- Detecting CXX compiler ABI info
+[2.509s] -- Detecting CXX compiler ABI info - done
+[2.522s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[2.522s] -- Detecting CXX compile features
+[2.523s] -- Detecting CXX compile features - done
+[2.528s] -- Found ament_cmake: 2.5.6 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[2.791s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[2.914s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[3.989s] -- CUDA Toolkit not found: Skipping CUDA-specific targets
+[4.117s] -- Configuring done (4.1s)
+[4.121s] -- Generating done (0.0s)
+[4.124s] -- Build files have been written to: /home/ironie/HornetXII_sims/build/dave_multibeam_sonar_demo
+[4.131s] Invoked command in '/home/ironie/HornetXII_sims/build/dave_multibeam_sonar_demo' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ironie/assignment3/install/assignment3:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/ironie/HornetXII_sims/src/dave/gazebo/dave_gz_multibeam_sonar/multibeam_sonar_demo -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/ironie/HornetXII_sims/install/dave_multibeam_sonar_demo
+[4.132s] Invoking command in '/home/ironie/HornetXII_sims/build/dave_multibeam_sonar_demo': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ironie/assignment3/install/assignment3:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/ironie/HornetXII_sims/build/dave_multibeam_sonar_demo -- -j12 -l12
+[4.168s] Invoked command in '/home/ironie/HornetXII_sims/build/dave_multibeam_sonar_demo' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ironie/assignment3/install/assignment3:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/ironie/HornetXII_sims/build/dave_multibeam_sonar_demo -- -j12 -l12
+[4.170s] Invoking command in '/home/ironie/HornetXII_sims/build/dave_multibeam_sonar_demo': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ironie/assignment3/install/assignment3:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/ironie/HornetXII_sims/build/dave_multibeam_sonar_demo
+[4.178s] -- Install configuration: ""
+[4.178s] -- Execute custom install script
+[4.179s] -- Symlinking: /home/ironie/HornetXII_sims/install/dave_multibeam_sonar_demo/share/ament_index/resource_index/package_run_dependencies/dave_multibeam_sonar_demo
+[4.189s] -- Symlinking: /home/ironie/HornetXII_sims/install/dave_multibeam_sonar_demo/share/ament_index/resource_index/parent_prefix_path/dave_multibeam_sonar_demo
+[4.199s] -- Symlinking: /home/ironie/HornetXII_sims/install/dave_multibeam_sonar_demo/share/dave_multibeam_sonar_demo/environment/ament_prefix_path.sh
+[4.208s] -- Symlinking: /home/ironie/HornetXII_sims/install/dave_multibeam_sonar_demo/share/dave_multibeam_sonar_demo/environment/ament_prefix_path.dsv
+[4.217s] -- Symlinking: /home/ironie/HornetXII_sims/install/dave_multibeam_sonar_demo/share/dave_multibeam_sonar_demo/environment/path.sh
+[4.227s] -- Symlinking: /home/ironie/HornetXII_sims/install/dave_multibeam_sonar_demo/share/dave_multibeam_sonar_demo/environment/path.dsv
+[4.236s] -- Symlinking: /home/ironie/HornetXII_sims/install/dave_multibeam_sonar_demo/share/dave_multibeam_sonar_demo/local_setup.bash
+[4.245s] -- Symlinking: /home/ironie/HornetXII_sims/install/dave_multibeam_sonar_demo/share/dave_multibeam_sonar_demo/local_setup.sh
+[4.253s] -- Symlinking: /home/ironie/HornetXII_sims/install/dave_multibeam_sonar_demo/share/dave_multibeam_sonar_demo/local_setup.zsh
+[4.264s] -- Symlinking: /home/ironie/HornetXII_sims/install/dave_multibeam_sonar_demo/share/dave_multibeam_sonar_demo/local_setup.dsv
+[4.273s] -- Symlinking: /home/ironie/HornetXII_sims/install/dave_multibeam_sonar_demo/share/dave_multibeam_sonar_demo/package.dsv
+[4.281s] -- Symlinking: /home/ironie/HornetXII_sims/install/dave_multibeam_sonar_demo/share/ament_index/resource_index/packages/dave_multibeam_sonar_demo
+[4.290s] -- Symlinking: /home/ironie/HornetXII_sims/install/dave_multibeam_sonar_demo/share/dave_multibeam_sonar_demo/cmake/dave_multibeam_sonar_demoConfig.cmake
+[4.298s] -- Symlinking: /home/ironie/HornetXII_sims/install/dave_multibeam_sonar_demo/share/dave_multibeam_sonar_demo/cmake/dave_multibeam_sonar_demoConfig-version.cmake
+[4.305s] -- Symlinking: /home/ironie/HornetXII_sims/install/dave_multibeam_sonar_demo/share/dave_multibeam_sonar_demo/package.xml
+[4.328s] Invoked command in '/home/ironie/HornetXII_sims/build/dave_multibeam_sonar_demo' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ironie/assignment3/install/assignment3:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/ironie/HornetXII_sims/build/dave_multibeam_sonar_demo

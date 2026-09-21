@@ -1,0 +1,8 @@
+<library path="thruster_dave_hardware_interface">
+  <class
+    name="thruster_dave_hardware_interface/ThrusterDaveHardwareInterface"
+    type="thruster_dave_hardware_interface::ThrusterDaveHardwareInterface"
+    base_class_type="gz_ros2_control::GazeboSimSystemInterface">
+    <description>DAVE thruster effort hardware interface</description>
+  </class>
+</library>

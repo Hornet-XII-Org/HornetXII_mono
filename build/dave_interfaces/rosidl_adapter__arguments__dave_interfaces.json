@@ -1,0 +1,23 @@
+{
+  "package_name": "dave_interfaces",
+  "non_idl_tuples": [
+    "/home/ironie/HornetXII_sims/src/dave/dave_interfaces:msg/UsblCommand.msg",
+    "/home/ironie/HornetXII_sims/src/dave/dave_interfaces:msg/UsblResponse.msg",
+    "/home/ironie/HornetXII_sims/src/dave/dave_interfaces:msg/Location.msg",
+    "/home/ironie/HornetXII_sims/src/dave/dave_interfaces:msg/DVL.msg",
+    "/home/ironie/HornetXII_sims/src/dave/dave_interfaces:msg/DVLBeam.msg",
+    "/home/ironie/HornetXII_sims/src/dave/dave_interfaces:msg/DVLTarget.msg",
+    "/home/ironie/HornetXII_sims/src/dave/dave_interfaces:msg/StratifiedCurrentVelocity.msg",
+    "/home/ironie/HornetXII_sims/src/dave/dave_interfaces:msg/StratifiedCurrentDatabase.msg",
+    "/home/ironie/HornetXII_sims/src/dave/dave_interfaces:srv/SetOriginSphericalCoord.srv",
+    "/home/ironie/HornetXII_sims/src/dave/dave_interfaces:srv/GetOriginSphericalCoord.srv",
+    "/home/ironie/HornetXII_sims/src/dave/dave_interfaces:srv/TransformToSphericalCoord.srv",
+    "/home/ironie/HornetXII_sims/src/dave/dave_interfaces:srv/TransformFromSphericalCoord.srv",
+    "/home/ironie/HornetXII_sims/src/dave/dave_interfaces:srv/GetCurrentModel.srv",
+    "/home/ironie/HornetXII_sims/src/dave/dave_interfaces:srv/SetCurrentModel.srv",
+    "/home/ironie/HornetXII_sims/src/dave/dave_interfaces:srv/SetCurrentDirection.srv",
+    "/home/ironie/HornetXII_sims/src/dave/dave_interfaces:srv/SetCurrentVelocity.srv",
+    "/home/ironie/HornetXII_sims/src/dave/dave_interfaces:srv/SetStratifiedCurrentVelocity.srv",
+    "/home/ironie/HornetXII_sims/src/dave/dave_interfaces:srv/SetStratifiedCurrentDirection.srv"
+  ]
+}

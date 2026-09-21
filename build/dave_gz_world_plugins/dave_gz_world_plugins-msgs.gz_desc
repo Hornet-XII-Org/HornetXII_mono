@@ -1,0 +1,30 @@
+
+n
+gz/msgs/time.protogz.msgs",
+Time
+sec (Rsec
+nsec (RnsecB
+com.gz.msgsB
+TimeProtosbproto3
+à
+gz/msgs/header.protogz.msgsgz/msgs/time.proto"…
+Header#
+stamp (2.gz.msgs.TimeRstamp'
+data (2.gz.msgs.Header.MapRdata-
+Map
+key (	Rkey
+value (	RvalueB
+com.gz.msgsBHeaderProtosbproto3
+½
+gz/msgs/vector3d.protogz.msgsgz/msgs/header.proto"]
+Vector3d'
+header (2.gz.msgs.HeaderRheader
+x (Rx
+y (Ry
+z (RzB
+com.gz.msgsBVector3dProtosbproto3
+ä
+?dave_gz_world_plugins_msgs/msgs/StratifiedCurrentVelocity.protodave_gz_world_plugins_msgs.msgsgz/msgs/vector3d.proto"`
+StratifiedCurrentVelocity-
+velocity (2.gz.msgs.Vector3dRvelocity
+depth (Rdepthbproto3

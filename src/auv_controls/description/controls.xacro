@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+    <ros2_control name="simCommandToTopic" type="system">
+        <hardware>
+            <plugin>thruster_dave_hardware_interface/ThrusterDaveHardwareInterface</plugin>
+            <param name="thrust_topic">/auv_controls/thruster/cmd_thrust</param>
+            <param name="min_thrust">-30.0</param>
+            <param name="max_thrust">30.0</param>
+        </hardware>
+
+        <joint name="thruster_joint">            
+            <command_interface name="effort"/>
+        </joint>            
+    </ros2_control>
+
+
+    <gazebo>
+        <plugin name="gz_ros2_control::GazeboSimROS2ControlPlugin" filename="libgz_ros2_control-system.so">
+            <parameters>$(find auv_controls)/config/my_controllers.yaml</parameters>
+        </plugin>
+
+        <plugin name="gz::sim::systems::PosePublisher" filename="gz-sim-pose-publisher-system">
+            <publish_model_pose>true</publish_model_pose>
+            <publish_link_pose>false</publish_link_pose>
+            <update_frequency>50</update_frequency>
+            <topic>/bot/pose</topic>
+        </plugin>
+            
+        <!-- control topics are inside gazebo, which are then linked to ROS via gz_bridge -->
+        <plugin name="gz::sim::systems::Thruster" filename="gz-sim-thruster-system">
+            <namespace>auv_controls</namespace>            
+            <joint_name>thruster_joint</joint_name>            
+            <topic>thruster/cmd_thrust</topic>
+            <fluid_density>1000.0</fluid_density>
+            <thrust_coefficient>0.00031</thrust_coefficient>            
+            <use_angvel_cmd>false</use_angvel_cmd>
+
+            <min_thrust_cmd>-30</min_thrust_cmd>
+            <max_thrust_cmd>30</max_thrust_cmd>
+        </plugin>
+    </gazebo>
+</robot>

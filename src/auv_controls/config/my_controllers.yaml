@@ -1,0 +1,48 @@
+controller_manager:
+  ros__parameters:
+    update_rate: 30
+    use_sim_time: true
+
+    pid_controller:
+      type: pid_controller/PidController
+
+    # thruster_test_controller:
+    #   type: forward_command_controller/ForwardCommandController
+
+pid_controller:
+  ros__parameters:
+    dof_names:
+      - thruster_joint
+
+    command_interface: effort
+
+    reference_and_state_interfaces:
+      - position
+    
+    use_external_measured_states: true
+    set_current_state_as_first_setpoint: false
+
+    gains:
+      thruster_joint:
+        p: 20.0
+        i: 0.0
+        d: 10.0
+
+        # # Maximum commanded velocity
+        # u_clamp_min: -0.2
+        # u_clamp_max: 0.2
+
+        # Prevent excessive integral accumulation
+        i_clamp_min: -0.1
+        i_clamp_max: 0.1
+
+        antiwindup_strategy: conditional_integration
+
+  
+
+thruster_test_controller:
+  ros__parameters:
+    joints:
+      - thruster_joint
+    interface_name: effort
+

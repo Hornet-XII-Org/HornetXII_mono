@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "dave_interfaces__rs",
+		"source" : "/home/ironie/HornetXII_sims/build/dave_interfaces/dave_interfaces__rs"
+	}
+}

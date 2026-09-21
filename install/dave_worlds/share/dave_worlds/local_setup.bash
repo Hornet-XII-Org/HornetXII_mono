@@ -1,0 +1,1 @@
+/home/ironie/HornetXII_sims/build/dave_worlds/ament_cmake_environment_hooks/local_setup.bash

@@ -1,0 +1,24 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from dave_interfaces/msg/StratifiedCurrentVelocity.msg
+// generated code does not contain a copyright notice
+
+#include "geometry_msgs/msg/Vector3.idl"
+#include "std_msgs/msg/Header.idl"
+
+module dave_interfaces {
+  module msg {
+    @verbatim (language="comment", text=
+      "Publishes depths and velocities based on the database contents")
+    struct StratifiedCurrentVelocity {
+      std_msgs::msg::Header header;
+
+      @verbatim (language="comment", text=
+        "Depths")
+      sequence<float> depths;
+
+      @verbatim (language="comment", text=
+        "Velocities")
+      sequence<geometry_msgs::msg::Vector3> velocities;
+    };
+  };
+};

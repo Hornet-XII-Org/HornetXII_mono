@@ -1,0 +1,332 @@
+[0.345s] Invoking command in '/home/ironie/HornetXII_sims/build/dave_gz_model_plugins': AMENT_PREFIX_PATH=/home/ironie/HornetXII_sims/install/dave_ros_gz_plugins:/home/ironie/HornetXII_sims/install/dave_gz_world_plugins:/home/ironie/HornetXII_sims/install/dave_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/ironie/HornetXII_sims/install/dave_ros_gz_plugins:/home/ironie/HornetXII_sims/install/dave_gz_world_plugins:/home/ironie/HornetXII_sims/install/dave_interfaces:/home/ironie/dave_ws/install/multibeam_sonar_system:/home/ironie/dave_ws/install/dave_worlds:/home/ironie/dave_ws/install/dave_sensor_models:/home/ironie/dave_ws/install/dave_robot_models:/home/ironie/dave_ws/install/dave_object_models:/home/ironie/dave_ws/install/dave_multibeam_sonar_demo:/home/ironie/dave_ws/install/dave_interfaces:/home/ironie/dave_ws/install/dave_demos:/home/ironie/dave_ws/install/auv_controls:/home/ironie/testGazebo/install/simulator:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/home/ironie/assignment3/install/assignment3:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/ironie/HornetXII_sims/install/dave_ros_gz_plugins/lib:/home/ironie/HornetXII_sims/install/dave_gz_world_plugins/lib:/home/ironie/HornetXII_sims/install/dave_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/ironie/HornetXII_sims/install/dave_interfaces/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake /home/ironie/HornetXII_sims/src/dave/gazebo/dave_gz_model_plugins -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/ironie/HornetXII_sims/install/dave_gz_model_plugins
+[0.490s] -- The C compiler identification is GNU 13.3.0
+[1.210s] -- The CXX compiler identification is GNU 13.3.0
+[1.937s] -- Detecting C compiler ABI info
+[2.248s] -- Detecting C compiler ABI info - done
+[2.257s] -- Check for working C compiler: /usr/bin/cc - skipped
+[2.257s] -- Detecting C compile features
+[2.258s] -- Detecting C compile features - done
+[2.409s] -- Detecting CXX compiler ABI info
+[2.707s] -- Detecting CXX compiler ABI info - done
+[2.725s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[2.726s] -- Detecting CXX compile features
+[2.726s] -- Detecting CXX compile features - done
+[2.734s] -- Found ament_cmake: 2.5.6 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[2.991s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[3.089s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[3.151s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.83.0/BoostConfig.cmake (found version "1.83.0")  
+[3.162s] -- Looking for gz-plugin -- found version 4.0.0
+[3.162s] -- Searching for dependencies of gz-plugin
+[3.165s] -- Looking for gz-utils -- found version 4.0.0
+[3.165s] -- Searching for dependencies of gz-utils
+[3.166s] -- Searching for <gz-utils> component [cli]
+[3.170s] -- Looking for gz-utils-cli -- found version 4.0.0
+[3.170s] -- Searching for dependencies of gz-utils-cli
+[3.175s] -- Searching for <gz-plugin> component [register]
+[3.178s] -- Looking for gz-plugin-register -- found version 4.0.0
+[3.178s] -- Searching for dependencies of gz-plugin-register
+[3.182s] -- Found rclcpp: 28.1.22 (/opt/ros/jazzy/share/rclcpp/cmake)
+[3.354s] -- Found rosidl_generator_c: 4.6.9 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[3.369s] -- Found rosidl_generator_cpp: 4.6.9 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[3.389s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[3.410s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[3.495s] -- Found rmw_implementation_cmake: 7.3.3 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+[3.500s] -- Found rmw_fastrtps_cpp: 8.4.4 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+[3.584s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.13")  
+[3.768s] -- Found FastRTPS: /opt/ros/jazzy/include (Required is at least version "2.13") 
+[3.873s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[4.076s] -- Found std_msgs: 5.3.8 (/opt/ros/jazzy/share/std_msgs/cmake)
+[4.092s] -- Looking for gz-common -- found version 7.4.0
+[4.092s] -- Searching for dependencies of gz-common
+[4.092s] -- Looking for gz-utils -- found version 4.0.0
+[4.092s] -- Searching for dependencies of gz-utils
+[4.092s] -- Searching for <gz-utils> component [log]
+[4.096s] -- Looking for gz-utils-log -- found version 4.0.0
+[4.096s] -- Searching for dependencies of gz-utils-log
+[4.100s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[4.262s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[4.263s] -- Found Threads: TRUE  
+[4.273s] -- Checking for module 'uuid'
+[4.290s] --   Found uuid, version 2.39.3
+[4.318s] -- Found UUID: TRUE  
+[4.318s] -- Searching for <gz-common> component [profiler]
+[4.322s] -- Looking for gz-common-profiler -- found version 7.4.0
+[4.322s] -- Searching for dependencies of gz-common-profiler
+[4.327s] -- Looking for gz-sim -- found version 10.5.0
+[4.327s] -- Searching for dependencies of gz-sim
+[4.330s] -- Looking for sdformat -- found version 16.1.0
+[4.330s] -- Searching for dependencies of sdformat
+[4.335s] -- Checking for module 'tinyxml2'
+[4.348s] --   Found tinyxml2, version 10.0.0
+[4.380s] -- Looking for gz-math -- found version 9.3.0
+[4.380s] -- Searching for dependencies of gz-math
+[4.381s] -- Looking for gz-utils -- found version 4.0.0
+[4.382s] -- Looking for gz-utils -- found version 4.0.0
+[4.383s] -- Looking for gz-plugin -- found version 4.0.0
+[4.383s] -- Searching for dependencies of gz-plugin
+[4.384s] -- Looking for gz-utils -- found version 4.0.0
+[4.384s] -- Searching for <gz-plugin> component [loader]
+[4.388s] -- Looking for gz-plugin-loader -- found version 4.0.0
+[4.388s] -- Searching for dependencies of gz-plugin-loader
+[4.389s] -- Searching for <gz-plugin> component [register]
+[4.394s] -- Looking for gz-transport -- found version 15.1.0
+[4.394s] -- Searching for dependencies of gz-transport
+[6.017s] -- Found Protobuf: /usr/lib/x86_64-linux-gnu/libprotobuf.so (found version "3.21.12") 
+[7.033s] -- Config-file not installed for ZeroMQ -- checking for pkg-config
+[7.037s] -- Checking for module 'libzmq >= 4'
+[7.053s] --   Found libzmq, version 4.3.5
+[7.093s] -- Found ZeroMQ: TRUE (Required is at least version "4") 
+[7.152s] -- Looking for gz-utils -- found version 4.0.0
+[7.156s] -- Looking for gz-msgs -- found version 12.0.2
+[7.156s] -- Searching for dependencies of gz-msgs
+[8.314s] -- Looking for gz-utils -- found version 4.0.0
+[8.314s] -- Looking for gz-math -- found version 9.3.0
+[8.322s] -- Searching for <gz-transport> component [log]
+[8.325s] -- Looking for gz-transport-log -- found version 15.1.0
+[8.326s] -- Searching for dependencies of gz-transport-log
+[8.326s] -- Searching for <gz-transport> component [parameters]
+[8.329s] -- Looking for gz-transport-parameters -- found version 15.1.0
+[8.330s] -- Searching for dependencies of gz-transport-parameters
+[8.331s] -- Looking for gz-msgs -- found version 12.0.2
+[8.331s] -- Looking for gz-common -- found version 7.4.0
+[8.331s] -- Searching for dependencies of gz-common
+[8.332s] -- Looking for gz-utils -- found version 4.0.0
+[8.338s] -- Searching for <gz-common> component [av]
+[8.342s] -- Looking for gz-common-av -- found version 7.4.0
+[8.342s] -- Searching for dependencies of gz-common-av
+[8.347s] -- Checking for module 'libswscale'
+[8.361s] --   Found libswscale, version 7.5.100
+[8.397s] -- Found SWSCALE: TRUE  
+[8.402s] -- Checking for module 'libavdevice >= 56.4.100'
+[8.418s] --   Found libavdevice, version 60.3.100
+[8.464s] -- Found AVDEVICE: TRUE (Required is at least version "56.4.100") 
+[8.469s] -- Checking for module 'libavformat'
+[8.483s] --   Found libavformat, version 60.16.100
+[8.515s] -- Found AVFORMAT: TRUE  
+[8.521s] -- Checking for module 'libavcodec'
+[8.537s] --   Found libavcodec, version 60.31.102
+[8.573s] -- Found AVCODEC: TRUE  
+[8.577s] -- Checking for module 'libavutil'
+[8.593s] --   Found libavutil, version 58.29.100
+[8.624s] -- Found AVUTIL: TRUE  
+[8.625s] -- Searching for <gz-common> component [events]
+[8.628s] -- Looking for gz-common-events -- found version 7.4.0
+[8.629s] -- Searching for dependencies of gz-common-events
+[8.629s] -- Looking for gz-math -- found version 9.3.0
+[8.630s] -- Searching for <gz-common> component [graphics]
+[8.633s] -- Looking for gz-common-graphics -- found version 7.4.0
+[8.634s] -- Searching for dependencies of gz-common-graphics
+[8.634s] -- Looking for gz-math -- found version 9.3.0
+[8.638s] -- Found GzAssimp: TRUE (found version "5.3.0") 
+[8.639s] -- Searching for <gz-common> component [io]
+[8.643s] -- Looking for gz-common-io -- found version 7.4.0
+[8.644s] -- Searching for dependencies of gz-common-io
+[8.645s] -- Searching for <gz-common> component [profiler]
+[8.645s] -- Searching for <gz-common> component [testing]
+[8.649s] -- Looking for gz-common-testing -- found version 7.4.0
+[8.649s] -- Searching for dependencies of gz-common-testing
+[8.654s] -- Looking for gz-fuel_tools -- found version 11.0.0
+[8.655s] -- Searching for dependencies of gz-fuel_tools
+[9.844s] -- Found CURL: /usr/lib/x86_64-linux-gnu/libcurl.so (found version "8.5.0")  
+[9.854s] -- Checking for module 'jsoncpp'
+[9.871s] --   Found jsoncpp, version 1.9.5
+[9.910s] -- Found JSONCPP: TRUE  
+[10.923s] -- Checking for module 'yaml-0.1'
+[10.938s] --   Found yaml-0.1, version 0.2.5
+[10.968s] -- Found YAML: TRUE  
+[10.975s] -- Checking for module 'libzip'
+[10.988s] --   Found libzip, version 1.7.3
+[11.020s] -- Found ZIP: TRUE  
+[11.020s] -- Looking for gz-utils -- found version 4.0.0
+[11.021s] -- Looking for gz-common -- found version 7.4.0
+[11.021s] -- Looking for gz-math -- found version 9.3.0
+[11.021s] -- Looking for gz-msgs -- found version 12.0.2
+[11.026s] -- Looking for gz-gui -- found version 10.1.0
+[11.027s] -- Searching for dependencies of gz-gui
+[12.138s] -- Looking for gz-utils -- found version 4.0.0
+[12.139s] -- Looking for gz-math -- found version 9.3.0
+[12.140s] -- Looking for gz-common -- found version 7.4.0
+[12.140s] -- Looking for gz-plugin -- found version 4.0.0
+[12.141s] -- Looking for gz-transport -- found version 15.1.0
+[12.145s] -- Looking for gz-rendering -- found version 10.0.2
+[12.145s] -- Searching for dependencies of gz-rendering
+[12.145s] -- Looking for gz-math -- found version 9.3.0
+[12.145s] -- Searching for dependencies of gz-math
+[12.146s] -- Looking for gz-utils -- found version 4.0.0
+[12.146s] -- Searching for <gz-math> component [eigen3]
+[12.149s] -- Looking for gz-math-eigen3 -- found version 9.3.0
+[12.149s] -- Searching for dependencies of gz-math-eigen3
+[12.159s] -- Looking for gz-common -- found version 7.4.0
+[12.159s] -- Searching for dependencies of gz-common
+[12.159s] -- Looking for gz-utils -- found version 4.0.0
+[12.165s] -- Searching for <gz-common> component [graphics]
+[12.165s] -- Searching for <gz-common> component [events]
+[12.165s] -- Searching for <gz-common> component [geospatial]
+[12.169s] -- Looking for gz-common-geospatial -- found version 7.4.0
+[12.170s] -- Searching for dependencies of gz-common-geospatial
+[12.170s] -- Looking for gz-math -- found version 9.3.0
+[12.170s] -- Looking for gz-common -- found version 7.4.0
+[12.171s] -- Looking for gz-plugin -- found version 4.0.0
+[12.171s] -- Searching for dependencies of gz-plugin
+[12.172s] -- Looking for gz-utils -- found version 4.0.0
+[12.172s] -- Searching for <gz-plugin> component [all]
+[12.175s] -- Looking for all libraries of gz-plugin -- found version 4.0.0
+[12.176s] -- Looking for gz-plugin -- found version 4.0.0
+[12.177s] -- Looking for gz-utils -- found version 4.0.0
+[12.870s] -- Found OpenGL: /usr/lib/x86_64-linux-gnu/libOpenGL.so  found components: OpenGL 
+[12.872s] -- Looking for gz-msgs -- found version 12.0.2
+[12.883s] -- Performing Test HAVE_STDATOMIC
+[13.101s] -- Performing Test HAVE_STDATOMIC - Success
+[13.102s] -- Found WrapAtomic: TRUE  
+[13.159s] -- Found OpenGL: /usr/lib/x86_64-linux-gnu/libOpenGL.so   
+[13.160s] -- Found WrapOpenGL: TRUE  
+[13.209s] -- Found XKB: /usr/lib/x86_64-linux-gnu/libxkbcommon.so (found suitable version "1.6.0", minimum required is "0.5.0") 
+[13.405s] -- Found WrapVulkanHeaders: /usr/include  
+[14.460s] -- Looking for gz-physics -- found version 9.5.1
+[14.461s] -- Searching for dependencies of gz-physics
+[14.461s] -- Looking for gz-common -- found version 7.4.0
+[14.461s] -- Looking for gz-math -- found version 9.3.0
+[14.462s] -- Looking for gz-plugin -- found version 4.0.0
+[14.462s] -- Looking for gz-utils -- found version 4.0.0
+[14.464s] -- Searching for <gz-physics> component [heightmap]
+[14.467s] -- Looking for gz-physics-heightmap -- found version 9.5.1
+[14.468s] -- Searching for dependencies of gz-physics-heightmap
+[14.468s] -- Looking for gz-common -- found version 7.4.0
+[14.469s] -- Searching for <gz-physics> component [mesh]
+[14.472s] -- Looking for gz-physics-mesh -- found version 9.5.1
+[14.472s] -- Searching for dependencies of gz-physics-mesh
+[14.473s] -- Looking for gz-common -- found version 7.4.0
+[14.473s] -- Searching for <gz-physics> component [sdf]
+[14.477s] -- Looking for gz-physics-sdf -- found version 9.5.1
+[14.477s] -- Searching for dependencies of gz-physics-sdf
+[14.478s] -- Looking for sdformat -- found version 16.1.0
+[14.484s] -- Looking for gz-sensors -- found version 10.1.1
+[14.484s] -- Searching for dependencies of gz-sensors
+[15.512s] -- Looking for gz-math -- found version 9.3.0
+[15.513s] -- Looking for gz-common -- found version 7.4.0
+[15.513s] -- Looking for gz-transport -- found version 15.1.0
+[15.514s] -- Looking for gz-rendering -- found version 10.0.2
+[15.515s] -- Looking for gz-msgs -- found version 12.0.2
+[15.515s] -- Looking for sdformat -- found version 16.1.0
+[15.516s] -- Searching for <gz-sensors> component [air_pressure]
+[15.520s] -- Looking for gz-sensors-air_pressure -- found version 10.1.1
+[15.520s] -- Searching for dependencies of gz-sensors-air_pressure
+[15.521s] -- Searching for <gz-sensors> component [air_speed]
+[15.525s] -- Looking for gz-sensors-air_speed -- found version 10.1.1
+[15.525s] -- Searching for dependencies of gz-sensors-air_speed
+[15.526s] -- Searching for <gz-sensors> component [altimeter]
+[15.530s] -- Looking for gz-sensors-altimeter -- found version 10.1.1
+[15.530s] -- Searching for dependencies of gz-sensors-altimeter
+[15.531s] -- Searching for <gz-sensors> component [imu]
+[15.535s] -- Looking for gz-sensors-imu -- found version 10.1.1
+[15.535s] -- Searching for dependencies of gz-sensors-imu
+[15.536s] -- Searching for <gz-sensors> component [force_torque]
+[15.540s] -- Looking for gz-sensors-force_torque -- found version 10.1.1
+[15.540s] -- Searching for dependencies of gz-sensors-force_torque
+[15.540s] -- Searching for <gz-sensors> component [logical_camera]
+[15.544s] -- Looking for gz-sensors-logical_camera -- found version 10.1.1
+[15.544s] -- Searching for dependencies of gz-sensors-logical_camera
+[15.545s] -- Searching for <gz-sensors> component [magnetometer]
+[15.548s] -- Looking for gz-sensors-magnetometer -- found version 10.1.1
+[15.548s] -- Searching for dependencies of gz-sensors-magnetometer
+[15.548s] -- Searching for <gz-sensors> component [navsat]
+[15.552s] -- Looking for gz-sensors-navsat -- found version 10.1.1
+[15.553s] -- Searching for dependencies of gz-sensors-navsat
+[15.553s] -- Searching for <gz-sensors> component [dvl]
+[15.558s] -- Looking for gz-sensors-dvl -- found version 10.1.1
+[15.558s] -- Searching for dependencies of gz-sensors-dvl
+[15.558s] -- Looking for gz-sensors -- found version 10.1.1
+[15.558s] -- Searching for dependencies of gz-sensors
+[16.582s] -- Looking for gz-math -- found version 9.3.0
+[16.582s] -- Looking for gz-common -- found version 7.4.0
+[16.583s] -- Looking for gz-transport -- found version 15.1.0
+[16.583s] -- Looking for gz-rendering -- found version 10.0.2
+[16.583s] -- Looking for gz-msgs -- found version 12.0.2
+[16.584s] -- Looking for sdformat -- found version 16.1.0
+[16.584s] -- Searching for <gz-sensors> component [rendering]
+[16.588s] -- Looking for gz-sensors-rendering -- found version 10.1.1
+[16.588s] -- Searching for dependencies of gz-sensors-rendering
+[16.590s] -- Searching for <gz-sensors> component [rendering]
+[16.590s] -- Searching for <gz-sensors> component [lidar]
+[16.593s] -- Looking for gz-sensors-lidar -- found version 10.1.1
+[16.593s] -- Searching for dependencies of gz-sensors-lidar
+[16.594s] -- Looking for gz-sensors -- found version 10.1.1
+[16.594s] -- Searching for <gz-sensors> component [gpu_lidar]
+[16.598s] -- Looking for gz-sensors-gpu_lidar -- found version 10.1.1
+[16.598s] -- Searching for dependencies of gz-sensors-gpu_lidar
+[16.598s] -- Looking for gz-sensors -- found version 10.1.1
+[16.599s] -- Searching for <gz-sensors> component [camera]
+[16.603s] -- Looking for gz-sensors-camera -- found version 10.1.1
+[16.603s] -- Searching for dependencies of gz-sensors-camera
+[16.603s] -- Looking for gz-sensors -- found version 10.1.1
+[16.604s] -- Searching for <gz-sensors> component [boundingbox_camera]
+[16.608s] -- Looking for gz-sensors-boundingbox_camera -- found version 10.1.1
+[16.608s] -- Searching for dependencies of gz-sensors-boundingbox_camera
+[16.608s] -- Searching for <gz-sensors> component [segmentation_camera]
+[16.612s] -- Looking for gz-sensors-segmentation_camera -- found version 10.1.1
+[16.612s] -- Searching for dependencies of gz-sensors-segmentation_camera
+[16.613s] -- Searching for <gz-sensors> component [depth_camera]
+[16.616s] -- Looking for gz-sensors-depth_camera -- found version 10.1.1
+[16.616s] -- Searching for dependencies of gz-sensors-depth_camera
+[16.617s] -- Looking for gz-sensors -- found version 10.1.1
+[16.618s] -- Searching for <gz-sensors> component [rgbd_camera]
+[16.622s] -- Looking for gz-sensors-rgbd_camera -- found version 10.1.1
+[16.622s] -- Searching for dependencies of gz-sensors-rgbd_camera
+[16.622s] -- Looking for gz-sensors -- found version 10.1.1
+[16.623s] -- Searching for <gz-sensors> component [thermal_camera]
+[16.627s] -- Looking for gz-sensors-thermal_camera -- found version 10.1.1
+[16.627s] -- Searching for dependencies of gz-sensors-thermal_camera
+[16.628s] -- Looking for gz-sensors -- found version 10.1.1
+[16.629s] -- Searching for <gz-sensors> component [wide_angle_camera]
+[16.632s] -- Looking for gz-sensors-wide_angle_camera -- found version 10.1.1
+[16.632s] -- Searching for dependencies of gz-sensors-wide_angle_camera
+[16.634s] -- Looking for gz-rendering -- found version 10.0.2
+[16.634s] -- Looking for gz-math -- found version 9.3.0
+[16.635s] -- Looking for gz-utils -- found version 4.0.0
+[17.638s] -- Found geometry_msgs: 5.3.8 (/opt/ros/jazzy/share/geometry_msgs/cmake)
+[17.654s] -- Found dave_interfaces: 0.0.0 (/home/ironie/HornetXII_sims/install/dave_interfaces/share/dave_interfaces/cmake)
+[17.686s] -- Looking for gz-msgs -- found version 12.0.2
+[17.687s] -- Found dave_gz_world_plugins: 0.0.0 (/home/ironie/HornetXII_sims/install/dave_gz_world_plugins/share/dave_gz_world_plugins/cmake)
+[17.721s] -- Compiling against Gazebo Jetty
+[17.726s] -- Found ament_lint_auto: 0.17.5 (/opt/ros/jazzy/share/ament_lint_auto/cmake)
+[17.855s] -- Added test 'copyright' to check source files copyright and LICENSE
+[17.857s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[17.857s] -- Configured cppcheck include dirs: /home/ironie/HornetXII_sims/src/dave/gazebo/dave_gz_model_plugins/include
+[17.857s] -- Configured cppcheck exclude dirs and/or files: 
+[17.860s] -- Added test 'cpplint' to check C / C++ code against the Google style
+[17.860s] -- Configured cpplint exclude dirs and/or files: 
+[17.861s] -- Added test 'lint_cmake' to check CMake code style
+[17.863s] -- Added test 'uncrustify' to check C / C++ code style
+[17.863s] -- Configured uncrustify additional arguments: 
+[17.864s] -- Added test 'xmllint' to check XML markup files
+[17.867s] -- Configuring done (17.5s)
+[17.891s] -- Generating done (0.0s)
+[17.899s] -- Build files have been written to: /home/ironie/HornetXII_sims/build/dave_gz_model_plugins
+[17.919s] Invoked command in '/home/ironie/HornetXII_sims/build/dave_gz_model_plugins' returned '0': AMENT_PREFIX_PATH=/home/ironie/HornetXII_sims/install/dave_ros_gz_plugins:/home/ironie/HornetXII_sims/install/dave_gz_world_plugins:/home/ironie/HornetXII_sims/install/dave_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/ironie/HornetXII_sims/install/dave_ros_gz_plugins:/home/ironie/HornetXII_sims/install/dave_gz_world_plugins:/home/ironie/HornetXII_sims/install/dave_interfaces:/home/ironie/dave_ws/install/multibeam_sonar_system:/home/ironie/dave_ws/install/dave_worlds:/home/ironie/dave_ws/install/dave_sensor_models:/home/ironie/dave_ws/install/dave_robot_models:/home/ironie/dave_ws/install/dave_object_models:/home/ironie/dave_ws/install/dave_multibeam_sonar_demo:/home/ironie/dave_ws/install/dave_interfaces:/home/ironie/dave_ws/install/dave_demos:/home/ironie/dave_ws/install/auv_controls:/home/ironie/testGazebo/install/simulator:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/home/ironie/assignment3/install/assignment3:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/ironie/HornetXII_sims/install/dave_ros_gz_plugins/lib:/home/ironie/HornetXII_sims/install/dave_gz_world_plugins/lib:/home/ironie/HornetXII_sims/install/dave_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/ironie/HornetXII_sims/install/dave_interfaces/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake /home/ironie/HornetXII_sims/src/dave/gazebo/dave_gz_model_plugins -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/ironie/HornetXII_sims/install/dave_gz_model_plugins
+[17.920s] Invoking command in '/home/ironie/HornetXII_sims/build/dave_gz_model_plugins': AMENT_PREFIX_PATH=/home/ironie/HornetXII_sims/install/dave_ros_gz_plugins:/home/ironie/HornetXII_sims/install/dave_gz_world_plugins:/home/ironie/HornetXII_sims/install/dave_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/ironie/HornetXII_sims/install/dave_ros_gz_plugins:/home/ironie/HornetXII_sims/install/dave_gz_world_plugins:/home/ironie/HornetXII_sims/install/dave_interfaces:/home/ironie/dave_ws/install/multibeam_sonar_system:/home/ironie/dave_ws/install/dave_worlds:/home/ironie/dave_ws/install/dave_sensor_models:/home/ironie/dave_ws/install/dave_robot_models:/home/ironie/dave_ws/install/dave_object_models:/home/ironie/dave_ws/install/dave_multibeam_sonar_demo:/home/ironie/dave_ws/install/dave_interfaces:/home/ironie/dave_ws/install/dave_demos:/home/ironie/dave_ws/install/auv_controls:/home/ironie/testGazebo/install/simulator:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/home/ironie/assignment3/install/assignment3:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/ironie/HornetXII_sims/install/dave_ros_gz_plugins/lib:/home/ironie/HornetXII_sims/install/dave_gz_world_plugins/lib:/home/ironie/HornetXII_sims/install/dave_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/ironie/HornetXII_sims/install/dave_interfaces/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/ironie/HornetXII_sims/build/dave_gz_model_plugins -- -j12 -l12
+[17.979s] [ 50%] [32mBuilding CXX object CMakeFiles/OceanCurrentModelPlugin.dir/src/OceanCurrentModelPlugin.cc.o[0m
+[34.465s] [100%] [32m[1mLinking CXX shared library libOceanCurrentModelPlugin.so[0m
+[35.292s] [100%] Built target OceanCurrentModelPlugin
+[35.305s] Invoked command in '/home/ironie/HornetXII_sims/build/dave_gz_model_plugins' returned '0': AMENT_PREFIX_PATH=/home/ironie/HornetXII_sims/install/dave_ros_gz_plugins:/home/ironie/HornetXII_sims/install/dave_gz_world_plugins:/home/ironie/HornetXII_sims/install/dave_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/ironie/HornetXII_sims/install/dave_ros_gz_plugins:/home/ironie/HornetXII_sims/install/dave_gz_world_plugins:/home/ironie/HornetXII_sims/install/dave_interfaces:/home/ironie/dave_ws/install/multibeam_sonar_system:/home/ironie/dave_ws/install/dave_worlds:/home/ironie/dave_ws/install/dave_sensor_models:/home/ironie/dave_ws/install/dave_robot_models:/home/ironie/dave_ws/install/dave_object_models:/home/ironie/dave_ws/install/dave_multibeam_sonar_demo:/home/ironie/dave_ws/install/dave_interfaces:/home/ironie/dave_ws/install/dave_demos:/home/ironie/dave_ws/install/auv_controls:/home/ironie/testGazebo/install/simulator:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/home/ironie/assignment3/install/assignment3:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/ironie/HornetXII_sims/install/dave_ros_gz_plugins/lib:/home/ironie/HornetXII_sims/install/dave_gz_world_plugins/lib:/home/ironie/HornetXII_sims/install/dave_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/ironie/HornetXII_sims/install/dave_interfaces/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/ironie/HornetXII_sims/build/dave_gz_model_plugins -- -j12 -l12
+[35.306s] Invoking command in '/home/ironie/HornetXII_sims/build/dave_gz_model_plugins': AMENT_PREFIX_PATH=/home/ironie/HornetXII_sims/install/dave_ros_gz_plugins:/home/ironie/HornetXII_sims/install/dave_gz_world_plugins:/home/ironie/HornetXII_sims/install/dave_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/ironie/HornetXII_sims/install/dave_ros_gz_plugins:/home/ironie/HornetXII_sims/install/dave_gz_world_plugins:/home/ironie/HornetXII_sims/install/dave_interfaces:/home/ironie/dave_ws/install/multibeam_sonar_system:/home/ironie/dave_ws/install/dave_worlds:/home/ironie/dave_ws/install/dave_sensor_models:/home/ironie/dave_ws/install/dave_robot_models:/home/ironie/dave_ws/install/dave_object_models:/home/ironie/dave_ws/install/dave_multibeam_sonar_demo:/home/ironie/dave_ws/install/dave_interfaces:/home/ironie/dave_ws/install/dave_demos:/home/ironie/dave_ws/install/auv_controls:/home/ironie/testGazebo/install/simulator:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/home/ironie/assignment3/install/assignment3:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/ironie/HornetXII_sims/install/dave_ros_gz_plugins/lib:/home/ironie/HornetXII_sims/install/dave_gz_world_plugins/lib:/home/ironie/HornetXII_sims/install/dave_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/ironie/HornetXII_sims/install/dave_interfaces/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --install /home/ironie/HornetXII_sims/build/dave_gz_model_plugins
+[35.314s] -- Install configuration: ""
+[35.315s] -- Execute custom install script
+[35.315s] -- Symlinking: /home/ironie/HornetXII_sims/install/dave_gz_model_plugins/lib/dave_gz_model_plugins/libOceanCurrentModelPlugin.so
+[35.324s] -- Symlinking: /home/ironie/HornetXII_sims/install/dave_gz_model_plugins/include//dave_gz_model_plugins/OceanCurrentModelPlugin.hh
+[35.333s] -- Symlinking: /home/ironie/HornetXII_sims/install/dave_gz_model_plugins/share/dave_gz_model_plugins/environment/dave_gz_model_plugins.dsv
+[35.343s] -- Symlinking: /home/ironie/HornetXII_sims/install/dave_gz_model_plugins/share/ament_index/resource_index/package_run_dependencies/dave_gz_model_plugins
+[35.351s] -- Symlinking: /home/ironie/HornetXII_sims/install/dave_gz_model_plugins/share/ament_index/resource_index/parent_prefix_path/dave_gz_model_plugins
+[35.361s] -- Symlinking: /home/ironie/HornetXII_sims/install/dave_gz_model_plugins/share/dave_gz_model_plugins/environment/ament_prefix_path.sh
+[35.371s] -- Symlinking: /home/ironie/HornetXII_sims/install/dave_gz_model_plugins/share/dave_gz_model_plugins/environment/ament_prefix_path.dsv
+[35.379s] -- Symlinking: /home/ironie/HornetXII_sims/install/dave_gz_model_plugins/share/dave_gz_model_plugins/environment/path.sh
+[35.388s] -- Symlinking: /home/ironie/HornetXII_sims/install/dave_gz_model_plugins/share/dave_gz_model_plugins/environment/path.dsv
+[35.397s] -- Symlinking: /home/ironie/HornetXII_sims/install/dave_gz_model_plugins/share/dave_gz_model_plugins/local_setup.bash
+[35.406s] -- Symlinking: /home/ironie/HornetXII_sims/install/dave_gz_model_plugins/share/dave_gz_model_plugins/local_setup.sh
+[35.417s] -- Symlinking: /home/ironie/HornetXII_sims/install/dave_gz_model_plugins/share/dave_gz_model_plugins/local_setup.zsh
+[35.427s] -- Symlinking: /home/ironie/HornetXII_sims/install/dave_gz_model_plugins/share/dave_gz_model_plugins/local_setup.dsv
+[35.436s] -- Symlinking: /home/ironie/HornetXII_sims/install/dave_gz_model_plugins/share/dave_gz_model_plugins/package.dsv
+[35.445s] -- Symlinking: /home/ironie/HornetXII_sims/install/dave_gz_model_plugins/share/ament_index/resource_index/packages/dave_gz_model_plugins
+[35.453s] -- Symlinking: /home/ironie/HornetXII_sims/install/dave_gz_model_plugins/share/dave_gz_model_plugins/cmake/dave_gz_model_pluginsConfig.cmake
+[35.462s] -- Symlinking: /home/ironie/HornetXII_sims/install/dave_gz_model_plugins/share/dave_gz_model_plugins/cmake/dave_gz_model_pluginsConfig-version.cmake
+[35.470s] -- Symlinking: /home/ironie/HornetXII_sims/install/dave_gz_model_plugins/share/dave_gz_model_plugins/package.xml
+[35.480s] Invoked command in '/home/ironie/HornetXII_sims/build/dave_gz_model_plugins' returned '0': AMENT_PREFIX_PATH=/home/ironie/HornetXII_sims/install/dave_ros_gz_plugins:/home/ironie/HornetXII_sims/install/dave_gz_world_plugins:/home/ironie/HornetXII_sims/install/dave_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/ironie/HornetXII_sims/install/dave_ros_gz_plugins:/home/ironie/HornetXII_sims/install/dave_gz_world_plugins:/home/ironie/HornetXII_sims/install/dave_interfaces:/home/ironie/dave_ws/install/multibeam_sonar_system:/home/ironie/dave_ws/install/dave_worlds:/home/ironie/dave_ws/install/dave_sensor_models:/home/ironie/dave_ws/install/dave_robot_models:/home/ironie/dave_ws/install/dave_object_models:/home/ironie/dave_ws/install/dave_multibeam_sonar_demo:/home/ironie/dave_ws/install/dave_interfaces:/home/ironie/dave_ws/install/dave_demos:/home/ironie/dave_ws/install/auv_controls:/home/ironie/testGazebo/install/simulator:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/home/ironie/assignment3/install/assignment3:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/ironie/HornetXII_sims/install/dave_ros_gz_plugins/lib:/home/ironie/HornetXII_sims/install/dave_gz_world_plugins/lib:/home/ironie/HornetXII_sims/install/dave_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/ironie/HornetXII_sims/install/dave_interfaces/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --install /home/ironie/HornetXII_sims/build/dave_gz_model_plugins

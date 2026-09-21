@@ -1,0 +1,45 @@
+[0.047s] Invoking command in '/home/ironie/HornetXII_sims/build/dave_object_models': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ironie/assignment3/install/assignment3:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/ironie/HornetXII_sims/src/dave/models/dave_object_models -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/ironie/HornetXII_sims/install/dave_object_models
+[0.281s] -- The C compiler identification is GNU 13.3.0
+[1.099s] -- The CXX compiler identification is GNU 13.3.0
+[1.838s] -- Detecting C compiler ABI info
+[2.127s] -- Detecting C compiler ABI info - done
+[2.140s] -- Check for working C compiler: /usr/bin/cc - skipped
+[2.140s] -- Detecting C compile features
+[2.140s] -- Detecting C compile features - done
+[2.224s] -- Detecting CXX compiler ABI info
+[2.494s] -- Detecting CXX compiler ABI info - done
+[2.509s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[2.510s] -- Detecting CXX compile features
+[2.510s] -- Detecting CXX compile features - done
+[2.515s] -- Found ament_cmake: 2.5.6 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[2.774s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[2.903s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[3.167s] -- Configuring done (3.1s)
+[3.174s] -- Generating done (0.0s)
+[3.178s] -- Build files have been written to: /home/ironie/HornetXII_sims/build/dave_object_models
+[3.186s] Invoked command in '/home/ironie/HornetXII_sims/build/dave_object_models' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ironie/assignment3/install/assignment3:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/ironie/HornetXII_sims/src/dave/models/dave_object_models -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/ironie/HornetXII_sims/install/dave_object_models
+[3.188s] Invoking command in '/home/ironie/HornetXII_sims/build/dave_object_models': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ironie/assignment3/install/assignment3:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/ironie/HornetXII_sims/build/dave_object_models -- -j12 -l12
+[3.250s] Invoked command in '/home/ironie/HornetXII_sims/build/dave_object_models' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ironie/assignment3/install/assignment3:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/ironie/HornetXII_sims/build/dave_object_models -- -j12 -l12
+[3.252s] Invoking command in '/home/ironie/HornetXII_sims/build/dave_object_models': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ironie/assignment3/install/assignment3:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/ironie/HornetXII_sims/build/dave_object_models
+[3.396s] -- Install configuration: ""
+[3.396s] -- Execute custom install script
+[3.396s] -- Symlinking: /home/ironie/HornetXII_sims/install/dave_object_models/share/dave_object_models/description/mossy_cinder_block/model.config
+[3.397s] -- Symlinking: /home/ironie/HornetXII_sims/install/dave_object_models/share/dave_object_models/description/mossy_cinder_block/model.sdf
+[3.397s] -- Symlinking: /home/ironie/HornetXII_sims/install/dave_object_models/share/dave_object_models/launch/upload_object.launch.py
+[3.398s] -- Symlinking: /home/ironie/HornetXII_sims/install/dave_object_models/share/dave_object_models/environment/dave_object_models.dsv
+[3.398s] -- Symlinking: /home/ironie/HornetXII_sims/install/dave_object_models/share/ament_index/resource_index/package_run_dependencies/dave_object_models
+[3.398s] -- Symlinking: /home/ironie/HornetXII_sims/install/dave_object_models/share/ament_index/resource_index/parent_prefix_path/dave_object_models
+[3.398s] -- Symlinking: /home/ironie/HornetXII_sims/install/dave_object_models/share/dave_object_models/environment/ament_prefix_path.sh
+[3.399s] -- Symlinking: /home/ironie/HornetXII_sims/install/dave_object_models/share/dave_object_models/environment/ament_prefix_path.dsv
+[3.400s] -- Symlinking: /home/ironie/HornetXII_sims/install/dave_object_models/share/dave_object_models/environment/path.sh
+[3.401s] -- Symlinking: /home/ironie/HornetXII_sims/install/dave_object_models/share/dave_object_models/environment/path.dsv
+[3.412s] -- Symlinking: /home/ironie/HornetXII_sims/install/dave_object_models/share/dave_object_models/local_setup.bash
+[3.425s] -- Symlinking: /home/ironie/HornetXII_sims/install/dave_object_models/share/dave_object_models/local_setup.sh
+[3.439s] -- Symlinking: /home/ironie/HornetXII_sims/install/dave_object_models/share/dave_object_models/local_setup.zsh
+[3.450s] -- Symlinking: /home/ironie/HornetXII_sims/install/dave_object_models/share/dave_object_models/local_setup.dsv
+[3.463s] -- Symlinking: /home/ironie/HornetXII_sims/install/dave_object_models/share/dave_object_models/package.dsv
+[3.475s] -- Symlinking: /home/ironie/HornetXII_sims/install/dave_object_models/share/ament_index/resource_index/packages/dave_object_models
+[3.486s] -- Symlinking: /home/ironie/HornetXII_sims/install/dave_object_models/share/dave_object_models/cmake/dave_object_modelsConfig.cmake
+[3.497s] -- Symlinking: /home/ironie/HornetXII_sims/install/dave_object_models/share/dave_object_models/cmake/dave_object_modelsConfig-version.cmake
+[3.508s] -- Symlinking: /home/ironie/HornetXII_sims/install/dave_object_models/share/dave_object_models/package.xml
+[3.524s] Invoked command in '/home/ironie/HornetXII_sims/build/dave_object_models' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ironie/assignment3/install/assignment3:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/ironie/HornetXII_sims/build/dave_object_models

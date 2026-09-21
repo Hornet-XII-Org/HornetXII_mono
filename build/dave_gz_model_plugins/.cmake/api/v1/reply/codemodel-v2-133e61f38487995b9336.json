@@ -1,0 +1,79 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-4bcff86cbe53cbab417c.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.22.1"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"name" : "",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "dave_gz_model_plugins",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "OceanCurrentModelPlugin::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-OceanCurrentModelPlugin-92996c812af371f51a71.json",
+					"name" : "OceanCurrentModelPlugin",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "dave_gz_model_plugins_uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-dave_gz_model_plugins_uninstall-0a2584d7b43624a98681.json",
+					"name" : "dave_gz_model_plugins_uninstall",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall-33f17c9124adaa5c3771.json",
+					"name" : "uninstall",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/ironie/HornetXII_sims/build/dave_gz_model_plugins",
+		"source" : "/home/ironie/HornetXII_sims/src/dave/gazebo/dave_gz_model_plugins"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 6
+	}
+}

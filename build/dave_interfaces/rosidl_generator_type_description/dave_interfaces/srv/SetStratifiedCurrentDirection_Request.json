@@ -1,0 +1,36 @@
+{
+  "type_description_msg": {
+    "type_description": {
+      "type_name": "dave_interfaces/srv/SetStratifiedCurrentDirection_Request",
+      "fields": [
+        {
+          "name": "layer",
+          "type": {
+            "type_id": 5,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        },
+        {
+          "name": "angle",
+          "type": {
+            "type_id": 11,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        }
+      ]
+    },
+    "referenced_type_descriptions": []
+  },
+  "type_hashes": [
+    {
+      "type_name": "dave_interfaces/srv/SetStratifiedCurrentDirection_Request",
+      "hash_string": "RIHS01_fa3cfc4afcb4a32c9733b39e84d7200888197b45a89d6d110a4ebd2217b42d09"
+    }
+  ]
+}

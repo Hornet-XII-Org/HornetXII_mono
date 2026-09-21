@@ -1,0 +1,26 @@
+{
+  "type_description_msg": {
+    "type_description": {
+      "type_name": "dave_interfaces/srv/SetCurrentDirection_Response",
+      "fields": [
+        {
+          "name": "success",
+          "type": {
+            "type_id": 15,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        }
+      ]
+    },
+    "referenced_type_descriptions": []
+  },
+  "type_hashes": [
+    {
+      "type_name": "dave_interfaces/srv/SetCurrentDirection_Response",
+      "hash_string": "RIHS01_1cf2866ff7794408d21a4e13d9c72130b1952b8de97e4d8b7f888bec724f944d"
+    }
+  ]
+}

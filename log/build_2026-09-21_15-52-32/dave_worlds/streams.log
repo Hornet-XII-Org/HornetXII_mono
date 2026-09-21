@@ -1,0 +1,65 @@
+[0.070s] Invoking command in '/home/ironie/HornetXII_sims/build/dave_worlds': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ironie/assignment3/install/assignment3:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/ironie/HornetXII_sims/src/dave/models/dave_worlds -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/ironie/HornetXII_sims/install/dave_worlds
+[0.269s] -- The C compiler identification is GNU 13.3.0
+[1.143s] -- The CXX compiler identification is GNU 13.3.0
+[1.887s] -- Detecting C compiler ABI info
+[2.201s] -- Detecting C compiler ABI info - done
+[2.210s] -- Check for working C compiler: /usr/bin/cc - skipped
+[2.210s] -- Detecting C compile features
+[2.211s] -- Detecting C compile features - done
+[2.307s] -- Detecting CXX compiler ABI info
+[2.676s] -- Detecting CXX compiler ABI info - done
+[2.688s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[2.689s] -- Detecting CXX compile features
+[2.690s] -- Detecting CXX compile features - done
+[2.696s] -- Found ament_cmake: 2.5.6 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[2.957s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[3.100s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[3.355s] -- Configuring done (3.3s)
+[3.363s] -- Generating done (0.0s)
+[3.366s] -- Build files have been written to: /home/ironie/HornetXII_sims/build/dave_worlds
+[3.386s] Invoked command in '/home/ironie/HornetXII_sims/build/dave_worlds' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ironie/assignment3/install/assignment3:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/ironie/HornetXII_sims/src/dave/models/dave_worlds -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/ironie/HornetXII_sims/install/dave_worlds
+[3.387s] Invoking command in '/home/ironie/HornetXII_sims/build/dave_worlds': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ironie/assignment3/install/assignment3:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/ironie/HornetXII_sims/build/dave_worlds -- -j12 -l12
+[3.538s] Invoked command in '/home/ironie/HornetXII_sims/build/dave_worlds' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ironie/assignment3/install/assignment3:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/ironie/HornetXII_sims/build/dave_worlds -- -j12 -l12
+[3.540s] Invoking command in '/home/ironie/HornetXII_sims/build/dave_worlds': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ironie/assignment3/install/assignment3:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/ironie/HornetXII_sims/build/dave_worlds
+[3.552s] -- Install configuration: ""
+[3.553s] -- Execute custom install script
+[3.554s] -- Symlinking: /home/ironie/HornetXII_sims/install/dave_worlds/share/dave_worlds/worlds/ACT1951_1_Annual_2021.csv
+[3.566s] -- Symlinking: /home/ironie/HornetXII_sims/install/dave_worlds/share/dave_worlds/worlds/camera_tutorial.world
+[3.579s] -- Symlinking: /home/ironie/HornetXII_sims/install/dave_worlds/share/dave_worlds/worlds/dave_Santorini.world
+[3.592s] -- Symlinking: /home/ironie/HornetXII_sims/install/dave_worlds/share/dave_worlds/worlds/dave_bimanual_example.world
+[3.604s] -- Symlinking: /home/ironie/HornetXII_sims/install/dave_worlds/share/dave_worlds/worlds/dave_electrical_mating.world
+[3.616s] -- Symlinking: /home/ironie/HornetXII_sims/install/dave_worlds/share/dave_worlds/worlds/dave_graded_seabed.world
+[3.628s] -- Symlinking: /home/ironie/HornetXII_sims/install/dave_worlds/share/dave_worlds/worlds/dave_integrated.world
+[3.643s] -- Symlinking: /home/ironie/HornetXII_sims/install/dave_worlds/share/dave_worlds/worlds/dave_multibeam_sonar.world
+[3.654s] -- Symlinking: /home/ironie/HornetXII_sims/install/dave_worlds/share/dave_worlds/worlds/dave_ocean_models.world
+[3.665s] -- Symlinking: /home/ironie/HornetXII_sims/install/dave_worlds/share/dave_worlds/worlds/dave_ocean_waves.world
+[3.675s] -- Symlinking: /home/ironie/HornetXII_sims/install/dave_worlds/share/dave_worlds/worlds/dave_ocean_waves_mossy_ground.world
+[3.686s] -- Symlinking: /home/ironie/HornetXII_sims/install/dave_worlds/share/dave_worlds/worlds/dave_ocean_waves_sonar.world
+[3.713s] -- Symlinking: /home/ironie/HornetXII_sims/install/dave_worlds/share/dave_worlds/worlds/dave_ocean_waves_sonar_integrated.world
+[3.728s] -- Symlinking: /home/ironie/HornetXII_sims/install/dave_worlds/share/dave_worlds/worlds/dave_ocean_waves_transient_current.world
+[3.744s] -- Symlinking: /home/ironie/HornetXII_sims/install/dave_worlds/share/dave_worlds/worlds/dave_plug_and_socket.world
+[3.763s] -- Symlinking: /home/ironie/HornetXII_sims/install/dave_worlds/share/dave_worlds/worlds/dvl_world.world
+[3.784s] -- Symlinking: /home/ironie/HornetXII_sims/install/dave_worlds/share/dave_worlds/worlds/new_dvl.world
+[3.796s] -- Symlinking: /home/ironie/HornetXII_sims/install/dave_worlds/share/dave_worlds/worlds/ocean_current_plugin.world
+[3.808s] -- Symlinking: /home/ironie/HornetXII_sims/install/dave_worlds/share/dave_worlds/worlds/transientOceanCurrentDatabase.csv
+[3.819s] -- Symlinking: /home/ironie/HornetXII_sims/install/dave_worlds/share/dave_worlds/worlds/usbl_tutorial.world
+[3.834s] -- Symlinking: /home/ironie/HornetXII_sims/install/dave_worlds/share/dave_worlds/media/materials/textures/dirt_diffusespecular.png
+[3.846s] -- Symlinking: /home/ironie/HornetXII_sims/install/dave_worlds/share/dave_worlds/media/materials/textures/flat_normal.png
+[3.857s] -- Symlinking: /home/ironie/HornetXII_sims/install/dave_worlds/share/dave_worlds/media/meshes/Santorini_heightmap.tif
+[3.871s] -- Symlinking: /home/ironie/HornetXII_sims/install/dave_worlds/share/dave_worlds/environment/dave_worlds.dsv
+[3.886s] -- Symlinking: /home/ironie/HornetXII_sims/install/dave_worlds/share/ament_index/resource_index/package_run_dependencies/dave_worlds
+[3.900s] -- Symlinking: /home/ironie/HornetXII_sims/install/dave_worlds/share/ament_index/resource_index/parent_prefix_path/dave_worlds
+[3.911s] -- Symlinking: /home/ironie/HornetXII_sims/install/dave_worlds/share/dave_worlds/environment/ament_prefix_path.sh
+[3.923s] -- Symlinking: /home/ironie/HornetXII_sims/install/dave_worlds/share/dave_worlds/environment/ament_prefix_path.dsv
+[3.935s] -- Symlinking: /home/ironie/HornetXII_sims/install/dave_worlds/share/dave_worlds/environment/path.sh
+[3.946s] -- Symlinking: /home/ironie/HornetXII_sims/install/dave_worlds/share/dave_worlds/environment/path.dsv
+[3.958s] -- Symlinking: /home/ironie/HornetXII_sims/install/dave_worlds/share/dave_worlds/local_setup.bash
+[3.971s] -- Symlinking: /home/ironie/HornetXII_sims/install/dave_worlds/share/dave_worlds/local_setup.sh
+[3.980s] -- Symlinking: /home/ironie/HornetXII_sims/install/dave_worlds/share/dave_worlds/local_setup.zsh
+[3.991s] -- Symlinking: /home/ironie/HornetXII_sims/install/dave_worlds/share/dave_worlds/local_setup.dsv
+[4.000s] -- Symlinking: /home/ironie/HornetXII_sims/install/dave_worlds/share/dave_worlds/package.dsv
+[4.010s] -- Symlinking: /home/ironie/HornetXII_sims/install/dave_worlds/share/ament_index/resource_index/packages/dave_worlds
+[4.025s] -- Symlinking: /home/ironie/HornetXII_sims/install/dave_worlds/share/dave_worlds/cmake/dave_worldsConfig.cmake
+[4.036s] -- Symlinking: /home/ironie/HornetXII_sims/install/dave_worlds/share/dave_worlds/cmake/dave_worldsConfig-version.cmake
+[4.048s] -- Symlinking: /home/ironie/HornetXII_sims/install/dave_worlds/share/dave_worlds/package.xml
+[4.059s] Invoked command in '/home/ironie/HornetXII_sims/build/dave_worlds' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ironie/assignment3/install/assignment3:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/ironie/HornetXII_sims/build/dave_worlds

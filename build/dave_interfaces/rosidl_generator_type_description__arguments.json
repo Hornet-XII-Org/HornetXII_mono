@@ -1,0 +1,30 @@
+{
+  "package_name": "dave_interfaces",
+  "output_dir": "/home/ironie/HornetXII_sims/build/dave_interfaces/rosidl_generator_type_description/dave_interfaces",
+  "idl_tuples": [
+    "/home/ironie/HornetXII_sims/build/dave_interfaces/rosidl_adapter/dave_interfaces:msg/UsblCommand.idl",
+    "/home/ironie/HornetXII_sims/build/dave_interfaces/rosidl_adapter/dave_interfaces:msg/UsblResponse.idl",
+    "/home/ironie/HornetXII_sims/build/dave_interfaces/rosidl_adapter/dave_interfaces:msg/Location.idl",
+    "/home/ironie/HornetXII_sims/build/dave_interfaces/rosidl_adapter/dave_interfaces:msg/DVL.idl",
+    "/home/ironie/HornetXII_sims/build/dave_interfaces/rosidl_adapter/dave_interfaces:msg/DVLBeam.idl",
+    "/home/ironie/HornetXII_sims/build/dave_interfaces/rosidl_adapter/dave_interfaces:msg/DVLTarget.idl",
+    "/home/ironie/HornetXII_sims/build/dave_interfaces/rosidl_adapter/dave_interfaces:msg/StratifiedCurrentVelocity.idl",
+    "/home/ironie/HornetXII_sims/build/dave_interfaces/rosidl_adapter/dave_interfaces:msg/StratifiedCurrentDatabase.idl",
+    "/home/ironie/HornetXII_sims/build/dave_interfaces/rosidl_adapter/dave_interfaces:srv/SetOriginSphericalCoord.idl",
+    "/home/ironie/HornetXII_sims/build/dave_interfaces/rosidl_adapter/dave_interfaces:srv/GetOriginSphericalCoord.idl",
+    "/home/ironie/HornetXII_sims/build/dave_interfaces/rosidl_adapter/dave_interfaces:srv/TransformToSphericalCoord.idl",
+    "/home/ironie/HornetXII_sims/build/dave_interfaces/rosidl_adapter/dave_interfaces:srv/TransformFromSphericalCoord.idl",
+    "/home/ironie/HornetXII_sims/build/dave_interfaces/rosidl_adapter/dave_interfaces:srv/GetCurrentModel.idl",
+    "/home/ironie/HornetXII_sims/build/dave_interfaces/rosidl_adapter/dave_interfaces:srv/SetCurrentModel.idl",
+    "/home/ironie/HornetXII_sims/build/dave_interfaces/rosidl_adapter/dave_interfaces:srv/SetCurrentDirection.idl",
+    "/home/ironie/HornetXII_sims/build/dave_interfaces/rosidl_adapter/dave_interfaces:srv/SetCurrentVelocity.idl",
+    "/home/ironie/HornetXII_sims/build/dave_interfaces/rosidl_adapter/dave_interfaces:srv/SetStratifiedCurrentVelocity.idl",
+    "/home/ironie/HornetXII_sims/build/dave_interfaces/rosidl_adapter/dave_interfaces:srv/SetStratifiedCurrentDirection.idl"
+  ],
+  "include_paths": [
+    "geometry_msgs:/opt/ros/jazzy/share/geometry_msgs",
+    "std_msgs:/opt/ros/jazzy/share/std_msgs",
+    "service_msgs:/opt/ros/jazzy/share/service_msgs",
+    "builtin_interfaces:/opt/ros/jazzy/share/builtin_interfaces"
+  ]
+}

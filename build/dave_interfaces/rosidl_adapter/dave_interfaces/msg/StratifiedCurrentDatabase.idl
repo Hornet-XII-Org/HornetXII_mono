@@ -1,0 +1,77 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from dave_interfaces/msg/StratifiedCurrentDatabase.msg
+// generated code does not contain a copyright notice
+
+#include "geometry_msgs/msg/Vector3.idl"
+
+module dave_interfaces {
+  module msg {
+    @verbatim (language="comment", text=
+      "Publishes depths and velocities read from the csv database")
+    struct StratifiedCurrentDatabase {
+      @verbatim (language="comment", text=
+        "Depths")
+      sequence<float> depths;
+
+      @verbatim (language="comment", text=
+        "Velocities")
+      sequence<geometry_msgs::msg::Vector3> velocities;
+
+      @verbatim (language="comment", text=
+        "Tide time (GMT)")
+      sequence<int16> time_gmt_year;
+
+      sequence<int16> time_gmt_month;
+
+      sequence<int16> time_gmt_day;
+
+      sequence<int16> time_gmt_hour;
+
+      sequence<int16> time_gmt_minute;
+
+      @verbatim (language="comment", text=
+        "Tide velocities")
+      sequence<float> tidevelocities;
+
+      @verbatim (language="comment", text=
+        "Tide constituents")
+      boolean tideconstituents;
+
+      float m2_amp;
+
+      float m2_phase;
+
+      float m2_speed;
+
+      float s2_amp;
+
+      float s2_phase;
+
+      float s2_speed;
+
+      float n2_amp;
+
+      float n2_phase;
+
+      float n2_speed;
+
+      @verbatim (language="comment", text=
+        "Tide direction")
+      float ebb_direction;
+
+      float flood_direction;
+
+      @verbatim (language="comment", text=
+        "World start time (GMT)")
+      int16 world_start_time_year;
+
+      int16 world_start_time_month;
+
+      int16 world_start_time_day;
+
+      int16 world_start_time_hour;
+
+      int16 world_start_time_minute;
+    };
+  };
+};

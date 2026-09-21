@@ -1,0 +1,24 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from dave_interfaces/msg/DVL.msg
+// generated code does not contain a copyright notice
+
+#include "dave_interfaces/msg/DVLBeam.idl"
+#include "dave_interfaces/msg/DVLTarget.idl"
+#include "geometry_msgs/msg/TwistWithCovariance.idl"
+#include "std_msgs/msg/Header.idl"
+
+module dave_interfaces {
+  module msg {
+    struct DVL {
+      std_msgs::msg::Header header;
+
+      string type;
+
+      dave_interfaces::msg::DVLTarget target;
+
+      geometry_msgs::msg::TwistWithCovariance velocity;
+
+      sequence<dave_interfaces::msg::DVLBeam> beams;
+    };
+  };
+};

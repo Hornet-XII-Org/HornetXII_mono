@@ -1,0 +1,26 @@
+{
+  "type_description_msg": {
+    "type_description": {
+      "type_name": "dave_interfaces/srv/SetStratifiedCurrentVelocity_Response",
+      "fields": [
+        {
+          "name": "success",
+          "type": {
+            "type_id": 15,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        }
+      ]
+    },
+    "referenced_type_descriptions": []
+  },
+  "type_hashes": [
+    {
+      "type_name": "dave_interfaces/srv/SetStratifiedCurrentVelocity_Response",
+      "hash_string": "RIHS01_ed04d979e1b2bf1ec0021eeac3f5ffc1d862aefc93be6964f1ae2ac0dfd90d80"
+    }
+  ]
+}

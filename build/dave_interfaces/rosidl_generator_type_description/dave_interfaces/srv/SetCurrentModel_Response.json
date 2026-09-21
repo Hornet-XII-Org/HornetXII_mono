@@ -1,0 +1,26 @@
+{
+  "type_description_msg": {
+    "type_description": {
+      "type_name": "dave_interfaces/srv/SetCurrentModel_Response",
+      "fields": [
+        {
+          "name": "success",
+          "type": {
+            "type_id": 15,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        }
+      ]
+    },
+    "referenced_type_descriptions": []
+  },
+  "type_hashes": [
+    {
+      "type_name": "dave_interfaces/srv/SetCurrentModel_Response",
+      "hash_string": "RIHS01_7f4d5276bbe0ff48ef7c853803b6c0e6548ed6038319ae99627fda9f3cf38779"
+    }
+  ]
+}

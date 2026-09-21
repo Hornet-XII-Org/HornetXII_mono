@@ -1,0 +1,12 @@
+/home/ironie/HornetXII_sims/build/dave_ros_gz_plugins/CMakeFiles/uninstall.dir
+/home/ironie/HornetXII_sims/build/dave_ros_gz_plugins/CMakeFiles/dave_ros_gz_plugins_uninstall.dir
+/home/ironie/HornetXII_sims/build/dave_ros_gz_plugins/CMakeFiles/SphericalCoords.dir
+/home/ironie/HornetXII_sims/build/dave_ros_gz_plugins/CMakeFiles/DVLBridge.dir
+/home/ironie/HornetXII_sims/build/dave_ros_gz_plugins/CMakeFiles/OceanCurrentPlugin.dir
+/home/ironie/HornetXII_sims/build/dave_ros_gz_plugins/CMakeFiles/test.dir
+/home/ironie/HornetXII_sims/build/dave_ros_gz_plugins/CMakeFiles/edit_cache.dir
+/home/ironie/HornetXII_sims/build/dave_ros_gz_plugins/CMakeFiles/rebuild_cache.dir
+/home/ironie/HornetXII_sims/build/dave_ros_gz_plugins/CMakeFiles/list_install_components.dir
+/home/ironie/HornetXII_sims/build/dave_ros_gz_plugins/CMakeFiles/install.dir
+/home/ironie/HornetXII_sims/build/dave_ros_gz_plugins/CMakeFiles/install/local.dir
+/home/ironie/HornetXII_sims/build/dave_ros_gz_plugins/CMakeFiles/install/strip.dir

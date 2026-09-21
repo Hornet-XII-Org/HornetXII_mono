@@ -1,0 +1,45 @@
+[0.050s] Invoking command in '/home/ironie/HornetXII_sims/build/dave_demos': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ironie/assignment3/install/assignment3:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/ironie/HornetXII_sims/src/dave/examples/dave_demos -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/ironie/HornetXII_sims/install/dave_demos
+[0.292s] -- The C compiler identification is GNU 13.3.0
+[1.087s] -- The CXX compiler identification is GNU 13.3.0
+[1.796s] -- Detecting C compiler ABI info
+[2.072s] -- Detecting C compiler ABI info - done
+[2.086s] -- Check for working C compiler: /usr/bin/cc - skipped
+[2.086s] -- Detecting C compile features
+[2.087s] -- Detecting C compile features - done
+[2.195s] -- Detecting CXX compiler ABI info
+[2.451s] -- Detecting CXX compiler ABI info - done
+[2.461s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[2.462s] -- Detecting CXX compile features
+[2.463s] -- Detecting CXX compile features - done
+[2.480s] -- Found ament_cmake: 2.5.6 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[2.743s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[2.881s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[3.149s] -- Configuring done (3.1s)
+[3.161s] -- Generating done (0.0s)
+[3.163s] -- Build files have been written to: /home/ironie/HornetXII_sims/build/dave_demos
+[3.181s] Invoked command in '/home/ironie/HornetXII_sims/build/dave_demos' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ironie/assignment3/install/assignment3:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/ironie/HornetXII_sims/src/dave/examples/dave_demos -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/ironie/HornetXII_sims/install/dave_demos
+[3.183s] Invoking command in '/home/ironie/HornetXII_sims/build/dave_demos': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ironie/assignment3/install/assignment3:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/ironie/HornetXII_sims/build/dave_demos -- -j12 -l12
+[3.255s] Invoked command in '/home/ironie/HornetXII_sims/build/dave_demos' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ironie/assignment3/install/assignment3:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/ironie/HornetXII_sims/build/dave_demos -- -j12 -l12
+[3.257s] Invoking command in '/home/ironie/HornetXII_sims/build/dave_demos': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ironie/assignment3/install/assignment3:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/ironie/HornetXII_sims/build/dave_demos
+[3.269s] -- Install configuration: ""
+[3.270s] -- Execute custom install script
+[3.273s] -- Symlinking: /home/ironie/HornetXII_sims/install/dave_demos/share/dave_demos/launch/dave_object.launch.py
+[3.287s] -- Symlinking: /home/ironie/HornetXII_sims/install/dave_demos/share/dave_demos/launch/dave_robot.launch.py
+[3.301s] -- Symlinking: /home/ironie/HornetXII_sims/install/dave_demos/share/dave_demos/launch/dave_sensor.launch.py
+[3.315s] -- Symlinking: /home/ironie/HornetXII_sims/install/dave_demos/share/dave_demos/launch/dave_world.launch.py
+[3.329s] -- Symlinking: /home/ironie/HornetXII_sims/install/dave_demos/share/ament_index/resource_index/package_run_dependencies/dave_demos
+[3.346s] -- Symlinking: /home/ironie/HornetXII_sims/install/dave_demos/share/ament_index/resource_index/parent_prefix_path/dave_demos
+[3.361s] -- Symlinking: /home/ironie/HornetXII_sims/install/dave_demos/share/dave_demos/environment/ament_prefix_path.sh
+[3.373s] -- Symlinking: /home/ironie/HornetXII_sims/install/dave_demos/share/dave_demos/environment/ament_prefix_path.dsv
+[3.386s] -- Symlinking: /home/ironie/HornetXII_sims/install/dave_demos/share/dave_demos/environment/path.sh
+[3.411s] -- Symlinking: /home/ironie/HornetXII_sims/install/dave_demos/share/dave_demos/environment/path.dsv
+[3.413s] -- Symlinking: /home/ironie/HornetXII_sims/install/dave_demos/share/dave_demos/local_setup.bash
+[3.426s] -- Symlinking: /home/ironie/HornetXII_sims/install/dave_demos/share/dave_demos/local_setup.sh
+[3.437s] -- Symlinking: /home/ironie/HornetXII_sims/install/dave_demos/share/dave_demos/local_setup.zsh
+[3.449s] -- Symlinking: /home/ironie/HornetXII_sims/install/dave_demos/share/dave_demos/local_setup.dsv
+[3.462s] -- Symlinking: /home/ironie/HornetXII_sims/install/dave_demos/share/dave_demos/package.dsv
+[3.477s] -- Symlinking: /home/ironie/HornetXII_sims/install/dave_demos/share/ament_index/resource_index/packages/dave_demos
+[3.492s] -- Symlinking: /home/ironie/HornetXII_sims/install/dave_demos/share/dave_demos/cmake/dave_demosConfig.cmake
+[3.507s] -- Symlinking: /home/ironie/HornetXII_sims/install/dave_demos/share/dave_demos/cmake/dave_demosConfig-version.cmake
+[3.521s] -- Symlinking: /home/ironie/HornetXII_sims/install/dave_demos/share/dave_demos/package.xml
+[3.569s] Invoked command in '/home/ironie/HornetXII_sims/build/dave_demos' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ironie/assignment3/install/assignment3:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/ironie/HornetXII_sims/build/dave_demos

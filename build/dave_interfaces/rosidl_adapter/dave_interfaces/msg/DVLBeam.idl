@@ -1,0 +1,21 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from dave_interfaces/msg/DVLBeam.msg
+// generated code does not contain a copyright notice
+
+#include "geometry_msgs/msg/TwistWithCovariance.idl"
+
+module dave_interfaces {
+  module msg {
+    struct DVLBeam {
+      int64 id;
+
+      string reference;
+
+      double range;
+
+      boolean locked;
+
+      geometry_msgs::msg::TwistWithCovariance velocity;
+    };
+  };
+};

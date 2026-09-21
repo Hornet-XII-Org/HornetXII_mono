@@ -1,0 +1,1 @@
+ament_cmake_symlink_install_targets("TARGET_FILES" "/home/ironie/HornetXII_sims/build/dave_interfaces/rosidl_generator_py/dave_interfaces/dave_interfaces_s__rosidl_typesupport_c.so" "TARGETS" "dave_interfaces_s__rosidl_typesupport_c" "DESTINATION" "lib/python3.12/site-packages/dave_interfaces")
