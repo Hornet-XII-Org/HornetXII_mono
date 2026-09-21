@@ -1,1 +1,0 @@
-/home/ironie/HornetXII_sims/build/dave_multibeam_sonar_demo/ament_cmake_environment_hooks/local_setup.bash

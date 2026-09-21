@@ -1,1 +1,0 @@
-/home/ironie/HornetXII_sims/src/dave/models/dave_robot_models/config/bluerov2_heavy/robot_config.py

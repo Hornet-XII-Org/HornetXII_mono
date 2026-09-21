@@ -1,1 +1,0 @@
-/home/ironie/HornetXII_sims/src/auv_controls/launch/control.launch.py

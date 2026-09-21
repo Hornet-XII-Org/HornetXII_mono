@@ -1,1 +1,0 @@
-/home/ironie/HornetXII_sims/build/dave_sensor_models/ament_cmake_environment_hooks/local_setup.zsh

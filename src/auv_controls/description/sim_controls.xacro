@@ -32,8 +32,7 @@
             <namespace>auv_controls</namespace>            
             <joint_name>thruster_joint</joint_name>            
             <topic>thruster/cmd_thrust</topic>
-            <fluid_density>1000.0</fluid_density>
-            <thrust_coefficient>0.00031</thrust_coefficient>            
+            
             <use_angvel_cmd>false</use_angvel_cmd>
 
             <min_thrust_cmd>-30</min_thrust_cmd>

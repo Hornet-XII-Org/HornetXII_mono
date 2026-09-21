@@ -1,1 +1,0 @@
-/home/ironie/HornetXII_sims/src/dave/models/dave_sensor_models/config/blueview_p900/sensor_config.py
