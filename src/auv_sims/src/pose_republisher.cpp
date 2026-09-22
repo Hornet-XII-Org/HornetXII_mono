@@ -5,10 +5,15 @@
 #include "geometry_msgs/msg/pose_stamped.hpp"
 #include "control_msgs/msg/multi_dof_command.hpp"
 
-class OdoRepublisher : public rclcpp::Node
+
+/*
+republishes the bridged pose data of robot from gazebo to pid_controller's measured state.
+Useful for now, but best is to use localized pose to put into measured_state
+*/
+class PoseRepublisher : public rclcpp::Node
 {
 public:
-    OdoRepublisher() : Node("OdoRepublisher") {
+    PoseRepublisher() : Node("PoseRepublisher") {
         publisher = this->create_publisher<control_msgs::msg::MultiDOFCommand>("pid_controller/measured_state", 10);
 
         auto callback = [this](geometry_msgs::msg::PoseStamped::SharedPtr msg) {
@@ -32,7 +37,7 @@ private:
 
 int main(int argc, char * argv[]) {
     rclcpp::init(argc, argv);
-    rclcpp::spin(std::make_shared<OdoRepublisher>());
+    rclcpp::spin(std::make_shared<PoseRepublisher>());
     rclcpp::shutdown();
     return 0;
 

@@ -62,11 +62,11 @@ pluginlib_export_plugin_description_file(
 )
 
 # Pose republisher
-add_executable(odoRepub src/odo_republisher.cpp)
-ament_target_dependencies(odoRepub rclcpp control_msgs geometry_msgs)
+add_executable(PoseRepub src/pose_republisher.cpp)
+ament_target_dependencies(PoseRepub rclcpp control_msgs geometry_msgs)
 
 install(TARGETS
-  odoRepub
+  PoseRepub
   DESTINATION lib/${PROJECT_NAME}
 )
 

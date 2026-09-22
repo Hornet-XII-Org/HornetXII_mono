@@ -6,6 +6,9 @@ controller_manager:
     pid_controller:
       type: pid_controller/PidController
 
+    joint_state_broadcaster:
+      type: joint_state_broadcaster/JointStateBroadcaster
+
     # thruster_test_controller:
     #   type: forward_command_controller/ForwardCommandController
 
