@@ -56,12 +56,7 @@ The following command deliberately uses Ubuntu's system Python. Use it even if C
 cd ~/HornetXII_mono
 source /opt/ros/jazzy/setup.bash
 
-env -u PYTHONHOME -u PYTHONPATH \
-  PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin \
-  /usr/bin/colcon build \
-  --symlink-install \
-  --cmake-clean-cache \
-  --cmake-args -DPython3_EXECUTABLE=/usr/bin/python3
+colcon build --symlink-install
 
 source install/setup.bash
 ```
