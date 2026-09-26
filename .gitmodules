@@ -1,4 +1,3 @@
 [submodule "src/dave"]
 	path = src/dave
 	url = https://github.com/IOES-Lab/dave.git
-	branch = ros2
