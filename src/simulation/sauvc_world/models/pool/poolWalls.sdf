@@ -1,0 +1,152 @@
+<?xml version="1.0"?>
+<sdf version="1.9">
+  <model name="sauvc_pool">
+    <static>true</static>
+
+    <link name="pool_structure">
+
+      <!-- LEFT WALL: X = -12.5 -->
+      <visual name="left_wall">
+        <pose>-12.5 0 -0.8 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.15 16.3 1.8</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.75 0.85 0.9 1</ambient>
+          <diffuse>0.75 0.85 0.9 1</diffuse>
+        </material>
+      </visual>
+
+      <collision name="left_wall_collision">
+        <pose>-12.5 0 -0.8 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.15 16.3 1.8</size>
+          </box>
+        </geometry>
+      </collision>
+
+      <!-- RIGHT WALL: X = +12.5 -->
+      <visual name="right_wall">
+        <pose>12.5 0 -0.8 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.15 16.3 1.8</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.75 0.85 0.9 1</ambient>
+          <diffuse>0.75 0.85 0.9 1</diffuse>
+        </material>
+      </visual>
+
+      <collision name="right_wall_collision">
+        <pose>12.5 0 -0.8 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.15 16.3 1.8</size>
+          </box>
+        </geometry>
+      </collision>
+
+      <!-- TOP WALL: Y = +8 -->
+      <visual name="top_wall">
+        <pose>0 8 -0.8 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>25.3 0.15 1.8</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.75 0.85 0.9 1</ambient>
+          <diffuse>0.75 0.85 0.9 1</diffuse>
+        </material>
+      </visual>
+
+      <collision name="top_wall_collision">
+        <pose>0 8 -0.8 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>25.3 0.15 1.8</size>
+          </box>
+        </geometry>
+      </collision>
+
+      <!-- BOTTOM WALL: Y = -8 -->
+      <visual name="bottom_wall">
+        <pose>0 -8 -0.8 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>25.3 0.15 1.8</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.75 0.85 0.9 1</ambient>
+          <diffuse>0.75 0.85 0.9 1</diffuse>
+        </material>
+      </visual>
+
+      <collision name="bottom_wall_collision">
+        <pose>0 -8 -0.8 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>25.3 0.15 1.8</size>
+          </box>
+        </geometry>
+      </collision>
+
+      <!-- FLOOR: LEFT HALF -->
+      <!-- Centre X = -6.25 -->
+      <!-- Slope descends toward X = 0 -->
+      <visual name="floor_left">
+        <pose>-6.25 0 -1.5 0 0.031989 0</pose>
+        <geometry>
+          <box>
+            <size>12.5064 16 0.2</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.65 0.78 0.85 1</ambient>
+          <diffuse>0.65 0.78 0.85 1</diffuse>
+        </material>
+      </visual>
+
+      <collision name="floor_left_collision">
+        <pose>-6.25 0 -1.5 0 0.031989 0</pose>
+        <geometry>
+          <box>
+            <size>12.5064 16 0.2</size>
+          </box>
+        </geometry>
+      </collision>
+
+      <!-- FLOOR: RIGHT HALF -->
+      <!-- Centre X = +6.25 -->
+      <!-- Slope rises toward X = +12.5 -->
+      <visual name="floor_right">
+        <pose>6.25 0 -1.5 0 -0.031989 0</pose>
+        <geometry>
+          <box>
+            <size>12.5064 16 0.2</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.65 0.78 0.85 1</ambient>
+          <diffuse>0.65 0.78 0.85 1</diffuse>
+        </material>
+      </visual>
+
+      <collision name="floor_right_collision">
+        <pose>6.25 0 -1.5 0 -0.031989 0</pose>
+        <geometry>
+          <box>
+            <size>12.5064 16 0.2</size>
+          </box>
+        </geometry>
+      </collision>
+
+    </link>
+  </model>
+</sdf>
