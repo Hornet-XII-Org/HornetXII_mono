@@ -8,6 +8,9 @@
   <license>TODO: License declaration</license>
 
   <depend>rclpy</depend>
+  <exec_depend>ament_index_python</exec_depend>
+  <exec_depend>launch</exec_depend>
+  <exec_depend>launch_ros</exec_depend>
   <depend>ros_gz_sim</depend>
   <exec_depend>auv_sims</exec_depend>
   <exec_depend>dave_demos</exec_depend>

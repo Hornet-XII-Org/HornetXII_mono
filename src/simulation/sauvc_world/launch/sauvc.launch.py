@@ -21,7 +21,7 @@ def generate_launch_description():
         package="ros_gz_sim",
         executable="create",
         arguments=[
-            "-world", "oceans_waves",
+            "-world", "dave_ocean_waves",
             "-file", os.path.join(pkg, "models", "gate", "model.sdf"),
             "-name", "sauvc_gate",
             "-x", "4",
@@ -30,7 +30,6 @@ def generate_launch_description():
         ],
         output="screen",
     )
-    
     spawn_pool = Node(
         package="ros_gz_sim",
         executable="create",
