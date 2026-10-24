@@ -1,53 +1,67 @@
+"""Launch BlueROV with direct ROS thruster control, without ArduSub SITL."""
+
 import os
+import xml.etree.ElementTree as ET
+
 from ament_index_python.packages import get_package_share_directory
 from launch import LaunchDescription
-from launch.actions import IncludeLaunchDescription, DeclareLaunchArgument
+from launch.actions import DeclareLaunchArgument, IncludeLaunchDescription
 from launch.launch_description_sources import PythonLaunchDescriptionSource
-from launch.substitutions import LaunchConfiguration, PathJoinSubstitution
+from launch.substitutions import LaunchConfiguration
 from launch_ros.actions import Node
-from launch_ros.substitutions import FindPackageShare
+
 
 def generate_launch_description():
-    package_name='auv_sims'
+    sim_share = get_package_share_directory('auv_sims')
+    robot_share = get_package_share_directory('dave_robot_models')
+    dave_share = get_package_share_directory('dave_demos')
 
+    # Direct ROS control uses the six Gazebo thruster systems, without the
+    # upstream model's optional ArduPilot plugin and its SITL dependency.
+    model = ET.parse(os.path.join(
+        robot_share, 'description', 'bluerov2', 'model.sdf'))
+    for parent in model.iter():
+        for plugin in list(parent.findall('plugin')):
+            if plugin.get('filename') == 'libArduPilotPlugin.so':
+                parent.remove(plugin)
 
-    dave = IncludeLaunchDescription(
-        PythonLaunchDescriptionSource([os.path.join(
-            get_package_share_directory('dave_demos'), 'launch', 'dave_world.launch.py')]),
-            launch_arguments={'world_name': 'dave_ocean_waves'}.items()
+    world = IncludeLaunchDescription(
+        PythonLaunchDescriptionSource(os.path.join(
+            dave_share, 'launch', 'dave_world.launch.py')),
+        launch_arguments={'world_name': 'dave_ocean_waves'}.items(),
     )
-
-    robot_launch = IncludeLaunchDescription(
-        PythonLaunchDescriptionSource(
-            [
-                PathJoinSubstitution(
-                    [
-                        FindPackageShare("dave_robot_models"),
-                        "launch",
-                        "upload_robot.launch.py",
-                    ]
-                )
-            ]
-        ),
-        launch_arguments={
-            "gui": "gui",
-            "use_sim_time": "true",
-            "namespace": "bluerov2",
-            "use_ned_frame": "true",   
-            "use_teleop" : "false",
-            # "x": "10",
-            "use_web_joystick" : "false"         
-        }.items(),
-    ) 
-    
-    gz_bridge_params = os.path.join(get_package_share_directory(package_name), "config", "gz_bridge.yaml")
-    ros_gz_bridge_node = Node(package="ros_gz_bridge", executable="parameter_bridge", 
-        arguments=['--ros-args', '-p', f'config_file:={gz_bridge_params}']
+    spawn_robot = Node(
+        package='ros_gz_sim', executable='create',
+        arguments=[
+            '-world', 'oceans_waves', '-name', 'bluerov2',
+            '-string', ET.tostring(model.getroot(), encoding='unicode'),
+            '-x', LaunchConfiguration('x'), '-y', LaunchConfiguration('y'),
+            '-z', LaunchConfiguration('z'),
+        ],
+        output='screen',
     )
-
-    # Launch them all!
+    thruster_bridge = Node(
+        package='ros_gz_bridge', executable='parameter_bridge',
+        name='bluerov_thruster_bridge',
+        parameters=[{'config_file': os.path.join(
+            sim_share, 'config', 'gz_bridge.yaml')}],
+        output='screen',
+    )
+    state_bridge = Node(
+        package='ros_gz_bridge', executable='parameter_bridge',
+        name='bluerov_state_bridge',
+        arguments=[
+            '/model/bluerov2/odometry@nav_msgs/msg/Odometry[gz.msgs.Odometry',
+            '/model/bluerov2/imu@sensor_msgs/msg/Imu[gz.msgs.IMU',
+            '/world/oceans_waves/model/bluerov2/joint_state@sensor_msgs/msg/JointState[gz.msgs.Model',
+            '/model/bluerov2/camera@sensor_msgs/msg/Image[gz.msgs.Image',
+            '/model/bluerov2/camera_info@sensor_msgs/msg/CameraInfo[gz.msgs.CameraInfo',
+        ],
+        output='screen',
+    )
     return LaunchDescription([
-        dave,     
-        robot_launch,
-        ros_gz_bridge_node,            
+        DeclareLaunchArgument('x', default_value='0'),
+        DeclareLaunchArgument('y', default_value='0'),
+        DeclareLaunchArgument('z', default_value='-0.7'),
+        world, spawn_robot, thruster_bridge, state_bridge,
     ])

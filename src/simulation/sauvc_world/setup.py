@@ -1,4 +1,5 @@
 from setuptools import find_packages, setup
+from glob import glob
 
 package_name = 'sauvc_world'
 
@@ -12,7 +13,13 @@ setup(
         ('share/' + package_name, ['package.xml']),
         ('share/' + package_name + '/models/gate', ['models/gate/model.sdf']),
         ('share/' + package_name + '/launch', ['launch/sauvc.launch.py']),
-        ('share/' + package_name + '/models/pool', ['models/pool/poolWalls.sdf']),
+        ('share/' + package_name + '/models/pool',
+            ['models/pool/poolWalls.sdf', 'models/pool/model.config',
+             'models/pool/REFERENCES.md']),
+        ('share/' + package_name + '/models/pool/meshes',
+            glob('models/pool/meshes/*.obj')),
+        ('share/' + package_name + '/models/pool/materials/textures',
+            glob('models/pool/materials/textures/*.png')),
     ],
     install_requires=['setuptools'],
     zip_safe=True,
