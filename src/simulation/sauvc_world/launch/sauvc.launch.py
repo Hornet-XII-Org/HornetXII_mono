@@ -13,7 +13,7 @@ def generate_launch_description():
 
     existing_sim = IncludeLaunchDescription(
         PythonLaunchDescriptionSource(
-            os.path.join(auv_pkg, "launch", "test_sim.launch.py")
+            os.path.join(auv_pkg, "launch", "test_blueROV.launch.py")
         )
     )
 

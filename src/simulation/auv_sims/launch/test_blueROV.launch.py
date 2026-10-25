@@ -16,6 +16,22 @@ def generate_launch_description():
             get_package_share_directory('dave_demos'), 'launch', 'dave_world.launch.py')]),
             launch_arguments={'world_name': 'dave_ocean_waves'}.items()
     )
+    # define ENU to NED transform here as i think the transform done by dave isint correct?
+    enu_to_ned_transform = Node(
+        package="tf2_ros",
+        executable="static_transform_publisher",
+        name="world_to_world_ned",
+        arguments=[
+            "--yaw",
+            "1.57",
+            "--roll",
+            "3.14",
+            "--frame-id",
+            "world",
+            "--child-frame-id",
+            "world_ned",
+        ]
+    )
 
     robot_launch = IncludeLaunchDescription(
         PythonLaunchDescriptionSource(
@@ -33,9 +49,8 @@ def generate_launch_description():
             "gui": "gui",
             "use_sim_time": "true",
             "namespace": "bluerov2",
-            "use_ned_frame": "true",   
-            "use_teleop" : "false",
-            # "x": "10",
+            "use_ned_frame": "false",   
+            "use_teleop" : "false",               
             "use_web_joystick" : "false"         
         }.items(),
     ) 
@@ -48,6 +63,7 @@ def generate_launch_description():
     # Launch them all!
     return LaunchDescription([
         dave,     
+        enu_to_ned_transform,
         robot_launch,
         ros_gz_bridge_node,            
     ])

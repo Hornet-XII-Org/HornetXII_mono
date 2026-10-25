@@ -2,13 +2,14 @@
 #include <control_toolbox/pid.hpp>
 #include <Eigen/Dense>
 #include <cmath>
-// #include <format>
 #include <fmt/core.h>
 
 #include "rclcpp/rclcpp.hpp"
 #include "geometry_msgs/msg/pose_array.hpp"
 #include "std_msgs/msg/float64.hpp"
 #include <tf2/utils.hpp>
+#include <tf2_ros/buffer.h>
+#include <tf2_ros/transform_listener.h>
 #include <tf2_geometry_msgs/tf2_geometry_msgs.hpp>
 #include <tf2/LinearMath/Quaternion.h>
 
@@ -21,6 +22,10 @@ class PIDController : public rclcpp::Node
 public:
     PIDController() : Node("PIDController")
     {       
+        tf_buffer_ = std::make_unique<tf2_ros::Buffer>(this->get_clock());
+        tf_listener_ = std::make_shared<tf2_ros::TransformListener>(*tf_buffer_);
+
+
         stateSubscriber = this->create_subscription<geometry_msgs::msg::PoseArray>(STATE_TOPIC, 10, 
             [this](geometry_msgs::msg::PoseArray::ConstSharedPtr msg) {
                 stateCallback(msg);
@@ -30,7 +35,7 @@ public:
                 referenceCallback(msg);
             });
 
-        for (int i = 0; i < 4; i++) {
+        for (int i = 0; i < 6; i++) {
             std::string str = fmt::format("auv_controls/thruster{}/cmd_thrust", i+1);
             RCLCPP_INFO(this->get_logger(), str.c_str());
             thrusterPub[i] = this->create_publisher<std_msgs::msg::Float64>(str.c_str(), 10);            
@@ -42,11 +47,14 @@ public:
             strategy.type = control_toolbox::AntiWindupStrategy::BACK_CALCULATION;
             strategy.tracking_time_constant = 2.0;    
             //p, i, d, bounded max out, bounded min out        
-            pids[i].initialize(20.0, 1.5, 2.0, 10.0, -10.0, strategy);            
+            pids[i].initialize(20.0, 4.5, 1.5, 10.0, -10.0, strategy);            
         }
     }
 
 private:
+    std::unique_ptr<tf2_ros::Buffer> tf_buffer_;
+    std::shared_ptr<tf2_ros::TransformListener> tf_listener_;
+
     //subscribes to the current state from localization
     rclcpp::Subscription<geometry_msgs::msg::PoseArray>::SharedPtr stateSubscriber;
     //subscribes to the targetPosition, aka reference
@@ -58,7 +66,7 @@ private:
     control_toolbox::Pid pids[4];
     double prev_timestamp;
 
-    rclcpp::Publisher<std_msgs::msg::Float64>::SharedPtr thrusterPub[4];
+    rclcpp::Publisher<std_msgs::msg::Float64>::SharedPtr thrusterPub[6];
 
     //calculated TAM Moore-Penrose psuedo inverse, use online calculator
     Eigen::MatrixXd tamInverse {
@@ -78,13 +86,27 @@ private:
     {
         double currentStamp = msg->header.stamp.sec + msg->header.stamp.nanosec/(1e9);
         //compute xy-yaw pid effort
-        geometry_msgs::msg::Pose state = msg->poses[0];        
+        geometry_msgs::msg::Pose state = msg->poses[0];
+        
+        //transform from ENU to NED
+        try {
+            geometry_msgs::msg::PoseStamped pose_in;
+            pose_in.header = msg->header;
+            pose_in.header.frame_id = "world";
+            pose_in.pose = msg->poses[0];
+
+            state = tf_buffer_->transform(pose_in, "world_ned").pose;
+        } catch (const tf2::TransformException &ex) {
+           RCLCPP_WARN(get_logger(), "Could not transform pose: %s", ex.what());
+        }
+
         double stateYaw = tf2::getYaw(state.orientation);        
         double refYaw = tf2::getYaw(reference.orientation);
         
         double dx = reference.position.x - state.position.x;
         double dy = reference.position.y - state.position.y;
-        //displacement vector (in the AUV reference)
+        double dz = reference.position.z - state.position.z;
+        //x-y displacement vector (in the AUV reference)
         Eigen::Vector2d displacement(
             std::cos(stateYaw) * dx + std::sin(stateYaw) * dy,
             -std::sin(stateYaw) * dx + std::cos(stateYaw) * dy);
@@ -94,25 +116,28 @@ private:
             std::cos(refYaw - stateYaw));
 
         Eigen::VectorXd effort(3);
-        RCLCPP_INFO(this->get_logger(), "deltaX: %f, deltaY: %f, refYaw: %f, stateYaw: %f", displacement(0), displacement(1), refYaw, stateYaw);
+        RCLCPP_INFO(this->get_logger(), "dx: %f, dy: %f, dz: %f, dYaw: %f", displacement(0), displacement(1), dz, refYaw - stateYaw);
         double xEffort =   pids[0].compute_command(displacement(0),    currentStamp - prev_timestamp);
         double yEffort =   pids[1].compute_command(displacement(1),    currentStamp - prev_timestamp);
-        double psiEffort = pids[3].compute_command(yawError, currentStamp - prev_timestamp);
-        //I definitely have some sign/transform error somewhere for this to have a -y and -psi, ill fix it soon
-        effort << xEffort, -yEffort, -psiEffort;        
+        double zEffort =   pids[2].compute_command(dz,                 currentStamp - prev_timestamp);
+        double psiEffort = pids[3].compute_command(yawError,           currentStamp - prev_timestamp);
+
+        effort << xEffort, yEffort, psiEffort;
+
+        //2 total vertical thrusters
+        double individualZEffort = zEffort/2;
 
         Eigen::VectorXd allocation(4);
         allocation = this->tamInverse * effort;
-
-        //TODO
-        //compute z effort
-        // double zEffort =   pids[2].compute_command(reference.position.z - state.position.x, currentStamp - prev_timestamp);
         
         //thruster1 to thruster4
         publishThrust(0, allocation(0));
         publishThrust(1, allocation(1));
         publishThrust(2, allocation(2));
         publishThrust(3, allocation(3));
+
+        publishThrust(4, individualZEffort);
+        publishThrust(5, individualZEffort);
         
 
         prev_timestamp = currentStamp;
