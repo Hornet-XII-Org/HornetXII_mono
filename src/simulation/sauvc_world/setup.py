@@ -11,6 +11,7 @@ setup(
         ('share/ament_index/resource_index/packages',
             ['resource/' + package_name]),
         ('share/' + package_name, ['package.xml']),
+        ('share/' + package_name + '/models/robot', ['models/robot/model.sdf']),
         ('share/' + package_name + '/models/gate', ['models/gate/model.sdf']),
         ('share/' + package_name + '/launch', ['launch/sauvc.launch.py']),
         ('share/' + package_name + '/models/pool',

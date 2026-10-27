@@ -8,6 +8,7 @@ from launch import LaunchDescription
 from launch.actions import DeclareLaunchArgument, IncludeLaunchDescription
 from launch.launch_description_sources import PythonLaunchDescriptionSource
 from launch.substitutions import LaunchConfiguration
+from launch.conditions import IfCondition
 from launch_ros.actions import Node
 
 
@@ -30,8 +31,14 @@ def generate_launch_description():
             dave_share, 'launch', 'dave_world.launch.py')),
         launch_arguments={'world_name': 'dave_ocean_waves'}.items(),
     )
+    spawn_robot_arg = DeclareLaunchArgument(
+        'spawn_robot',
+        default_value='true',
+        description='Whether to spawn the default BlueROV2 model',
+    )
     spawn_robot = Node(
         package='ros_gz_sim', executable='create',
+        condition=IfCondition(LaunchConfiguration('spawn_robot')),
         arguments=[
             '-world', 'oceans_waves', '-name', 'bluerov2',
             '-string', ET.tostring(model.getroot(), encoding='unicode'),
@@ -63,5 +70,6 @@ def generate_launch_description():
         DeclareLaunchArgument('x', default_value='0'),
         DeclareLaunchArgument('y', default_value='0'),
         DeclareLaunchArgument('z', default_value='-0.7'),
-        world, spawn_robot, thruster_bridge, state_bridge,
+        spawn_robot_arg, world, spawn_robot,
+        thruster_bridge, state_bridge,
     ])
