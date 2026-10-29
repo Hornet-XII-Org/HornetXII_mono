@@ -10,40 +10,43 @@ from launch_ros.actions import Node
 
 def generate_launch_description():
     pkg = get_package_share_directory("sauvc_world")
-    auv_pkg = get_package_share_directory("auv_sims")
+    sim_share = get_package_share_directory("auv_sims")
+    dave_share = get_package_share_directory('dave_demos')
 
-    existing_sim = IncludeLaunchDescription(
-        PythonLaunchDescriptionSource(
-            os.path.join(auv_pkg, "launch", "test_blueROV.launch.py")
-        ),
-        # Provisional qualification practice: shallow end, facing along +X.
-        launch_arguments={
-            'spawn_robot': 'false',
-            'x': '-24.4',
-            'y': '0',
-            'z': '-0.65',
-        }.items(),
+    world = IncludeLaunchDescription(
+        PythonLaunchDescriptionSource(os.path.join(
+            dave_share, 'launch', 'dave_world.launch.py')),
+        launch_arguments={'world_name': 'dave_ocean_waves'}.items(),
     )
-    
-    # Direct ROS control uses the six Gazebo thruster systems, without the
-    # upstream model's optional ArduPilot plugin and its SITL dependency.
-    sauvc_share = get_package_share_directory('sauvc_world')
-    robot_model = ET.parse(os.path.join(
-        sauvc_share, 'models', 'robot', 'model.sdf'
-    ))
-    for parent in robot_model.iter():
-        for plugin in list(parent.findall('plugin')):
-            print(plugin.get('filename'))
-            if plugin.get('filename') == 'libArduPilotPlugin.so':
-                print("Remove plugin")
-                parent.remove(plugin)
+
+    thruster_bridge = Node(
+        package='ros_gz_bridge', executable='parameter_bridge',
+        name='bluerov_thruster_bridge',
+        parameters=[{'config_file': os.path.join(
+            sim_share, 'config', 'gz_bridge.yaml')}],
+        output='screen',
+    )
+
+    state_bridge = Node(
+        package='ros_gz_bridge', executable='parameter_bridge',
+        name='bluerov_state_bridge',
+        arguments=[
+            '/model/bluerov2/odometry@nav_msgs/msg/Odometry[gz.msgs.Odometry',
+            '/model/bluerov2/imu@sensor_msgs/msg/Imu[gz.msgs.IMU',
+            '/world/oceans_waves/model/bluerov2/joint_state@sensor_msgs/msg/JointState[gz.msgs.Model',
+            '/model/bluerov2/camera/left@sensor_msgs/msg/Image[gz.msgs.Image',
+            '/model/bluerov2/camera/right@sensor_msgs/msg/Image[gz.msgs.Image',
+            '/model/bluerov2/camera/down@sensor_msgs/msg/Image[gz.msgs.Image',
+        ],
+        output='screen',
+    )
 
     spawn_robot = Node(
         package="ros_gz_sim",
         executable="create",
         arguments=[
             "-world", "oceans_waves",
-            '-string', ET.tostring(robot_model.getroot(), encoding='unicode'),
+            "-file", os.path.join(pkg, "models", "robot", "model.sdf"),
             "-name", "sauvc_robot",
             "-x", "-24.4",
             "-y", "0",
@@ -85,7 +88,9 @@ def generate_launch_description():
     return LaunchDescription([
         AppendEnvironmentVariable(
             'GZ_SIM_RESOURCE_PATH', os.path.join(pkg, 'models')),
-        existing_sim,
+        world,
+        thruster_bridge,
+        state_bridge,
         spawn_robot,
         spawn_gate,
         spawn_pool,
