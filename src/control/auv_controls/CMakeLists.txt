@@ -11,32 +11,40 @@ find_package(ament_cmake REQUIRED)
 # further dependencies manually.
 # find_package(<dependency> REQUIRED)
 
-find_package(gz_ros2_control REQUIRED)
-find_package(gz_sim_vendor REQUIRED)
-find_package(gz-sim REQUIRED)
+# find_package(gz_ros2_control REQUIRED)
+# find_package(gz_sim_vendor REQUIRED)
+# find_package(gz-sim REQUIRED)
 find_package(hardware_interface REQUIRED)
 find_package(pluginlib REQUIRED)
 find_package(rclcpp REQUIRED)
 find_package(std_msgs REQUIRED)
 find_package(control_msgs REQUIRED)
 find_package(geometry_msgs REQUIRED)
+find_package(nav_msgs REQUIRED)
 find_package(control_toolbox REQUIRED)
 find_package(eigen3_cmake_module REQUIRED)
 find_package(Eigen3 REQUIRED)
 find_package(tf2 REQUIRED)
+find_package(custom_msgs REQUIRED)
 
 add_executable(PIDController src/PIDController.cpp)
-ament_target_dependencies(PIDController rclcpp geometry_msgs control_toolbox Eigen3 tf2 tf2_geometry_msgs)
+ament_target_dependencies(PIDController rclcpp geometry_msgs control_toolbox Eigen3 tf2 tf2_geometry_msgs custom_msgs)
 
 install(
-  DIRECTORY config description launch
+  DIRECTORY description launch
   DESTINATION share/${PROJECT_NAME}
+)
+
+install(DIRECTORY config/
+  DESTINATION share/${PROJECT_NAME}/config
 )
 
 install(TARGETS
   PIDController
   DESTINATION lib/${PROJECT_NAME}
 )
+
+
 
 
 if(BUILD_TESTING)
