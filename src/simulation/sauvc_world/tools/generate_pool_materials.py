@@ -98,7 +98,7 @@ def texture(name, width, height, tile_width, tile_height):
     color[stripe] = navy
     color += variation[..., None]
     color *= (0.94 + 0.06 * bevel)[..., None]
-    color[grout] = [111, 133, 140]
+    color[grout] = [0, 0, 0]
     Image.fromarray(np.uint8(np.clip(color, 0, 255))).save(
         POOL / 'materials' / 'textures' / f'{name}_albedo.png')
     roughness = np.where(grout, 215, np.where(stripe, 130, 155)).astype(np.uint8)
