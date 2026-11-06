@@ -37,6 +37,9 @@ def generate_launch_description():
             '/model/bluerov2/camera/left@sensor_msgs/msg/Image[gz.msgs.Image',
             '/model/bluerov2/camera/right@sensor_msgs/msg/Image[gz.msgs.Image',
             '/model/bluerov2/camera/down@sensor_msgs/msg/Image[gz.msgs.Image',
+            '/model/bluerov2/camera/left/camera_info@sensor_msgs/msg/CameraInfo[gz.msgs.CameraInfo',
+            '/model/bluerov2/camera/right/camera_info@sensor_msgs/msg/CameraInfo[gz.msgs.CameraInfo',
+            '/model/bluerov2/camera/down/camera_info@sensor_msgs/msg/CameraInfo[gz.msgs.CameraInfo',
         ],
         output='screen',
     )

@@ -86,6 +86,7 @@
         <always_on>false</always_on>
         <topic>/model/bluerov2/camera/left</topic>
         <camera>
+          <camera_info_topic>/model/bluerov2/camera/left/camera_info</camera_info_topic>
           <horizontal_fov>1.05</horizontal_fov>
           <image>
             <width>640</width>
@@ -159,6 +160,7 @@
         <always_on>false</always_on>
         <topic>/model/bluerov2/camera/right</topic>
         <camera>
+          <camera_info_topic>/model/bluerov2/camera/right/camera_info</camera_info_topic>
           <horizontal_fov>1.05</horizontal_fov>
           <image>
             <width>640</width>
@@ -234,6 +236,7 @@
         <always_on>false</always_on>
         <topic>/model/bluerov2/camera/down</topic>
         <camera>
+          <camera_info_topic>/model/bluerov2/camera/down/camera_info</camera_info_topic>
           <horizontal_fov>1.05</horizontal_fov>
           <image>
             <width>640</width>
