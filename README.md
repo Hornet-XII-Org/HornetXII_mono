@@ -85,3 +85,27 @@ ros2 run controller_manager spawner pid_controller
 ```
 
 Gazebo may take longer on its first run while it downloads Fuel models.
+
+### Run BlueROV with the pool and gate
+
+After sourcing both environments, run:
+
+```bash
+ros2 launch sauvc_world sauvc.launch.py
+```
+
+This starts the ocean world, six-thruster BlueROV, pool walls and floor, and
+orange gate. The pool interior is 50 × 25 m, with 1.28 m shallow and 2.00 m
+deep sections joined by a slope. Eight swimming-lane markings run along X.
+BlueROV starts at `(-24.4, 0, -0.65)` and the gate at `(-15, 0, -0.75)`,
+10 m from the shallow wall. This is a provisional qualification practice layout;
+the 2027 course allocation is not yet confirmed.
+The six `auv_controls/thrusterN/cmd_thrust` ROS topics accept thrust commands
+in newtons. This launch uses direct ROS control without ArduSub SITL or the
+single-thruster test PID controller. Odometry, IMU, joint states, and camera
+data are bridged from Gazebo to ROS.
+
+The pool uses Singapore Polytechnic inspired pale ceramic tiles and navy lane
+markings. Tile sizes and marking spacing are visual estimates; photographic
+sources, assumptions, and asset regeneration instructions are in
+[`REFERENCES.md`](src/simulation/sauvc_world/models/pool/REFERENCES.md).
