@@ -28,7 +28,7 @@ find_package(tf2 REQUIRED)
 find_package(custom_msgs REQUIRED)
 
 add_executable(PIDController src/PIDController.cpp)
-ament_target_dependencies(PIDController rclcpp geometry_msgs control_toolbox Eigen3 tf2 tf2_geometry_msgs custom_msgs)
+ament_target_dependencies(PIDController rclcpp geometry_msgs control_toolbox Eigen3 tf2 tf2_geometry_msgs custom_msgs nav_msgs)
 
 install(
   DIRECTORY description launch

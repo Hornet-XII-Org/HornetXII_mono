@@ -50,7 +50,7 @@ def generate_launch_description():
         arguments=[
             "-world", "oceans_waves",
             "-file", os.path.join(pkg, "models", "robot", "model.sdf"),
-            "-name", "sauvc_robot",
+            "-name", "bluerov2",
             "-x", "-24.4",
             "-y", "0",
             "-z", "-0.65",

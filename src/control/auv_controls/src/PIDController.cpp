@@ -7,6 +7,7 @@
 #include <array>
 #include "rclcpp/rclcpp.hpp"
 #include "geometry_msgs/msg/pose_array.hpp"
+#include "nav_msgs/msg/odometry.hpp"
 #include "std_msgs/msg/float64.hpp"
 #include <tf2/utils.hpp>
 #include <tf2_ros/buffer.h>
@@ -16,7 +17,7 @@
 #include "rclcpp_action/rclcpp_action.hpp"
 #include "custom_msgs/action/move_to.hpp"
 
-#define STATE_TOPIC "/model/bluerov2/pose"
+#define STATE_TOPIC "/model/bluerov2/odometry"
 #define REFERENCE_TOPIC "/reference"
 #define THRUSTER_COMMAND "auv_controls/thruster{}/cmd_thrust"
 #define CMD_TOPIC "/cmd_vel"
@@ -53,8 +54,8 @@ public:
         // tf_buffer_ = std::make_unique<tf2_ros::Buffer>(this->get_clock());
         // tf_listener_ = std::make_shared<tf2_ros::TransformListener>(*tf_buffer_);
 
-        stateSubscriber = this->create_subscription<geometry_msgs::msg::PoseArray>(STATE_TOPIC, 10, 
-            [this](geometry_msgs::msg::PoseArray::ConstSharedPtr msg) {
+        stateSubscriber = this->create_subscription<nav_msgs::msg::Odometry>(STATE_TOPIC, 10, 
+            [this](nav_msgs::msg::Odometry::ConstSharedPtr msg) {
                 stateCallback(msg);
             });
 
@@ -114,7 +115,7 @@ private:
     std::shared_ptr<tf2_ros::TransformListener> tf_listener_;
 
     //subscribes to the current state from localization
-    rclcpp::Subscription<geometry_msgs::msg::PoseArray>::SharedPtr stateSubscriber;
+    rclcpp::Subscription<nav_msgs::msg::Odometry>::SharedPtr stateSubscriber;
     //subscribes to the targetPosition, aka reference
     rclcpp::Subscription<geometry_msgs::msg::Pose>::SharedPtr referenceSubscriber;
     geometry_msgs::msg::Pose reference;
@@ -170,7 +171,7 @@ private:
     /*
     For reference control commanding
     */
-    void stateCallback(const geometry_msgs::msg::PoseArray::ConstSharedPtr msg)
+    void stateCallback(const nav_msgs::msg::Odometry::ConstSharedPtr msg)
     {
         if (this->get_parameter("control_mode").as_string() == "direct")
             return;
@@ -183,7 +184,7 @@ private:
             return;
         }
         //compute xy-yaw pid effort
-        geometry_msgs::msg::Pose state = msg->poses[0];
+        geometry_msgs::msg::Pose state = msg->pose.pose;
         
         //transform from ENU to NED
         // try {
