@@ -80,13 +80,15 @@
         </inertia>
       </inertial>
 
-      <sensor name="underwater_camera" type="camera">
+      <!-- rgbd_camera: the UnderwaterCamera plugin needs the depth image.
+           Plugin publishes the water-affected image on the ROS topic
+           /model/bluerov2/camera/left/simulated_image -->
+      <sensor name="underwater_camera" type="rgbd_camera">
         <update_rate>5</update_rate>
         <visualize>false</visualize>
-        <always_on>false</always_on>
+        <always_on>true</always_on>
         <topic>/model/bluerov2/camera/left</topic>
         <camera>
-          <camera_info_topic>/model/bluerov2/camera/left/camera_info</camera_info_topic>
           <horizontal_fov>1.05</horizontal_fov>
           <image>
             <width>640</width>
@@ -94,9 +96,21 @@
           </image>
           <clip>
             <near>0.1</near>
-            <far>10.0</far>
+            <far>40.0</far>
           </clip>
         </camera>
+        <plugin
+          filename="UnderwaterCamera"
+          name="dave_gz_sensor_plugins::UnderwaterCamera">
+          <!-- absorption per metre: red is absorbed fastest -->
+          <attenuationR>0.04</attenuationR>
+          <attenuationG>0.025</attenuationG>
+          <attenuationB>0.015</attenuationB>
+          <!-- colour distant objects fade into (0-255) -->
+          <backgroundR>51</backgroundR>
+          <backgroundG>128</backgroundG>
+          <backgroundB>153</backgroundB>
+        </plugin>
       </sensor>
     </link>
 
@@ -154,13 +168,15 @@
           <izz>0.0001</izz>
         </inertia>
       </inertial>
-      <sensor name="underwater_camera" type="camera">
+      <!-- rgbd_camera: the UnderwaterCamera plugin needs the depth image.
+           Plugin publishes the water-affected image on the ROS topic
+           /model/bluerov2/camera/right/simulated_image -->
+      <sensor name="underwater_camera" type="rgbd_camera">
         <update_rate>5</update_rate>
         <visualize>false</visualize>
-        <always_on>false</always_on>
+        <always_on>true</always_on>
         <topic>/model/bluerov2/camera/right</topic>
         <camera>
-          <camera_info_topic>/model/bluerov2/camera/right/camera_info</camera_info_topic>
           <horizontal_fov>1.05</horizontal_fov>
           <image>
             <width>640</width>
@@ -168,9 +184,21 @@
           </image>
           <clip>
             <near>0.1</near>
-            <far>10.0</far>
+            <far>40.0</far>
           </clip>
         </camera>
+        <plugin
+          filename="UnderwaterCamera"
+          name="dave_gz_sensor_plugins::UnderwaterCamera">
+          <!-- absorption per metre: red is absorbed fastest -->
+          <attenuationR>0.04</attenuationR>
+          <attenuationG>0.025</attenuationG>
+          <attenuationB>0.015</attenuationB>
+          <!-- colour distant objects fade into (0-255) -->
+          <backgroundR>51</backgroundR>
+          <backgroundG>128</backgroundG>
+          <backgroundB>153</backgroundB>
+        </plugin>
       </sensor>
     </link>
 

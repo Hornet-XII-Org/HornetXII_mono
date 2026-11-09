@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<sdf version="1.9">
+  <!-- SAUVC qualification gate, after the official figure
+       https://sauvc.org/rulebook/img/qualification-gate.jpg (rulebook
+       v2027.3.2): two orange posts 4 cm wide and ~100 cm tall hanging from the
+       water surface, joined by a white 150 cm wide bar at the surface. The
+       "3 sides" of the rules are left post, right post and top bar. There is
+       no bottom bar. Frame lies in the y-z plane, so an AUV travelling along
+       +x passes through it.
+       Origin = bottom of the posts: spawn at z=-1.0 so the post tops are at the
+       water surface (z=0) and the white bar sits just above it. -->
+  <model name="qualification_gate">
+    <static>true</static>
+    <link name="link">
+      <visual name="left_post">
+        <pose>0 0.73 0.5 0 0 0</pose>
+        <geometry><box><size>0.04 0.04 1.0</size></box></geometry>
+        <material>
+          <ambient>1 0.6 0 1</ambient>
+          <diffuse>1 0.6 0 1</diffuse>
+        </material>
+      </visual>
+      <visual name="right_post">
+        <pose>0 -0.73 0.5 0 0 0</pose>
+        <geometry><box><size>0.04 0.04 1.0</size></box></geometry>
+        <material>
+          <ambient>1 0.6 0 1</ambient>
+          <diffuse>1 0.6 0 1</diffuse>
+        </material>
+      </visual>
+      <visual name="top_bar">
+        <pose>0 0 1.04 0 0 0</pose>
+        <geometry><box><size>0.04 1.5 0.08</size></box></geometry>
+        <material>
+          <ambient>0.95 0.95 0.95 1</ambient>
+          <diffuse>0.95 0.95 0.95 1</diffuse>
+        </material>
+      </visual>
+    </link>
+  </model>
+</sdf>
