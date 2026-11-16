@@ -65,10 +65,10 @@ def generate_launch_description():
             "-world", "oceans_waves",
             "-file", os.path.join(pkg, "models", "gate", "model.sdf"),
             "-name", "sauvc_gate",
-            # 10 m from the shallow wall at x=-25; 2027 layout is pending.
+            # Qualification practice: 10 m from the shallow wall at x=-25.
             "-x", "-15",
             "-y", "0",
-            "-z", "-0.75",
+            "-z", "-0.55",
         ],
         output="screen",
     )

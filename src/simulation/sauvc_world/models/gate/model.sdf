@@ -4,10 +4,10 @@
     <static>true</static>
     <link name="gate">
       <visual name="left_post">
-        <pose>0 -0.7 0 0 0 0</pose>
+        <pose>0 -0.8 0 0 0 0</pose>
         <geometry>
           <box>
-            <size>0.1 0.1 1.4</size>
+            <size>0.1 0.1 1.0</size>
           </box>
         </geometry>
         <material>
@@ -17,10 +17,10 @@
       </visual>
 
       <visual name="right_post">
-        <pose>0 0.7 0 0 0 0</pose>
+        <pose>0 0.8 0 0 0 0</pose>
         <geometry>
           <box>
-            <size>0.1 0.1 1.4</size>
+            <size>0.1 0.1 1.0</size>
           </box>
         </geometry>
         <material>
@@ -30,10 +30,10 @@
       </visual>
 
       <visual name="top_bar">
-        <pose>0 0 0.7 0 0 0</pose>
+        <pose>0 0 0.55 0 0 0</pose>
         <geometry>
           <box>
-            <size>0.1 1.5 0.1</size>
+            <size>0.1 1.7 0.1</size>
           </box>
         </geometry>
         <material>
@@ -41,6 +41,20 @@
           <diffuse>1 0.4 0 1</diffuse>
         </material>
       </visual>
+      <!-- Model origin is the opening center. Inner width 1.5 m, top at
+           +0.5 m, post bottoms at -0.5 m; there is no bottom crossbar. -->
+      <collision name="left_post_collision">
+        <pose>0 -0.8 0 0 0 0</pose>
+        <geometry><box><size>0.1 0.1 1.0</size></box></geometry>
+      </collision>
+      <collision name="right_post_collision">
+        <pose>0 0.8 0 0 0 0</pose>
+        <geometry><box><size>0.1 0.1 1.0</size></box></geometry>
+      </collision>
+      <collision name="top_bar_collision">
+        <pose>0 0 0.55 0 0 0</pose>
+        <geometry><box><size>0.1 1.7 0.1</size></box></geometry>
+      </collision>
     </link>
   </model>
 </sdf>
