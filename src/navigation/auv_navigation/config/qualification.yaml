@@ -1,0 +1,41 @@
+waypoint_executor:
+  ros__parameters:
+    mission: qualification
+    frame_id: map
+    state_topic: /model/bluerov2/odometry
+    gate_pose: [-15.0, 0.0, -0.55, 0.0]  # opening center XYZ, forward normal yaw (rad)
+    gate_width: 1.5
+    gate_height: 1.0
+    vehicle_length: 0.6
+    vehicle_width: 0.5
+    vehicle_height: 0.4
+    clearance_margin: 0.1
+    approach_distance: 1.5
+    exit_distance: 1.0
+    linear_speed: 0.2
+    yaw_rate: 0.35
+    waypoint_timeout: 120.0
+
+# Dedicated simulation tuning. Legacy PIDController_params.yaml stays available.
+PIDController:
+  ros__parameters:
+    control_mode: reference
+    accept_cmd_vel: false
+    reference_timeout: 0.5
+    state_timeout: 0.5
+    max_thruster_force: 10.0
+    use_velocity_derivative: true
+    # Compensate this model's small positive buoyancy (body Z-up force in N).
+    heave_feedforward: -2.7
+    x_p: 12.0
+    x_i: 0.0
+    x_d: 10.0
+    y_p: 12.0
+    y_i: 0.0
+    y_d: 10.0
+    z_p: 15.0
+    z_i: 0.5
+    z_d: 10.0
+    yaw_p: 1.5
+    yaw_i: 0.0
+    yaw_d: 1.5

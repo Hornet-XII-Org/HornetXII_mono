@@ -19,14 +19,11 @@ Ubuntu 24.04 with ROS 2 Jazzy and Gazebo Harmonic is the reference development e
 
 ### Install DAVE and workspace dependencies
 
-Follow the [DAVE native installation manual](https://dave-ros2.notion.site/Native-Local-Installation-Manual-7c6d7be83a4947d28ae3e3eb6b7de5ee) for the Ubuntu host dependencies. When the manual reaches **Get source codes**, clone DAVE directly into this workspace and pin the last revision currently used by HornetXII instead of checking out DAVE's moving development branch:
+Follow the [DAVE native installation manual](https://dave-ros2.notion.site/Native-Local-Installation-Manual-7c6d7be83a4947d28ae3e3eb6b7de5ee) for the Ubuntu host dependencies. When the manual reaches **Get source codes**, initialize this repository's DAVE submodule at the recorded commit, `d2121a5b4457361e60106aaa029b0a448977d70e`, instead of cloning DAVE's moving development branch:
 
 ```bash
 cd ~/HornetXII_mono
-
-# Skip the clone command if src/dave already exists.
-git clone https://github.com/IOES-Lab/dave.git src/dave
-git -C src/dave checkout d2121a5b4457361e60106aaa029b0a448977d70e
+git submodule update --init --recursive --checkout
 ```
 
 Continue the DAVE manual after its source-code step, using `~/HornetXII_mono` as the ROS workspace. Then install dependencies declared by all packages in this workspace:
@@ -56,7 +53,8 @@ The following command deliberately uses Ubuntu's system Python. Use it even if C
 cd ~/HornetXII_mono
 source /opt/ros/jazzy/setup.bash
 
-colcon build --symlink-install
+colcon build --symlink-install \
+  --cmake-args -DPython_EXECUTABLE=/usr/bin/python3 -DPython3_EXECUTABLE=/usr/bin/python3
 
 source install/setup.bash
 ```
@@ -105,6 +103,12 @@ The six `auv_controls/thrusterN/cmd_thrust` ROS topics accept thrust commands
 in newtons. This launch uses direct ROS control without ArduSub SITL or the
 single-thruster test PID controller. Odometry, IMU, joint states, and camera
 data are bridged from Gazebo to ROS.
+
+For the qualification mission, keep that simulation running and launch
+`ros2 launch auv_navigation qualification.launch.py` in another sourced
+terminal. Then call `/waypoint_executor/start` as shown in the
+[navigation guide](src/navigation/README.md). The qualification launch starts
+its own PID controller; stop standalone controllers and teleop first.
 
 The pool uses Singapore Polytechnic inspired pale ceramic tiles and navy lane
 markings. Tile sizes and marking spacing are visual estimates; photographic

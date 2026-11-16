@@ -1,11 +1,11 @@
 import os
-import xml.etree.ElementTree as ET
 
 from ament_index_python.packages import get_package_share_directory
 from launch import LaunchDescription
-from launch.actions import AppendEnvironmentVariable, IncludeLaunchDescription
+from launch.actions import AppendEnvironmentVariable, DeclareLaunchArgument, IncludeLaunchDescription
 from launch.launch_description_sources import PythonLaunchDescriptionSource
 from launch_ros.actions import Node
+from launch.substitutions import LaunchConfiguration
 
 
 def generate_launch_description():
@@ -16,7 +16,8 @@ def generate_launch_description():
     world = IncludeLaunchDescription(
         PythonLaunchDescriptionSource(os.path.join(
             dave_share, 'launch', 'dave_world.launch.py')),
-        launch_arguments={'world_name': 'dave_ocean_waves'}.items(),
+        launch_arguments={'world_name': 'dave_ocean_waves',
+                          'headless': LaunchConfiguration('headless')}.items(),
     )
 
     thruster_bridge = Node(
@@ -89,6 +90,7 @@ def generate_launch_description():
     )
 
     return LaunchDescription([
+        DeclareLaunchArgument('headless', default_value='false'),
         AppendEnvironmentVariable(
             'GZ_SIM_RESOURCE_PATH', os.path.join(pkg, 'models')),
         world,

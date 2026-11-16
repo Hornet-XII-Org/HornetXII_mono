@@ -3,14 +3,19 @@
 `/reference` and odometry on `/model/bluerov2/odometry`. It rotates horizontal
 position errors into body axes and allocates effort to six thrusters.
 
+For the ground-truth qualification mission and its dedicated simulation tuning,
+follow the [navigation guide](../../navigation/README.md).
+`ros2 launch auv_navigation qualification.launch.py` starts both the executor
+and this controller; do not start another controller alongside it. Legacy
+gains below are separate from that simulation profile.
+
 The controller limits each final thruster command to `max_thruster_force`.
 Reference-mode odometry loss zeros thrust after `state_timeout` (default 0.5 s).
-`reference_timeout` defaults to zero for legacy pose publishers; set a positive
-value to require a pose-reference heartbeat. Optional `command_timeout` applies
-to direct keyboard commands and defaults to zero for compatibility.
-`use_velocity_derivative` enables measured-velocity derivative damping, and
-`heave_feedforward` adds a vertical force in newtons. Both default to disabled
-or zero and require tuning for the vehicle.
+`reference_timeout` defaults to zero for legacy pose publishers; the autonomous
+profile enables a 0.5 s reference heartbeat timeout. Optional `command_timeout`
+applies to direct keyboard commands and defaults to zero for compatibility.
+The simulation profile uses measured-velocity derivative damping and a model-
+specific `heave_feedforward`; these require retuning for the physical vehicle.
 
 To test, first launch the sim with the blueROV
 ```
