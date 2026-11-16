@@ -50,6 +50,36 @@
 
     </link>
 
+    <link name="depth_sensor_link">
+      <pose relative_to="base_link">0 0 0 0 0 0</pose>
+      <inertial>
+        <mass>0.0001</mass>
+        <inertia>
+          <ixx>0.0001</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.0001</iyy>
+          <iyz>0</iyz>
+          <izz>0.0001</izz>
+        </inertia>
+      </inertial>
+    </link>
+
+    <!-- https://dave-ros2.notion.site/SeaPressure-Plugin-d2314d664f3e4884bb860369d87bd550 -->
+    <plugin filename="sea_pressure_sensor"
+      name="dave_gz_sensor_plugins::SubseaPressureSensorPlugin">
+      <link_name>depth_sensor_link</link_name>
+      <!-- publishes to /model/<namespace>/<topic> -->
+      <namespace>bluerov2</namespace>
+      <topic>depth</topic>
+      <!-- publishing rate in Hz -->
+      <update_rate>60</update_rate>
+      <noise_sigma>3.0</noise_sigma>
+      <estimate_depth_on>false</estimate_depth_on>
+      <standard_pressure>101.325</standard_pressure>
+      <kPa_per_meter>9.80638</kPa_per_meter>
+    </plugin>
+
 
     <link name="camera_left_link">
       <pose relative_to="camera_left_mount_link">0 0 0 0 0 0</pose>
