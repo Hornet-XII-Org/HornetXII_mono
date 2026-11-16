@@ -13,14 +13,12 @@ def launch_setup(context):
     mode = LaunchConfiguration('mode').perform(context)
     pkg = get_package_share_directory("sauvc_world")
     sim_share = get_package_share_directory("auv_sims")
-    ros_gz_sim_share = get_package_share_directory('ros_gz_sim')
+    dave_share = get_package_share_directory('dave_demos')
 
     world = IncludeLaunchDescription(
         PythonLaunchDescriptionSource(os.path.join(
-            ros_gz_sim_share, 'launch', 'gz_sim.launch.py')),
-        launch_arguments={
-            'gz_args': '-r ' + os.path.join(pkg, 'worlds', 'sauvc_pool.world'),
-        }.items(),
+            dave_share, 'launch', 'dave_world.launch.py')),
+        launch_arguments={'world_name': 'dave_ocean_waves'}.items(),
     )
 
     thruster_bridge = Node(
@@ -38,8 +36,8 @@ def launch_setup(context):
             '/model/bluerov2/odometry@nav_msgs/msg/Odometry[gz.msgs.Odometry',
             '/model/bluerov2/imu@sensor_msgs/msg/Imu[gz.msgs.IMU',
             '/world/oceans_waves/model/bluerov2/joint_state@sensor_msgs/msg/JointState[gz.msgs.Model',
-            '/model/bluerov2/camera/left/image@sensor_msgs/msg/Image[gz.msgs.Image',
-            '/model/bluerov2/camera/right/image@sensor_msgs/msg/Image[gz.msgs.Image',
+            '/model/bluerov2/camera/left@sensor_msgs/msg/Image[gz.msgs.Image',
+            '/model/bluerov2/camera/right@sensor_msgs/msg/Image[gz.msgs.Image',
             '/model/bluerov2/camera/down@sensor_msgs/msg/Image[gz.msgs.Image',
             '/model/bluerov2/camera/left/camera_info@sensor_msgs/msg/CameraInfo[gz.msgs.CameraInfo',
             '/model/bluerov2/camera/right/camera_info@sensor_msgs/msg/CameraInfo[gz.msgs.CameraInfo',

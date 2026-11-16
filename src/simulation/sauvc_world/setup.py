@@ -37,7 +37,6 @@ setup(
         ('share/' + package_name + '/models/qualification_gate',
             ['models/qualification_gate/model.sdf']),
         ('share/' + package_name + '/launch', ['launch/sauvc.launch.py']),
-        ('share/' + package_name + '/worlds', ['worlds/sauvc_pool.world']),
         ('share/' + package_name + '/models/pool',
             ['models/pool/poolWalls.sdf', 'models/pool/model.config',
              'models/pool/REFERENCES.md']),
