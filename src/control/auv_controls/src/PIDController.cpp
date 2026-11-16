@@ -5,6 +5,9 @@
 #include <fmt/core.h>
 #include <vector>
 #include <array>
+#include <algorithm>
+#include <chrono>
+#include <limits>
 #include "rclcpp/rclcpp.hpp"
 #include "geometry_msgs/msg/pose_array.hpp"
 #include "nav_msgs/msg/odometry.hpp"
@@ -33,9 +36,23 @@ public:
     {     
         //should be either "direct", for direct steering or "reference" for driving to reference
         this->declare_parameter("control_mode", "reference");        
+        this->declare_parameter("accept_cmd_vel", true);
+        this->declare_parameter("reference_timeout", 0.0);
+        this->declare_parameter("state_timeout", 0.5);
+        this->declare_parameter("command_timeout", 0.0);
+        this->declare_parameter("use_velocity_derivative", false);
+        this->declare_parameter("heave_feedforward", 0.0);
+        this->declare_parameter("yaw_for_reached", 0.1);
+        this->declare_parameter("speed_for_reached", 0.08);
+        this->declare_parameter("settle_time", 0.7);
         this->declare_parameter("tam_inv", this->defaultTamInverse);
         this->declare_parameter("max_thruster_force", 10.0);
         this->dist_for_reached = this->declare_parameter("dist_for_reached", this->dist_for_reached);
+        if (!std::isfinite(this->get_parameter("max_thruster_force").as_double()) ||
+            this->get_parameter("max_thruster_force").as_double() <= 0.0 ||
+            this->get_parameter("tam_inv").as_double_array().size() != 12) {
+            throw std::invalid_argument("Expected positive max_thruster_force and 12 TAM coefficients");
+        }
         for (int i = 0;i < 8; i++) {
             this->declare_parameter(fmt::format("thruster_{}_coefficient", i+1), 1.0);
         }
@@ -80,6 +97,10 @@ public:
 
         auto handle_goal = [this](const rclcpp_action::GoalUUID & uuid, std::shared_ptr<const MoveTo::Goal> goal)
         {
+            if (this->get_parameter("control_mode").as_string() != "reference" ||
+                !validPose(goal->target) || this->active_goal != nullptr) {
+                return rclcpp_action::GoalResponse::REJECT;
+            }
             RCLCPP_INFO(this->get_logger(), "received target %.3f, %.3f, %.3f", 
                 goal->target.position.x, goal->target.position.y, goal->target.position.z);
             (void)uuid;
@@ -90,7 +111,6 @@ public:
         {
             RCLCPP_INFO(this->get_logger(), "Received request to cancel goal");
             (void)goal_handle;
-            this->active_goal.reset();
             return rclcpp_action::CancelResponse::ACCEPT;
         };
 
@@ -99,6 +119,9 @@ public:
             this->active_goal = goal_handle;
             const auto goal = goal_handle->get_goal();
             this->reference = goal->target;
+            this->has_reference = true;
+            this->settled_since = std::numeric_limits<double>::quiet_NaN();
+            resetPids();
             RCLCPP_INFO(this->get_logger(), "all good");
         };
 
@@ -108,6 +131,29 @@ public:
             handle_goal,
             handle_cancel,
             handle_accepted);
+        this->watchdog_ = this->create_wall_timer(std::chrono::milliseconds(100), [this]() {
+            const auto now = std::chrono::steady_clock::now();
+            const double timeout = this->get_parameter("state_timeout").as_double();
+            const double ref_timeout = this->get_parameter("reference_timeout").as_double();
+            const bool direct = this->get_parameter("control_mode").as_string() == "direct";
+            const double command_timeout = this->get_parameter("command_timeout").as_double();
+            const bool stale = direct ? command_timeout > 0.0 &&
+                std::chrono::duration<double>(now-this->last_command).count() > command_timeout :
+                std::chrono::duration<double>(now-this->last_state).count() > timeout;
+            const bool stale_ref = !direct && ref_timeout > 0.0 && !this->active_goal &&
+                std::chrono::duration<double>(now-this->last_reference).count() > ref_timeout;
+            if (stale || stale_ref) {
+                commandForce(0, 0, 0, 0);
+                resetPids();
+                this->prev_timestamp = std::numeric_limits<double>::quiet_NaN();
+                if (this->active_goal) {
+                    auto result = std::make_shared<MoveTo::Result>();
+                    result->success = false;
+                    this->active_goal->abort(result);
+                    this->active_goal.reset();
+                }
+            }
+        });
     }
 
 private:
@@ -128,14 +174,22 @@ private:
     double dist_for_reached = 0.1;
 
     // dummy values, reinitialized in constructor so we can take in parameter values
-    control_toolbox::AntiWindupStrategy strategy;
+    control_toolbox::AntiWindupStrategy strategy = [] {
+        control_toolbox::AntiWindupStrategy value;
+        value.type = control_toolbox::AntiWindupStrategy::CONDITIONAL_INTEGRATION;
+        return value;
+    }();
     std::array<control_toolbox::Pid, 4> pids = {
-        control_toolbox::Pid(0.0, 0.0, 0.0, 10.0, -10.0, this->strategy),
-        control_toolbox::Pid(0.0, 0.0, 0.0, 10.0, -10.0, this->strategy),
-        control_toolbox::Pid(0.0, 0.0, 0.0, 10.0, -10.0, this->strategy),
-        control_toolbox::Pid(0.0, 0.0, 0.0, 10.0, -10.0, this->strategy),
+        control_toolbox::Pid(0, 0, 0, 10, -10, strategy),
+        control_toolbox::Pid(0, 0, 0, 10, -10, strategy),
+        control_toolbox::Pid(0, 0, 0, 10, -10, strategy),
+        control_toolbox::Pid(0, 0, 0, 10, -10, strategy),
     };
-    double prev_timestamp;
+    double prev_timestamp = std::numeric_limits<double>::quiet_NaN();
+    double settled_since = std::numeric_limits<double>::quiet_NaN();
+    bool has_reference = false;
+    rclcpp::TimerBase::SharedPtr watchdog_;
+    std::chrono::steady_clock::time_point last_state{}, last_reference{}, last_command{};
 
     rclcpp::Publisher<std_msgs::msg::Float64>::SharedPtr thrusterPub[6];    
 
@@ -150,10 +204,34 @@ private:
 
 
     void referenceCallback(const geometry_msgs::msg::Pose::ConstSharedPtr msg)
-    { this->reference = *msg; }
+    {
+        if (!validPose(*msg)) { return; }
+        // An explicit action owns the reference until completion or cancellation.
+        if (this->active_goal) { return; }
+        this->reference = *msg;
+        this->has_reference = true;
+        this->last_reference = std::chrono::steady_clock::now();
+    }
+
+    bool validPose(const geometry_msgs::msg::Pose& pose) const
+    {
+        const auto& q = pose.orientation;
+        const double norm = q.x*q.x + q.y*q.y + q.z*q.z + q.w*q.w;
+        return std::isfinite(pose.position.x) && std::isfinite(pose.position.y) &&
+            std::isfinite(pose.position.z) && std::isfinite(norm) && std::abs(norm-1.0) < 0.02;
+    }
+
+    void resetPids()
+    {
+        for (auto& pid : pids) { pid.reset(); }
+    }
 
     void cmdCallback(const geometry_msgs::msg::Twist::ConstSharedPtr msg)
     {    
+        if (!this->get_parameter("accept_cmd_vel").as_bool() || this->active_goal) { return; }
+        if (!std::isfinite(msg->linear.x) || !std::isfinite(msg->linear.y) ||
+            !std::isfinite(msg->linear.z) || !std::isfinite(msg->angular.z)) { return; }
+        this->last_command = this->last_reference = std::chrono::steady_clock::now();
         if (this->get_parameter("control_mode").as_string() == "direct")
         {
             commandForce(msg->linear.x * 5, -msg->linear.y * 5, msg->linear.z * 10, -msg->angular.z * 0.2);
@@ -162,10 +240,11 @@ private:
 
         this->reference.position.x = msg->linear.x * 0.5 + this->reference.position.x;
         this->reference.position.y = msg->linear.y * 0.5 + this->reference.position.y;
-        this->reference.position.z = this->reference.position.z < 0 ? 0 : msg->linear.z * 0.5 + this->reference.position.z;        
-        this->reference.orientation.z = msg->angular.z * 0.5 + this->reference.orientation.z;
-        if (this->reference.orientation.z < -3.1415) { this->reference.orientation.z += 3.1415; }
-        if (this->reference.orientation.z >  3.1415) { this->reference.orientation.z -= 3.1415; }            
+        this->reference.position.z += msg->linear.z * 0.5;
+        tf2::Quaternion q;
+        q.setRPY(0, 0, tf2::getYaw(this->reference.orientation) + msg->angular.z * 0.5);
+        this->reference.orientation = tf2::toMsg(q);
+        this->has_reference = true;
     }
 
     /*
@@ -173,18 +252,52 @@ private:
     */
     void stateCallback(const nav_msgs::msg::Odometry::ConstSharedPtr msg)
     {
+        const auto& velocity = msg->twist.twist;
+        if (!validPose(msg->pose.pose) || !std::isfinite(velocity.linear.x) ||
+            !std::isfinite(velocity.linear.y) || !std::isfinite(velocity.linear.z) ||
+            !std::isfinite(velocity.angular.z)) {
+            commandForce(0, 0, 0, 0);
+            resetPids();
+            return;
+        }
+        this->last_state = std::chrono::steady_clock::now();
         if (this->get_parameter("control_mode").as_string() == "direct")
             return;
 
         double currentStamp = msg->header.stamp.sec + msg->header.stamp.nanosec/(1e9);
+        if (!this->has_reference) {
+            this->reference = msg->pose.pose;
+            this->has_reference = true;
+        }
+        const double reference_timeout = this->get_parameter("reference_timeout").as_double();
+        if (reference_timeout > 0.0 && !this->active_goal &&
+            std::chrono::duration<double>(this->last_state-this->last_reference).count() > reference_timeout) {
+            commandForce(0, 0, 0, 0);
+            resetPids();
+            this->prev_timestamp = currentStamp;
+            return;
+        }
         //big jump in time, let the next time loop
-        if (currentStamp - prev_timestamp > 0.1) {
-            RCLCPP_WARN(this->get_logger(), "time jump of %.5fs!!", currentStamp - prev_timestamp);  
+        if (!std::isfinite(prev_timestamp) || currentStamp <= prev_timestamp || currentStamp - prev_timestamp > 0.5) {
             prev_timestamp = currentStamp;
+            resetPids();
+            commandForce(0, 0, 0, 0);
             return;
         }
         //compute xy-yaw pid effort
         geometry_msgs::msg::Pose state = msg->pose.pose;
+        if (this->active_goal && this->active_goal->is_canceling()) {
+            this->reference = state;
+            this->last_reference = this->last_state;
+            auto result = std::make_shared<MoveTo::Result>();
+            result->success = false;
+            this->active_goal->canceled(result);
+            this->active_goal.reset();
+            resetPids();
+            commandForce(0, 0, 0, 0);
+            prev_timestamp = currentStamp;
+            return;
+        }
         
         //transform from ENU to NED
         // try {
@@ -215,29 +328,48 @@ private:
 
         // RCLCPP_INFO(this->get_logger(), "dx: %f, dy: %f, dz: %f, dYaw: %f",
         //     displacement(0), displacement(1), dz, refYaw - stateYaw);        
-        double xEffort =   pids[0].compute_command(displacement(0),    currentStamp - prev_timestamp);
-        double yEffort =   pids[1].compute_command(displacement(1),    currentStamp - prev_timestamp);
-        double zEffort =   pids[2].compute_command(dz,                 currentStamp - prev_timestamp);
-        double yawEffort = pids[3].compute_command(yawError,           currentStamp - prev_timestamp);
+        const double dt = currentStamp-prev_timestamp;
+        double xEffort, yEffort, zEffort, yawEffort;
+        if (this->get_parameter("use_velocity_derivative").as_bool()) {
+            // Damping on measured velocity avoids derivative kicks when a waypoint
+            // reference arrives at a lower rate than odometry. Twist is body-frame.
+            const auto& v = msg->twist.twist.linear;
+            const auto& q = state.orientation;
+            const tf2::Vector3 world_velocity = tf2::quatRotate(
+                tf2::Quaternion(q.x, q.y, q.z, q.w), tf2::Vector3(v.x, v.y, v.z));
+            xEffort = pids[0].compute_command(displacement(0), -v.x, dt);
+            yEffort = pids[1].compute_command(displacement(1), -v.y, dt);
+            zEffort = pids[2].compute_command(dz, -world_velocity.z(), dt);
+            yawEffort = pids[3].compute_command(yawError, -msg->twist.twist.angular.z, dt);
+        } else {
+            xEffort = pids[0].compute_command(displacement(0), dt);
+            yEffort = pids[1].compute_command(displacement(1), dt);
+            zEffort = pids[2].compute_command(dz, dt);
+            yawEffort = pids[3].compute_command(yawError, dt);
+        }
+        zEffort += this->get_parameter("heave_feedforward").as_double();
                     
         commandForce(xEffort, yEffort, zEffort, yawEffort);
 
         // handle active actions
         if (this->active_goal != nullptr) {
-            if (this->active_goal->is_canceling()) {
-                this->reference = state;
-                this->active_goal.reset();
-            }
-
             auto feedback = std::make_shared<MoveTo::Feedback>();
             feedback->current = state;
             active_goal->publish_feedback(feedback);
 
-            if (dist(state, this->reference) < this->get_parameter("dist_for_reached").as_double()) {
+            const auto& v = msg->twist.twist.linear;
+            const bool reached = dist(state, this->reference) < this->get_parameter("dist_for_reached").as_double() &&
+                std::abs(yawError) < this->get_parameter("yaw_for_reached").as_double() &&
+                std::hypot(std::hypot(v.x, v.y), v.z) < this->get_parameter("speed_for_reached").as_double() &&
+                std::abs(msg->twist.twist.angular.z) < this->get_parameter("speed_for_reached").as_double();
+            if (!reached) { this->settled_since = std::numeric_limits<double>::quiet_NaN(); }
+            else if (!std::isfinite(this->settled_since)) { this->settled_since = currentStamp; }
+            else if (currentStamp-this->settled_since >= this->get_parameter("settle_time").as_double()) {
                 auto result = std::make_shared<MoveTo::Result>();
                 result->success = true;
                 this->active_goal->succeed(result);
                 this->active_goal.reset();
+                this->last_reference = this->last_state;
             }
         }
 
@@ -253,6 +385,7 @@ private:
 
         std::vector<double> tamInvValues;
         this->get_parameter("tam_inv", tamInvValues);
+        if (tamInvValues.size() != 12) { return; }
         Eigen::Map<Eigen::Matrix<double, 4, 3, Eigen::RowMajor>> tamInverse(tamInvValues.data());
 
         Eigen::VectorXd allocation(4);
@@ -271,7 +404,10 @@ private:
     void publishThrust(int idx, float value) {        
         auto msg = std_msgs::msg::Float64();
         double coefficient = this->get_parameter(fmt::format("thruster_{}_coefficient", idx+1)).as_double();
-        msg.data = value * coefficient;
+        const double limit = this->get_parameter("max_thruster_force").as_double();
+        const double command = value * coefficient;
+        msg.data = std::isfinite(command) && std::isfinite(limit) && limit > 0.0 ?
+            std::clamp(command, -limit, limit) : 0.0;
         this->thrusterPub[idx]->publish(msg);
     }
 

@@ -1,5 +1,16 @@
 # Topic based
-Currently has a node called `PIDController`, that controls a BlueROV2. (No z axis yet! will add it soon, but if you want to yourself, feel free to do so). It reads in a reference position at `/reference`, calculates the displacement vector wrt the AUV yaw. This vector is fed into indivdual PIDs, before being combined into an effort vector. Individual effort is calculated via the TAM pseudo inverse matrix. Also, PID values aren't tuned yet!!
+`PIDController` controls BlueROV position X/Y/Z and yaw from pose targets on
+`/reference` and odometry on `/model/bluerov2/odometry`. It rotates horizontal
+position errors into body axes and allocates effort to six thrusters.
+
+The controller limits each final thruster command to `max_thruster_force`.
+Reference-mode odometry loss zeros thrust after `state_timeout` (default 0.5 s).
+`reference_timeout` defaults to zero for legacy pose publishers; set a positive
+value to require a pose-reference heartbeat. Optional `command_timeout` applies
+to direct keyboard commands and defaults to zero for compatibility.
+`use_velocity_derivative` enables measured-velocity derivative damping, and
+`heave_feedforward` adds a vertical force in newtons. Both default to disabled
+or zero and require tuning for the vehicle.
 
 To test, first launch the sim with the blueROV
 ```
@@ -19,7 +30,8 @@ This should work for any x, y and yaw(needs to be converted to a quaternion firs
 [ 0.707107, -0.707107,  0.707107, -0.707107]
 [0.16405,   -0.16405,  -0.16405,   0.16405 ]
 ```
-for Fx, Fy and Myaw. There definitely is some sign issue somewhere :)
+for Fx, Fy and Myaw. This is the historical allocation sketch; verify frame
+and joint-axis conventions whenever the vehicle model changes.
 
 # Ros2_control based
 you can do the following
@@ -36,4 +48,4 @@ ros2 topic pub /pid_controller/reference control_msgs/msg/MultiDOFCommand "{dof_
 auv_sims contains a hardware interface that pid_controller outputs to, which just republishes the controlled effort to auv_controls/thruster/cmd_thrust, which gazebo uses
 as thrust command. Feel free to edit and use yah
 
-also, pose_republisher in auv_sims republishes the pose data from gazebo to act as measured state for the controller. 
+also, pose_republisher in auv_sims republishes the pose data from gazebo to act as measured state for the controller.
