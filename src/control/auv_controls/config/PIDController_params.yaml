@@ -1,0 +1,39 @@
+PIDController:
+  ros__parameters:
+    # set to reference or direct
+    control_mode: reference
+    max_thruster_force: 10.0   
+    dist_for_reached: 0.1
+
+    tam_inv: [-0.353553281186581,  0.361011053952608,  1.491780290598801,
+              -0.353553281186581, -0.361011053952608, -1.491780290598801,
+               0.353553281186581,  0.346095508420555, -1.491780290598801,
+               0.353553281186581, -0.346095508420555,  1.491780290598801 ]
+
+    x_p: 20.0
+    x_i: 4.5
+    x_d: 1.5
+
+    y_p: 20.0
+    y_i: 4.5
+    y_d: 1.5
+
+    z_p: 20.0
+    z_i: 4.5
+    z_d: 1.5
+
+    yaw_p: 0.8
+    yaw_i: 0.0
+    yaw_d: 2.0
+
+    #x-y thrusters
+    thruster_1_coefficient: 1.0
+    thruster_2_coefficient: 1.0
+    thruster_3_coefficient: 1.0
+    thruster_4_coefficient: 1.0
+
+    #Vertical thrusters
+    thruster_5_coefficient: 1.0
+    thruster_6_coefficient: 1.0
+    thruster_7_coefficient: 1.0
+    thruster_8_coefficient: 1.0    

@@ -61,7 +61,7 @@ def launch_setup(context):
         arguments=[
             "-world", "oceans_waves",
             "-file", os.path.join(pkg, "models", "robot", "model.sdf"),
-            "-name", "sauvc_robot",
+            "-name", "bluerov2",
             "-x", robot_pose[0],
             "-y", robot_pose[1],
             "-z", robot_pose[2],
