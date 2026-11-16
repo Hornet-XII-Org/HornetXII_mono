@@ -1,45 +1,22 @@
 <?xml version="1.0"?>
 <sdf version="1.9">
+  <!-- Mesh from 3d_pool_props.zip (150 x 100 cm). Height is stretched x1.5 (mesh-Y
+       scale 0.015) to the 150 x 150 cm finals navigation gate of the SAUVC 2027
+       rulebook v2027.3.2; the posts are only ~4 cm wide so the stretch is harmless.
+        Source units are cm (scale 0.01) and the
+       mesh is Y-up, so it is rolled 90 deg about X (and yawed 90 deg so the flat face looks down the pool, +x). Model origin = bottom
+       centre of the object, so spawn z = height of the object's base. -->
   <model name="sauvc_gate">
     <static>true</static>
-    <link name="gate">
-      <visual name="left_post">
-        <pose>0 -0.7 0 0 0 0</pose>
+    <link name="link">
+      <visual name="visual">
+        <pose>0 0 0 1.5707963 0 1.5707963</pose>
         <geometry>
-          <box>
-            <size>0.1 0.1 1.4</size>
-          </box>
+          <mesh>
+            <uri>model://gate/meshes/competition-gate.obj</uri>
+            <scale>0.01 0.015 0.01</scale>
+          </mesh>
         </geometry>
-        <material>
-          <ambient>1 0.4 0 1</ambient>
-          <diffuse>1 0.4 0 1</diffuse>
-        </material>
-      </visual>
-
-      <visual name="right_post">
-        <pose>0 0.7 0 0 0 0</pose>
-        <geometry>
-          <box>
-            <size>0.1 0.1 1.4</size>
-          </box>
-        </geometry>
-        <material>
-          <ambient>1 0.4 0 1</ambient>
-          <diffuse>1 0.4 0 1</diffuse>
-        </material>
-      </visual>
-
-      <visual name="top_bar">
-        <pose>0 0 0.7 0 0 0</pose>
-        <geometry>
-          <box>
-            <size>0.1 1.5 0.1</size>
-          </box>
-        </geometry>
-        <material>
-          <ambient>1 0.4 0 1</ambient>
-          <diffuse>1 0.4 0 1</diffuse>
-        </material>
       </visual>
     </link>
   </model>

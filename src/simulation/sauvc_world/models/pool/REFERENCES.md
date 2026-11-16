@@ -43,13 +43,31 @@ as modelling assumptions, not a survey of SP's construction.
 Lane markings are visual-only meshes 3 mm above the floor, split at slope
 junctions. Wall targets have not yet been modelled.
 
-The launch remains a **qualification practice** scene, not a finals course.
-BlueROV starts at (-24.4, 0, -0.65), facing +X. The current gate is at
-(-15, 0, -0.75), 10 m from the shallow wall. Its existing shape is retained.
-These are provisional practice positions based on the historical qualification
-setup. [The 2027 venue announcement](https://sauvc.org/) names Singapore
-Polytechnic, but the exact 2027 pool allocation/course layout was not yet
-confirmed by the linked documents when checked on 24 October 2026.
+## Course layouts
+
+`ros2 launch sauvc_world sauvc.launch.py mode:=<mode>` selects the layout.
+Pool, cameras and bridges are identical in both modes.
+
+- `mode:=finals` (default): finals course. AUV starts in the 140 x 140 cm start
+  zone on the south long wall of the deep section at (10.5, -11.8) facing +y.
+  Gate 150 x 150 cm on the floor ~12 m from the start wall, orange flare 4-8 m
+  from the start wall, 8 x 2 m green target mat with four drums (1 blue, 3 red)
+  near the north wall, red/yellow/blue communication flares in the main arena.
+  Positions are representative: they follow the
+  [official 2025 arena diagram](https://raw.githubusercontent.com/sauvc/rulebook/016d4503b9d321f6db17b002a158877900d91079/img/arena-2025.jpg)
+  (not to scale), object sizes follow the SAUVC 2027 rulebook v2027.3.2
+  (30 Oct 2026, [sauvc.org/rulebook](https://sauvc.org/rulebook/)). The rules let
+  the gate, flares and drum order vary between attempts, and give no drum
+  spacing (2 m is assumed). Meshes come from `3d_pool_props.zip`, converted to
+  OBJ with `tools/convert_dae_to_obj.py`.
+- `mode:=qualification`: AUV starts at the shallow short wall at (-24.4, 0)
+  facing +x. One qualification gate ~10 m ahead, modelled after the
+  [official figure](https://sauvc.org/rulebook/img/qualification-gate.jpg): two
+  orange 4 cm posts ~100 cm long hanging from the surface and a white 150 cm bar
+  at the surface (no bottom bar). No other props.
+
+The SAUVC 2026 rulebook (Sanya) describes a different venue (25 x 16 m indoor
+pool, finals gate ~16 m from the start); it is not modelled here.
 
 The previous 25 × 16 m pool with 1.2 m ends / 1.6 m centre matched the
 [2026 Sanya qualification diagram](https://sauvc.org/rulebook/img/arena-2026-qualifiers.png).

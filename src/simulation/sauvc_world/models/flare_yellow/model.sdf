@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<sdf version="1.9">
+  <!-- Mesh from 3d_pool_props.zip. Source units are cm (scale 0.01) and the
+       mesh is Y-up, so it is rolled 90 deg about X. Model origin = bottom
+       centre of the object, so spawn z = height of the object's base. -->
+  <model name="flare_yellow">
+    <static>true</static>
+    <link name="link">
+      <visual name="visual">
+        <pose>0 0 0 1.5707963 0 0</pose>
+        <geometry>
+          <mesh>
+            <uri>model://flare_yellow/meshes/bump-flare-yellow.obj</uri>
+            <scale>0.01 0.01 0.01</scale>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+  </model>
+</sdf>

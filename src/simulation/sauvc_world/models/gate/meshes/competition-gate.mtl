@@ -1,0 +1,28 @@
+newmtl Entity2material
+Ka 0.0000 0.0000 0.0000
+Kd 0.0000 0.0000 0.0000
+Ks 0.1 0.1 0.1
+Ns 10
+d 1.0
+
+newmtl Entity5material
+Ka 0.6000 0.6000 0.6000
+Kd 0.6000 0.6000 0.6000
+Ks 0.1 0.1 0.1
+Ns 10
+d 1.0
+
+newmtl Entity6material
+Ka 1.0000 0.0980 0.0980
+Kd 1.0000 0.0980 0.0980
+Ks 0.1 0.1 0.1
+Ns 10
+d 1.0
+
+newmtl Entity13material
+Ka 0.0314 1.0000 0.0000
+Kd 0.0314 1.0000 0.0000
+Ks 0.1 0.1 0.1
+Ns 10
+d 1.0
+
